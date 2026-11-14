@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>AI-Assisted PCOS Research &amp; Risk Assessment | Kamalesh Ganesh</title>
+  <meta name="title" content="AI-Assisted PCOS Research &amp; Risk Assessment | Kamalesh Ganesh">
+  <meta name="description" content="An interdisciplinary academic research initiative investigating how machine learning, healthcare data analytics, and clinical indicators contribute to PCOS-related risk assessment and women's health monitoring.">
+  <meta name="author" content="Kamalesh Ganesh">
+  <meta name="theme-color" content="#A855F7">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Base & Detail Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+
+  <style>
+    :root {
+      --research-primary: #9333EA;
+      --research-secondary: #EC4899;
+      --research-accent: #06B6D4;
+      --research-gradient: linear-gradient(135deg, #7C3AED 0%, #C026D3 50%, #EC4899 100%);
+      --research-bg-card: rgba(255, 255, 255, 0.95);
+      --research-border: rgba(147, 51, 234, 0.16);
+    }
+
+    .research-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: rgba(147, 51, 234, 0.1);
+      border: 1px solid rgba(147, 51, 234, 0.25);
+      color: var(--research-primary);
+      padding: 0.4rem 1.1rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+
+    .non-diagnostic-callout {
+      background: #FDF4FF;
+      border: 1.5px solid #F0ABFC;
+      border-left: 5px solid #C026D3;
+      border-radius: var(--radius-md);
+      padding: 1rem 1.4rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      box-shadow: 0 4px 16px rgba(192, 38, 211, 0.08);
+    }
+
+    .non-diagnostic-callout i {
+      color: #C026D3;
+      font-size: 1.3rem;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    .non-diagnostic-callout p {
+      font-size: 0.88rem;
+      color: #701A75;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .sticky-research-nav {
+      position: sticky;
+      top: 72px;
+      z-index: 95;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(147, 51, 234, 0.12);
+      padding: 0.65rem 0;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .research-nav-track {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0.2rem 0;
+    }
+
+    .research-nav-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .research-nav-link {
+      font-family: var(--font-heading);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #64748B;
+      padding: 0.4rem 0.95rem;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+    }
+
+    .research-nav-link:hover {
+      color: var(--research-primary);
+      background: rgba(147, 51, 234, 0.08);
+      border-color: rgba(147, 51, 234, 0.2);
+    }
+
+    /* Comparison Card */
+    .pcos-vs-pcod-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(147, 51, 234, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 8px 30px rgba(147, 51, 234, 0.08);
+    }
+
+    .comp-col-pcos {
+      background: #FAF5FF;
+      border: 1px solid #E9D5FF;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .comp-col-pcod {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .comp-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .comp-badge-pcos {
+      background: #9333EA;
+      color: #FFFFFF;
+    }
+
+    .comp-badge-pcod {
+      background: #64748B;
+      color: #FFFFFF;
+    }
+
+    /* Tabbed Rotterdam Framework */
+    .framework-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .framework-tab-btn {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      padding: 0.5rem 1.15rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .framework-tab-btn:hover {
+      border-color: var(--research-primary);
+      color: var(--research-primary);
+    }
+
+    .framework-tab-btn.active {
+      background: var(--research-primary);
+      color: #FFFFFF;
+      border-color: var(--research-primary);
+      box-shadow: 0 4px 14px rgba(147, 51, 234, 0.3);
+    }
+
+    .framework-tab-content {
+      display: none;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      animation: fadeInTab 0.35s ease;
+    }
+
+    .framework-tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeInTab {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 10-Stage Timeline */
+    .ten-stage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .stage-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.1rem;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stage-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--research-primary);
+      box-shadow: 0 8px 24px rgba(147, 51, 234, 0.12);
+    }
+
+    .stage-num-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--research-primary);
+      letter-spacing: 0.5px;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+    }
+
+    .stage-title {
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .stage-desc {
+      font-size: 0.83rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Conceptual Pipeline Flow */
+    .pipeline-diagram-box {
+      background: linear-gradient(145deg, #181135 0%, #2A1758 100%);
+      border: 1.5px solid rgba(168, 85, 247, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      margin-top: 2rem;
+      color: #FFFFFF;
+    }
+
+    .pipeline-steps-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      position: relative;
+    }
+
+    .pipe-step-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.15rem;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .pipe-step-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #EC4899;
+    }
+
+    .pipe-step-icon {
+      font-size: 1.6rem;
+      color: #F472B6;
+      margin-bottom: 0.65rem;
+    }
+
+    .pipe-step-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .pipe-step-desc {
+      font-size: 0.8rem;
+      color: #CBD5E1;
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    /* Variable Taxonomy 3-Column */
+    .taxonomy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .taxonomy-col {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .taxonomy-col-title {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1.5px solid var(--border-light);
+    }
+
+    .taxonomy-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .taxonomy-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      background: var(--bg-subtle);
+      padding: 0.65rem 0.95rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(147, 51, 234, 0.1);
+    }
+
+    .taxonomy-item i {
+      color: var(--research-primary);
+      font-size: 0.8rem;
+    }
+
+    /* Roadmap Tracker */
+    .roadmap-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .roadmap-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.4rem;
+      box-shadow: var(--shadow-sm);
+      flex-wrap: wrap;
+    }
+
+    .roadmap-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .roadmap-stage-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--research-primary);
+      background: rgba(147, 51, 234, 0.1);
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+
+    .roadmap-status-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .status-in-progress {
+      background: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FCD34D;
+    }
+
+    .status-planned {
+      background: #EFF6FF;
+      color: #1E40AF;
+      border: 1px solid #BFDBFE;
+    }
+
+    /* Reference Cards & Archive */
+    .ref-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .ref-card:hover {
+      border-color: var(--research-primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .archive-slot-card {
+      background: #FAFAFA;
+      border: 1.5px dashed #CBD5E1;
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.1rem;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .archive-slot-card:hover {
+      border-color: var(--research-primary);
+      background: #FAF5FF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================================================================
+       NAVIGATION BAR
+       ====================================================================== -->
+  <header class="detail-navbar">
+    <div class="container detail-nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Kamalesh Ganesh Home">
+        <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="badge" style="background: rgba(147, 51, 234, 0.1); color: #9333EA; font-weight: 700; border: 1px solid rgba(147, 51, 234, 0.25); font-size: 0.78rem; padding: 0.35rem 0.85rem; border-radius: 9999px;">
+          Academic Research
+        </span>
+        <a href="index.html#projects" class="btn-back-portfolio">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky In-Page Navigation -->
+  <nav class="sticky-research-nav">
+    <div class="container">
+      <div class="research-nav-track">
+        <a href="#hero" class="research-nav-link">Overview</a>
+        <a href="#background" class="research-nav-link">Background</a>
+        <a href="#problems" class="research-nav-link">Problem Statement</a>
+        <a href="#objectives" class="research-nav-link">Objectives</a>
+        <a href="#clinical-framework" class="research-nav-link">Clinical Framework</a>
+        <a href="#methodology" class="research-nav-link">Methodology</a>
+        <a href="#variables" class="research-nav-link">Variables &amp; ML</a>
+        <a href="#evaluation" class="research-nav-link">Evaluation</a>
+        <a href="#roadmap" class="research-nav-link">Status &amp; Roadmap</a>
+        <a href="#bibliography" class="research-nav-link">References</a>
+        <a href="#archive" class="research-nav-link">Documentation Archive</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION: AI-ASSISTED PCOS RESEARCH
+         ====================================================================== -->
+    <section class="case-hero" id="hero">
+      <div class="container">
+        <!-- Top Metadata Badge -->
+        <div class="research-hero-badge">
+          <i class="fa-solid fa-dna"></i>
+          <span>INTERDISCIPLINARY RESEARCH MODEL &bull; EXPLORATORY SCOPE</span>
+        </div>
+
+        <h1 class="case-hero-title">
+          AI-Assisted PCOS Research
+        </h1>
+        <p class="case-hero-subtitle" style="font-size: 1.25rem; font-weight: 600; color: #475569; margin-bottom: 0.75rem;">
+          Exploring Artificial Intelligence for Better Understanding of Women's Health.
+        </p>
+
+        <!-- Mandatory Non-Diagnostic Advisory -->
+        <div class="non-diagnostic-callout">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div>
+            <strong>Academic Research Initiative:</strong>
+            <p>
+              Outputs explored under this initiative are intended strictly for exploratory risk assessment and data-driven clinical decision support. The system is <strong>not a clinically validated diagnostic tool</strong> and does not replace qualified clinical evaluation or licensed medical diagnosis.
+            </p>
+          </div>
+        </div>
+
+        <p class="case-hero-lead" style="margin-bottom: 1.5rem;">
+          An interdisciplinary research initiative investigating how machine learning, healthcare data analytics, and clinical indicators can contribute to PCOS-related risk assessment and women's health monitoring.
+        </p>
+
+        <!-- Pill Badges -->
+        <div class="case-hero-tags" style="margin-bottom: 2rem;">
+          <span class="hero-tech-pill"><i class="fa-solid fa-brain"></i> Artificial Intelligence in Healthcare</span>
+          <span class="hero-tech-pill"><i class="fa-solid fa-person-dress"></i> Women's Health</span>
+          <span class="hero-tech-pill"><i class="fa-solid fa-network-wired"></i> Machine Learning</span>
+          <span class="hero-tech-pill"><i class="fa-solid fa-chart-line"></i> Healthcare Data Analytics</span>
+          <span class="hero-tech-pill"><i class="fa-solid fa-notes-medical"></i> Clinical Decision Support</span>
+          <span class="hero-tech-pill"><i class="fa-solid fa-calculator"></i> Predictive Analytics</span>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="case-hero-cta-group" style="margin-bottom: 2.5rem;">
+          <a href="#background" class="btn btn-primary">
+            <i class="fa-solid fa-microscope"></i>
+            <span>Explore Research</span>
+          </a>
+          <a href="#methodology" class="btn btn-outline">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span>Research Methodology</span>
+          </a>
+          <a href="https://manikandan.nayaruvi.in/docs/pcos_identification_using_ai_literature_survey.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #EC4899; color: #BE185D;">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Literature Survey PDF</span>
+          </a>
+        </div>
+
+        <!-- Telemetry Highlights Grid -->
+        <div class="telemetry-kpi-grid">
+          <div class="telemetry-kpi-card">
+            <div class="tel-kpi-value" style="color: #9333EA;">Clinical &amp; Metabolic</div>
+            <div class="tel-kpi-label">Indicator Taxonomy</div>
+            <div class="tel-kpi-subtext">Menstrual, Endocrine &amp; Lipid Markers</div>
+          </div>
+          <div class="telemetry-kpi-card">
+            <div class="tel-kpi-value" style="color: #EC4899;">Rotterdam &amp; GOI</div>
+            <div class="tel-kpi-label">Reference Context</div>
+            <div class="tel-kpi-subtext">Government of India Standard Guidelines</div>
+          </div>
+          <div class="telemetry-kpi-card">
+            <div class="tel-kpi-value" style="color: #06B6D4;">Explainable AI</div>
+            <div class="tel-kpi-label">Analytical Focus</div>
+            <div class="tel-kpi-subtext">Transparent Feature Attribution (XAI)</div>
+          </div>
+        </div>
+
+        <!-- Thumbnail Showcase Graphic -->
+        <div class="case-mockup-wrapper" style="margin-top: 3rem;">
+          <img src="images/project-pcos.png" alt="AI-Assisted PCOS Healthcare Research Architecture" class="case-mockup-img" style="border-radius: var(--radius-lg); box-shadow: 0 16px 48px rgba(147, 51, 234, 0.2);">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 01: RESEARCH BACKGROUND
+         ====================================================================== -->
+    <section class="case-section" id="background">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">01 &bull; Research Background</span>
+          <h2 class="section-title">Clinical Relevance of PCOS in Women's Health</h2>
+          <p class="section-subtitle">
+            Primary clinical framing guided by the <strong>Government of India Standard Treatment Guidelines for Endocrinology</strong> (Polycystic Ovary Syndrome section).
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(147, 51, 234, 0.1); color: #9333EA;">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <h3 class="feat-title">Menstrual Irregularities</h3>
+            <p class="feat-desc">
+              Ovulatory dysfunction frequently presents through irregular, infrequent (oligomenorrhea), or prolonged menstrual cycles that warrant systematic clinical history evaluation.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(236, 72, 153, 0.1); color: #EC4899;">
+              <i class="fa-solid fa-venus"></i>
+            </div>
+            <h3 class="feat-title">Clinical or Biochemical Hyperandrogenism</h3>
+            <p class="feat-desc">
+              Clinical manifestations (such as hirsutism, acne, or pattern hair loss) and biochemical elevations in circulating androgen levels represent key diagnostic dimensions.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(6, 182, 212, 0.1); color: #06B6D4;">
+              <i class="fa-solid fa-wave-square"></i>
+            </div>
+            <h3 class="feat-title">Polycystic Ovarian Morphology</h3>
+            <p class="feat-desc">
+              Characteristic ultrasound appearances (such as follicle counts &ge; 12-20 per ovary or ovarian volume &gt; 10 mL) evaluated within established age-appropriate thresholds.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B;">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h3 class="feat-title">Metabolic Health Considerations</h3>
+            <p class="feat-desc">
+              PCOS frequently intersects with broader cardiometabolic risks including central adiposity (waist-to-hip ratio), dyslipidemia, and arterial pressure requiring comprehensive screening.
+            </p>
+          </div>
+
+          <div class="feature-item-card" style="grid-column: span 2;">
+            <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">
+              <i class="fa-solid fa-dna"></i>
+            </div>
+            <h3 class="feat-title">Insulin Resistance &amp; Glucose Intolerance</h3>
+            <p class="feat-desc">
+              Underlying cellular insulin resistance can amplify ovarian androgen synthesis and elevate long-term susceptibility to impaired fasting glucose, metabolic syndrome, and Type-2 diabetes mellitus over time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comparison: PCOS vs Informal PCOD -->
+        <div class="pcos-vs-pcod-card">
+          <div class="comp-col-pcos">
+            <span class="comp-badge comp-badge-pcos">Formal Clinical Entity</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #581C87; margin-bottom: 0.65rem;">
+              PCOS (Polycystic Ovary Syndrome)
+            </h3>
+            <p style="font-size: 0.9rem; color: #6B21A8; line-height: 1.6; margin: 0;">
+              A recognized multi-system endocrine, reproductive, and metabolic disorder characterized by standardized international diagnostic criteria (Rotterdam criteria). Involves persistent ovulatory dysfunction, androgen excess, and systemic metabolic complications after systematically excluding mimicking pathologies.
+            </p>
+          </div>
+
+          <div class="comp-col-pcod">
+            <span class="comp-badge comp-badge-pcod">Informal Regional Usage</span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #334155; margin-bottom: 0.65rem;">
+              PCOD (Informal Usage)
+            </h3>
+            <p style="font-size: 0.9rem; color: #475569; line-height: 1.6; margin: 0;">
+              A broader, informally used term in regional colloquial discussions often referring loosely to ultrasound findings of polycystic-appearing ovaries or transient cycle irregularity without necessarily satisfying the rigorous endocrine and metabolic characterization of clinical PCOS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 02: PROBLEM STATEMENT
+         ====================================================================== -->
+    <section class="case-section bg-subtle" id="problems">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">02 &bull; Research Problem Statement</span>
+          <h2 class="section-title">Why Interpretable Computational Analysis Matters</h2>
+          <p class="section-subtitle">
+            Addressing critical clinical gaps where transparent, multi-indicator computational models can assist clinical research and healthcare awareness.
+          </p>
+        </div>
+
+        <div class="problems-grid">
+          <div class="problem-card">
+            <div class="prob-num">01</div>
+            <h3 class="prob-title">Complexity of Clinical Indicators</h3>
+            <p class="prob-desc">
+              PCOS evaluation spans reproductive, endocrine, metabolic, and imaging variables rather than a single isolated biomarker, requiring multi-factorial evaluation.
+            </p>
+          </div>
+
+          <div class="problem-card">
+            <div class="prob-num">02</div>
+            <h3 class="prob-title">Variation in Symptoms &amp; Presentations</h3>
+            <p class="prob-desc">
+              Phenotypes differ substantially across individuals, ethnicities, and life stages—making uniform rule-of-thumb pattern recognition challenging.
+            </p>
+          </div>
+
+          <div class="problem-card">
+            <div class="prob-num">03</div>
+            <h3 class="prob-title">Multi-Parameter Assessment Importance</h3>
+            <p class="prob-desc">
+              Assessing menstrual patterns alongside metabolic markers (glucose, lipids, BMI) and endocrine profiles (AMH, LH/FSH) is essential for holistic understanding.
+            </p>
+          </div>
+
+          <div class="problem-card">
+            <div class="prob-num">04</div>
+            <h3 class="prob-title">Challenges in Health Data Interpretation</h3>
+            <p class="prob-desc">
+              Heterogeneous health records, missing laboratory panels, and varying documentation conventions across Indian healthcare facilities complicate structured analysis.
+            </p>
+          </div>
+
+          <div class="problem-card" style="grid-column: span 2;">
+            <div class="prob-num">05</div>
+            <h3 class="prob-title">Role of Explainable AI in Decision Support</h3>
+            <p class="prob-desc">
+              Black-box scoring methods lack clinical trustworthiness. Transparent models showing which physiological indicators contribute to risk stratification empower clinicians to audit computational suggestions responsibly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 03: RESEARCH OBJECTIVES
+         ====================================================================== -->
+    <section class="case-section" id="objectives">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">03 &bull; Research Objectives</span>
+          <h2 class="section-title">Core Investigative Research Directions</h2>
+          <p class="section-subtitle">
+            Structured objectives guiding the exploratory computational framework and academic inquiry.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(147, 51, 234, 0.1); color: #9333EA;">
+              <span style="font-weight: 800; font-size: 0.95rem;">01</span>
+            </div>
+            <h3 class="feat-title">Study Clinical Indicators</h3>
+            <p class="feat-desc">
+              Synthesize clinical, endocrine, and metabolic indicators highlighted in standard endocrinology guidelines to establish a robust variable dictionary.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(236, 72, 153, 0.1); color: #EC4899;">
+              <span style="font-weight: 800; font-size: 0.95rem;">02</span>
+            </div>
+            <h3 class="feat-title">Explore Machine-Learning Approaches</h3>
+            <p class="feat-desc">
+              Investigate supervised classification and statistical risk-stratification techniques on appropriate structured health variables.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(6, 182, 212, 0.1); color: #06B6D4;">
+              <span style="font-weight: 800; font-size: 0.95rem;">03</span>
+            </div>
+            <h3 class="feat-title">Analyse Parameter Relationships</h3>
+            <p class="feat-desc">
+              Examine multivariate correlations and co-occurrence patterns spanning cycle regularity, metabolic factors, and hormonal markers.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B;">
+              <span style="font-weight: 800; font-size: 0.95rem;">04</span>
+            </div>
+            <h3 class="feat-title">Investigate Data-Driven Monitoring</h3>
+            <p class="feat-desc">
+              Evaluate structured longitudinal indicator tracking approaches that promote early healthcare awareness and lifestyle intervention.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">
+              <span style="font-weight: 800; font-size: 0.95rem;">05</span>
+            </div>
+            <h3 class="feat-title">Explore Explainable AI (XAI)</h3>
+            <p class="feat-desc">
+              Incorporate transparent feature-attribution methods so model outputs remain traceable to meaningful biological and clinical variables.
+            </p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(99, 102, 241, 0.1); color: #6366F1;">
+              <span style="font-weight: 800; font-size: 0.95rem;">06</span>
+            </div>
+            <h3 class="feat-title">Evaluate Decision-Support Role</h3>
+            <p class="feat-desc">
+              Critically assess where computational analysis can complement—and explicitly never replace—structured clinical judgment by licensed practitioners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 04: ESTABLISHED MEDICAL REFERENCE
+         ====================================================================== -->
+    <section class="case-section bg-subtle" id="clinical-framework">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">04 &bull; Established Medical Reference</span>
+          <h2 class="section-title">Clinical Foundation &amp; Reference Framework</h2>
+          <p class="section-subtitle">
+            Grounded in established international diagnostic consensus and national healthcare guidelines.
+          </p>
+        </div>
+
+        <div class="about-narrative-card" style="margin-bottom: 2rem;">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: #581C87; margin-bottom: 0.75rem;">
+            Rotterdam Diagnostic Framework (Clinical Reference Context)
+          </h3>
+          <p style="font-size: 0.95rem; color: #475569; line-height: 1.65; margin-bottom: 1.25rem;">
+            In the applicable adult diagnostic context, the internationally accepted <strong>Rotterdam consensus criteria</strong> require at least two of the following three manifestations—after systematically excluding alternative endocrine or mimicking etiologies (e.g. non-classical congenital adrenal hyperplasia, hyperprolactinemia, thyroid dysfunction):
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+            <div style="background: #FFFFFF; border: 1px solid #E9D5FF; border-radius: var(--radius-sm); padding: 1rem;">
+              <strong style="color: #9333EA;">Criterion 1:</strong>
+              <p style="margin: 0.25rem 0 0; font-size: 0.85rem; color: #64748B;">Ovulatory dysfunction / chronic menstrual irregularity (oligomenorrhea or amenorrhea).</p>
+            </div>
+            <div style="background: #FFFFFF; border: 1px solid #E9D5FF; border-radius: var(--radius-sm); padding: 1rem;">
+              <strong style="color: #9333EA;">Criterion 2:</strong>
+              <p style="margin: 0.25rem 0 0; font-size: 0.85rem; color: #64748B;">Clinical signs (hirsutism, acne) and/or biochemical hyperandrogenism.</p>
+            </div>
+            <div style="background: #FFFFFF; border: 1px solid #E9D5FF; border-radius: var(--radius-sm); padding: 1rem;">
+              <strong style="color: #9333EA;">Criterion 3:</strong>
+              <p style="margin: 0.25rem 0 0; font-size: 0.85rem; color: #64748B;">Polycystic ovarian morphology (PCOM) observed via pelvic ultrasound examination.</p>
+            </div>
+          </div>
+          <div style="font-size: 0.82rem; color: #701A75; background: #FDF4FF; padding: 0.75rem 1rem; border-radius: var(--radius-xs); border: 1px dashed #F0ABFC;">
+            <em>Note: These criteria serve strictly as a domain knowledge reference foundation for modeling research and are not implemented as automated medical diagnoses.</em>
+          </div>
+        </div>
+
+        <!-- Interactive Framework Dimensions Tabs -->
+        <div class="framework-tabs" role="tablist">
+          <button class="framework-tab-btn active" data-tab="tab-pres" onclick="switchFrameworkTab('tab-pres')">Clinical Presentation</button>
+          <button class="framework-tab-btn" data-tab="tab-diag" onclick="switchFrameworkTab('tab-diag')">Diagnostic Criteria</button>
+          <button class="framework-tab-btn" data-tab="tab-inv" onclick="switchFrameworkTab('tab-inv')">Investigations</button>
+          <button class="framework-tab-btn" data-tab="tab-meta" onclick="switchFrameworkTab('tab-meta')">Metabolic Considerations</button>
+          <button class="framework-tab-btn" data-tab="tab-diff" onclick="switchFrameworkTab('tab-diff')">Differential Diagnosis</button>
+          <button class="framework-tab-btn" data-tab="tab-mgmt" onclick="switchFrameworkTab('tab-mgmt')">Management Considerations</button>
+        </div>
+
+        <!-- Tab 1 -->
+        <div class="framework-tab-content active" id="tab-pres">
+          <h4 style="font-family: var(--font-heading); color: #581C87; margin-bottom: 0.5rem;">Clinical Concept: Clinical Presentation</h4>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Features menstrual cycle disturbances including oligomenorrhea (cycles &gt; 35 days) or amenorrhea (absence of menses for 3-6 months), clinical manifestations of cutaneous androgen excess (hirsutism quantified by Ferriman-Gallwey scoring, persistent adult cystic acne, androgenic alopecia), alongside weight variations and metabolic risk indicators.
+          </p>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="framework-tab-content" id="tab-diag">
+          <h4 style="font-family: var(--font-heading); color: #581C87; margin-bottom: 0.5rem;">Clinical Concept: Diagnostic Criteria</h4>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Guided by the Rotterdam Consensus (2003) and endorsed by international guidelines (Monash 2023). Requires 2 out of 3 features in adults. In adolescent populations within 8 years of menarche, ultrasound criteria are generally withheld due to physiological multicyclic ovaries, emphasizing persistent ovulatory dysfunction and biochemical androgen excess.
+          </p>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="framework-tab-content" id="tab-inv">
+          <h4 style="font-family: var(--font-heading); color: #581C87; margin-bottom: 0.5rem;">Clinical Concept: Investigations</h4>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Biochemical testing includes Free and Total Testosterone, Sex Hormone-Binding Globulin (SHBG) to calculate Free Androgen Index (FAI), LH:FSH ratio, Anti-Müllerian Hormone (AMH), alongside fasting plasma glucose, 2-hour Oral Glucose Tolerance Test (OGTT), fasting lipid profiles, and pelvic ultrasound imaging.
+          </p>
+        </div>
+
+        <!-- Tab 4 -->
+        <div class="framework-tab-content" id="tab-meta">
+          <h4 style="font-family: var(--font-heading); color: #581C87; margin-bottom: 0.5rem;">Clinical Concept: Metabolic Considerations</h4>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Insulin resistance affects 50-70% of individuals across both lean and hyper-BMI phenotypes. Compensatory hyperinsulinemia stimulates ovarian theca cell androgen production while lowering hepatic SHBG synthesis, intensifying bioavailable circulating androgens and creating a bidirectional endocrine-metabolic cascade.
+          </p>
+        </div>
+
+        <!-- Tab 5 -->
+        <div class="framework-tab-content" id="tab-diff">
+          <h4 style="font-family: var(--font-heading); color: #581C87; margin-bottom: 0.5rem;">Clinical Concept: Differential Diagnosis</h4>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Essential exclusion of mimicking conditions: Thyroid disorders (serum TSH), hyperprolactinemia (serum prolactin), non-classical 21-hydroxylase congenital adrenal hyperplasia (follicular phase 17-hydroxyprogesterone), Cushing's syndrome, and androgen-secreting neoplasms.
+          </p>
+        </div>
+
+        <!-- Tab 6 -->
+        <div class="framework-tab-content" id="tab-mgmt">
+          <h4 style="font-family: var(--font-heading); color: #581C87; margin-bottom: 0.5rem;">Clinical Concept: Management Considerations</h4>
+          <p style="font-size: 0.92rem; color: #475569; line-height: 1.6;">
+            Personalized lifestyle modifications (caloric optimization, resistance and aerobic physical activity) form first-line foundational intervention. Pharmacological pathways under clinical guidance include combined oral contraceptives for cycle and androgen regulation, metformin for metabolic sensitization, and anti-androgens where indicated.
+          </p>
+        </div>
+
+        <!-- Primary Clinical Guideline Card -->
+        <div class="feature-item-card" style="margin-top: 2rem; border-left: 4px solid #9333EA;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            <div>
+              <span class="badge" style="background: rgba(147, 51, 234, 0.1); color: #9333EA; font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">
+                National Clinical Protocol
+              </span>
+              <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin: 0.5rem 0 0.35rem;">
+                Government of India — Standard Treatment Guidelines: Endocrinology (PCOS Section)
+              </h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.55;">
+                Referenced as the primary clinical framework in this research design. Direct guideline documentation is held in <code>public/docs/</code> for verification against national clinical standards.
+              </p>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <span class="badge" style="background: #F1F5F9; color: #475569; font-size: 0.75rem; padding: 0.45rem 0.85rem; border-radius: var(--radius-xs);">
+                <i class="fa-solid fa-file-medical"></i> Guideline Reference
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 05: METHODOLOGY & PIPELINE
+         ====================================================================== -->
+    <section class="case-section" id="methodology">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">05 &bull; Research Methodology &amp; Conceptual Pipeline</span>
+          <h2 class="section-title">Structured Ten-Stage Research Workflow</h2>
+          <p class="section-subtitle">
+            A systematic, leak-free academic methodology transitioning from clinical review to explainable decision support.
+          </p>
+        </div>
+
+        <div class="ten-stage-grid">
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 01</span>
+            <h4 class="stage-title">Clinical Literature Review</h4>
+            <p class="stage-desc">Synthesize endocrinology guidelines (GOI, Rotterdam, Monash) and peer-reviewed PCOS ML literature.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 02</span>
+            <h4 class="stage-title">Research Question Definition</h4>
+            <p class="stage-desc">Formulate bounded questions for non-invasive risk stratification and feature interpretability.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 03</span>
+            <h4 class="stage-title">Data Source Identification</h4>
+            <p class="stage-desc">Identify ethically sourced, de-identified datasets (ICMR, Kaggle, Mendeley) matching indicator criteria.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 04</span>
+            <h4 class="stage-title">Data Cleaning &amp; Preprocessing</h4>
+            <p class="stage-desc">Handle missing clinical panels, multi-unit standardizations, and physiological range audits.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 05</span>
+            <h4 class="stage-title">Exploratory Data Analysis</h4>
+            <p class="stage-desc">Inspect demographic distributions, class imbalance ratios, and multivariate correlation structures.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 06</span>
+            <h4 class="stage-title">Feature Analysis</h4>
+            <p class="stage-desc">Evaluate clinically grounded feature groupings across menstrual, biochemical, and metabolic covariates.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 07</span>
+            <h4 class="stage-title">ML Model Exploration</h4>
+            <p class="stage-desc">Explore interpretable statistical baselines (Logistic Regression) alongside ensemble models (Random Forest, XGBoost).</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 08</span>
+            <h4 class="stage-title">Model Evaluation</h4>
+            <p class="stage-desc">Validate generalization using strict held-out partitions, stratified k-fold splits, and calibration curves.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 09</span>
+            <h4 class="stage-title">Explainability &amp; Interpretation</h4>
+            <p class="stage-desc">Map model decisions back to human-understandable clinical features via SHAP and local feature attribution.</p>
+          </div>
+
+          <div class="stage-card">
+            <span class="stage-num-badge">Stage 10</span>
+            <h4 class="stage-title">Research Findings</h4>
+            <p class="stage-desc">Document clinical limitations, potential biases, dataset constraints, and reproducible research observations.</p>
+          </div>
+        </div>
+
+        <!-- Diagrammatic Conceptual Pipeline -->
+        <div class="pipeline-diagram-box">
+          <div style="text-align: center; margin-bottom: 1.75rem;">
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #F472B6; font-weight: 700;">
+              Conceptual Data-Analysis &amp; Explainability Pipeline
+            </span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; margin: 0.35rem 0 0;">
+              Diagrammatic Architecture (Non-Diagnostic Research Flow)
+            </h3>
+          </div>
+
+          <div class="pipeline-steps-row">
+            <div class="pipe-step-card">
+              <div class="pipe-step-icon"><i class="fa-solid fa-hospital-user"></i></div>
+              <div class="pipe-step-title">1. De-Identified Input</div>
+              <p class="pipe-step-desc">Anonymized clinical history, metabolic covariates, and hormone panels.</p>
+            </div>
+
+            <div class="pipe-step-card">
+              <div class="pipe-step-icon"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+              <div class="pipe-step-title">2. Preprocessing &amp; QC</div>
+              <p class="pipe-step-desc">Missing-value imputation, outlier filtering, and clinical range normalization.</p>
+            </div>
+
+            <div class="pipe-step-card">
+              <div class="pipe-step-icon"><i class="fa-solid fa-microchip"></i></div>
+              <div class="pipe-step-title">3. Model Exploration</div>
+              <p class="pipe-step-desc">Interpretable linear &amp; ensemble classifiers evaluated under cross-validation.</p>
+            </div>
+
+            <div class="pipe-step-card">
+              <div class="pipe-step-icon"><i class="fa-solid fa-eye"></i></div>
+              <div class="pipe-step-title">4. XAI &amp; Calibration</div>
+              <p class="pipe-step-desc">Feature attribution weights, probability calibration, and error auditing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 06: POTENTIAL HEALTH PARAMETERS
+         ====================================================================== -->
+    <section class="case-section bg-subtle" id="variables">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">06 &bull; Potential Health Parameters</span>
+          <h2 class="section-title">Conceptual Research Variable Taxonomy</h2>
+          <p class="section-subtitle">
+            Indicators identified during clinical domain study. Not all variables are assumed to be available in any single dataset.
+          </p>
+        </div>
+
+        <div class="taxonomy-grid">
+          <!-- Column 1 -->
+          <div class="taxonomy-col">
+            <h3 class="taxonomy-col-title">
+              <i class="fa-solid fa-notes-medical" style="color: #9333EA;"></i>
+              <span>Clinical Indicators</span>
+            </h3>
+            <ul class="taxonomy-list">
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Menstrual cycle regularity &amp; length</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Cycle irregularity duration (months)</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Clinical signs of hyperandrogenism (acne, hirsutism)</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Anti-Müllerian Hormone (AMH) levels</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> LH and FSH hormone concentrations</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> LH:FSH ratio metrics</li>
+            </ul>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="taxonomy-col">
+            <h3 class="taxonomy-col-title">
+              <i class="fa-solid fa-heart-pulse" style="color: #EC4899;"></i>
+              <span>Metabolic Indicators</span>
+            </h3>
+            <ul class="taxonomy-list">
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Body Mass Index (BMI, kg/m&sup2;)</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Waist-to-Hip Ratio (WHR)</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Fasting blood glucose measurements</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Oral Glucose Tolerance (OGTT 2-hr)</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Lipid panel (Triglycerides, HDL, LDL)</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Fasting serum insulin &amp; HOMA-IR</li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="taxonomy-col">
+            <h3 class="taxonomy-col-title">
+              <i class="fa-solid fa-user-clock" style="color: #06B6D4;"></i>
+              <span>Other Relevant Factors</span>
+            </h3>
+            <ul class="taxonomy-list">
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Chronological age</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Family history of PCOS or Type-2 Diabetes</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Lifestyle &amp; physical activity levels</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Dietary &amp; nutritional patterns</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Sleep regularity &amp; stress markers</li>
+              <li class="taxonomy-item"><i class="fa-solid fa-check"></i> Ultrasound Follicle count &amp; ovarian volume</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 07: AI & ML EXPLORATION
+         ====================================================================== -->
+    <section class="case-section" id="ml-exploration">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">07 &bull; AI &amp; Machine-Learning Exploration</span>
+          <h2 class="section-title">Candidate Analytical &amp; Modeling Techniques</h2>
+          <p class="section-subtitle">
+            Exploring diverse computational methods under a strictly transparent, non-clinical research scope.
+          </p>
+        </div>
+
+        <!-- Scope Notice -->
+        <div style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: var(--radius-sm); padding: 0.9rem 1.25rem; margin-bottom: 2rem; font-size: 0.85rem; color: #475569;">
+          <strong>Methodological Scope Notice:</strong> None of the models listed below are claimed as trained, benchmarked, or clinically validated in this portfolio. Model suitability depends strictly on dataset size, clinical curation quality, variable completeness, and leak-free validation protocols.
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(147, 51, 234, 0.1); color: #9333EA;">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h3 class="feat-title">Exploratory Data Analysis</h3>
+            <p class="feat-desc">Inspect multi-variable distributions, missingness patterns, and class imbalance across clinical records prior to model building.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(236, 72, 153, 0.1); color: #EC4899;">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <h3 class="feat-title">Statistical Analysis</h3>
+            <p class="feat-desc">Assess baseline odds associations, bivariate correlations, and significance across clinical and metabolic covariates.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(6, 182, 212, 0.1); color: #06B6D4;">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <h3 class="feat-title">Logistic Regression</h3>
+            <p class="feat-desc">Transparent linear baseline model providing directly interpretable coefficients and odds-ratio risk contributions.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B;">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="feat-title">Decision Trees</h3>
+            <p class="feat-desc">Hierarchical rule-based partitioning useful for examining non-linear variable thresholds and clinical interaction paths clearly.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <h3 class="feat-title">Random Forest</h3>
+            <p class="feat-desc">Ensemble bagging architecture well-suited for tabular clinical data, capturing non-linear interactions while moderating variance.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(99, 102, 241, 0.1); color: #6366F1;">
+              <i class="fa-solid fa-bezier-curve"></i>
+            </div>
+            <h3 class="feat-title">Support Vector Machines</h3>
+            <p class="feat-desc">Margin-maximizing hyperplane classification evaluated with appropriate feature scaling across continuous physiological markers.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(239, 68, 68, 0.1); color: #EF4444;">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h3 class="feat-title">Gradient Boosting (XGBoost)</h3>
+            <p class="feat-desc">Sequential gradient ensemble method evaluated alongside strict regularization and early-stopping controls to prevent overfitting.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(168, 85, 247, 0.1); color: #A855F7;">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="feat-title">Explainable AI (SHAP / LIME)</h3>
+            <p class="feat-desc">Post-hoc feature attribution techniques that decompose composite predictions into understandable, patient-specific indicator weights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 08: EVALUATION FRAMEWORK
+         ====================================================================== -->
+    <section class="case-section bg-subtle" id="evaluation">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">08 &bull; Evaluation Framework</span>
+          <h2 class="section-title">Planned Quantitative Validation Metrics</h2>
+          <p class="section-subtitle">
+            Rigorous statistical evaluation protocol designed to measure classification performance, discrimination, and probability calibration.
+          </p>
+        </div>
+
+        <div style="background: #FFFBEB; border: 1px solid #FDE68A; border-left: 4px solid #F59E0B; border-radius: var(--radius-sm); padding: 0.9rem 1.25rem; margin-bottom: 2rem; font-size: 0.85rem; color: #92400E;">
+          <strong>Validation Integrity Warning:</strong> All evaluation metrics must be computed strictly on valid, unseen held-out test partitions using leak-free cross-validation procedures. No fabricated comparison scores or simulated performance charts are displayed.
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem;">
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #9333EA; font-size: 1.05rem; margin-bottom: 0.35rem;">Accuracy</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Overall proportion of correct classifications, interpreted cautiously under class-imbalanced data distributions.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #EC4899; font-size: 1.05rem; margin-bottom: 0.35rem;">Precision (PPV)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Positive predictive value reflecting the likelihood that flagged risk assessments represent true positive conditions.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #06B6D4; font-size: 1.05rem; margin-bottom: 0.35rem;">Recall (Sensitivity)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">True positive detection rate measuring the model's capacity to identify true cases without false negatives.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #10B981; font-size: 1.05rem; margin-bottom: 0.35rem;">F1-Score</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Harmonic mean between precision and recall, balancing detection power against false-alarm generation.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #F59E0B; font-size: 1.05rem; margin-bottom: 0.35rem;">ROC-AUC</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Area Under Receiver Operating Characteristic curve evaluating threshold-independent diagnostic discrimination.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #6366F1; font-size: 1.05rem; margin-bottom: 0.35rem;">Confusion Matrix</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Granular contingency auditing of true positives, false positives, true negatives, and false negatives.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #8B5CF6; font-size: 1.05rem; margin-bottom: 0.35rem;">Calibration Curves</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Alignment analysis ensuring predicted risk probabilities match observed clinical empirical frequencies.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <h4 style="font-family: var(--font-heading); color: #14B8A6; font-size: 1.05rem; margin-bottom: 0.35rem;">Specificity (TNR)</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">True negative rate verifying that non-PCOS physiological states are not unnecessarily flagged.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 09: RESEARCH SIGNIFICANCE
+         ====================================================================== -->
+    <section class="case-section" id="significance">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">09 &bull; Research Significance</span>
+          <h2 class="section-title">Potential Research &amp; Societal Contribution</h2>
+          <p class="section-subtitle">
+            Exploring the broader societal value and scientific potential of explainable health analytics for women's wellness.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(147, 51, 234, 0.1); color: #9333EA;">
+              <i class="fa-solid fa-person-breastfeeding"></i>
+            </div>
+            <h3 class="feat-title">Women's Health Awareness</h3>
+            <p class="feat-desc">Encourages earlier attention to menstrual, metabolic, and hormonal health patterns, combating social stigma and delayed diagnosis.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(236, 72, 153, 0.1); color: #EC4899;">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="feat-title">Healthcare Data Analysis</h3>
+            <p class="feat-desc">Explores reproducible pipelines for cleaning, structuring, and harmonizing multi-factor endocrine and metabolic datasets.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(6, 182, 212, 0.1); color: #06B6D4;">
+              <i class="fa-solid fa-laptop-medical"></i>
+            </div>
+            <h3 class="feat-title">AI-Assisted Risk Assessment</h3>
+            <p class="feat-desc">Investigates non-diagnostic computational risk-awareness tools that help users know when to seek professional endocrine review.</p>
+          </div>
+
+          <div class="feature-item-card">
+            <div class="feat-icon-box" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <h3 class="feat-title">Explainable Healthcare AI</h3>
+            <p class="feat-desc">Prioritizes transparent biological explanations over opaque predictions, aligning computer science with medical ethics.</p>
+          </div>
+
+          <div class="feature-item-card" style="grid-column: span 2;">
+            <div class="feat-icon-box" style="background: rgba(245, 158, 11, 0.1); color: #F59E0B;">
+              <i class="fa-solid fa-hand-holding-medical"></i>
+            </div>
+            <h3 class="feat-title">Research-Driven Digital Health Innovation</h3>
+            <p class="feat-desc">Bridges academic clinical endocrinology guidelines with responsible software engineering practices to advance patient-centric digital wellness tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 10: PROGRESS TRACKER
+         ====================================================================== -->
+    <section class="case-section bg-subtle" id="roadmap">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">10 &bull; Transparent Research Progress Tracker</span>
+          <h2 class="section-title">Current Research Stage &amp; Roadmap</h2>
+          <p class="section-subtitle">
+            Real-time status tracking across academic phases to maintain scientific honesty and transparency.
+          </p>
+        </div>
+
+        <div class="roadmap-list">
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 01</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Clinical literature review</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Preliminary AI-ML survey, national guideline review, and related literature synthesis initiated.</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-in-progress">
+              <i class="fa-solid fa-spinner fa-spin"></i> In Progress
+            </span>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 02</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Research framework development</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Structuring parameter taxonomy, non-diagnostic scoping, and validation protocols.</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-in-progress">
+              <i class="fa-solid fa-spinner fa-spin"></i> In Progress
+            </span>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 03</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Dataset identification &amp; sourcing</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Evaluating ethically de-identified public and institutional research repositories (ICMR, Mendeley, Kaggle).</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-planned">
+              <i class="fa-regular fa-clock"></i> Planned
+            </span>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 04</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Data preprocessing and analysis</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Missingness audit, outlier detection, and clinical range normalization scheduled after dataset verification.</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-planned">
+              <i class="fa-regular fa-clock"></i> Planned
+            </span>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 05</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Model development</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Interpretable linear models and ensemble classifiers to be implemented on verified datasets.</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-planned">
+              <i class="fa-regular fa-clock"></i> Planned
+            </span>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 06</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Model evaluation</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Held-out test partition validation, calibration checks, and XAI feature attribution inspection.</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-planned">
+              <i class="fa-regular fa-clock"></i> Planned
+            </span>
+          </div>
+
+          <div class="roadmap-item">
+            <div class="roadmap-info">
+              <span class="roadmap-stage-badge">Stage 07</span>
+              <div>
+                <strong style="color: var(--text-main); font-size: 0.95rem;">Research documentation</strong>
+                <p style="margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text-secondary);">Final academic manuscript compilation and technical artifact publication.</p>
+              </div>
+            </div>
+            <span class="roadmap-status-pill status-planned">
+              <i class="fa-regular fa-clock"></i> Planned
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 11: BIBLIOGRAPHY & REFERENCES
+         ====================================================================== -->
+    <section class="case-section" id="bibliography">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">11 &bull; Bibliography &amp; References</span>
+          <h2 class="section-title">Clinical &amp; Literature References</h2>
+          <p class="section-subtitle">
+            Foundational clinical guidelines, peer-reviewed literature, and referenced research papers.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+          <!-- Primary Guideline -->
+          <div class="ref-card" style="border-left: 4px solid #9333EA;">
+            <div>
+              <span class="badge" style="background: rgba(147, 51, 234, 0.1); color: #9333EA; font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">
+                Primary Clinical Reference
+              </span>
+              <h3 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin: 0.65rem 0 0.35rem;">
+                Government of India — Standard Treatment Guidelines: Endocrinology
+              </h3>
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0; line-height: 1.55;">
+                Polycystic Ovary Syndrome (PCOS) section. Establishes core clinical, endocrine, and metabolic diagnostic thresholds for institutional practice.
+              </p>
+            </div>
+            <div style="font-size: 0.8rem; color: #64748B;">
+              <i class="fa-solid fa-landmark"></i> Ministry of Health &amp; Family Welfare, New Delhi
+            </div>
+          </div>
+
+          <!-- Literature Survey Report -->
+          <div class="ref-card" style="border-left: 4px solid #EC4899;">
+            <div>
+              <span class="badge" style="background: rgba(236, 72, 153, 0.1); color: #BE185D; font-size: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 9999px;">
+                Preliminary Research Report (PDF)
+              </span>
+              <h3 style="font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin: 0.65rem 0 0.35rem;">
+                PCOS Identification Using AI-ML Model — Literature Survey &amp; Scope Report
+              </h3>
+              <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0; line-height: 1.55;">
+                Comprehensive survey covering clinical dataset scoping (AMH, LH, FSH), ultrasound image analysis (PCOM), and current ML optimization algorithms.
+              </p>
+            </div>
+            <a href="https://manikandan.nayaruvi.in/docs/pcos_identification_using_ai_literature_survey.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="align-self: flex-start; font-size: 0.8rem;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <span>Open Document (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Peer-Reviewed Papers Grid -->
+        <h3 style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem;">
+          Referenced Peer-Reviewed Literature &amp; Datasets:
+        </h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+          <div class="ref-card">
+            <div>
+              <strong style="color: #9333EA; font-size: 0.88rem;">MDPI Sensors (2025)</strong>
+              <p style="font-size: 0.82rem; color: #475569; margin: 0.35rem 0;">AI model for PCOS prediction using clinical symptoms, ensemble learning (RF, KNN, LR), and bio-inspired optimization (WAO, RSO, CSO).</p>
+            </div>
+            <a href="https://www.mdpi.com/1424-8220/25/4/1166" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">
+              View Article &rarr;
+            </a>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <strong style="color: #EC4899; font-size: 0.88rem;">Nature Scientific Reports (2024)</strong>
+              <p style="font-size: 0.82rem; color: #475569; margin: 0.35rem 0;">CystNet: Deep learning (InceptionNet V3, CAE) and ensemble classification for ultrasound-based ovarian cyst and PCOS analysis.</p>
+            </div>
+            <a href="https://www.nature.com/articles/s41598-024-75964-3" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">
+              View Article &rarr;
+            </a>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <strong style="color: #06B6D4; font-size: 0.88rem;">PMC / NCBI (PMC10137609)</strong>
+              <p style="font-size: 0.82rem; color: #475569; margin: 0.35rem 0;">Clinical data analytics and multimodal approaches in polycystic ovary syndrome diagnosis and biomarker association studies.</p>
+            </div>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10137609/" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">
+              View Article &rarr;
+            </a>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <strong style="color: #10B981; font-size: 0.88rem;">Biomedical &amp; Pharmacology Journal</strong>
+              <p style="font-size: 0.82rem; color: #475569; margin: 0.35rem 0;">Hybrid CNN-XGBoost model: A multimodal data approach integrating electronic health records and transvaginal ultrasonography.</p>
+            </div>
+            <a href="https://biomedpharmajournal.org/vol18no3/pcos-detection-using-hybrid-cnn-xgboost-model-a-multimodal-data-approach/" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">
+              View Article &rarr;
+            </a>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <strong style="color: #F59E0B; font-size: 0.88rem;">PubMed 39569644 (Japan's JCOS System)</strong>
+              <p style="font-size: 0.82rem; color: #475569; margin: 0.35rem 0;">Comparative diagnostic utility of national diagnostic criteria (Japan Society of Obstetrics and Gynecology JCOS vs Rotterdam Consensus).</p>
+            </div>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/39569644/" target="_blank" rel="noopener noreferrer" style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">
+              View Article &rarr;
+            </a>
+          </div>
+
+          <div class="ref-card">
+            <div>
+              <strong style="color: #6366F1; font-size: 0.88rem;">FOGSI &amp; Indian Fertility Society (IFS)</strong>
+              <p style="font-size: 0.82rem; color: #475569; margin: 0.35rem 0;">Clinical practice guidelines for the management of Polycystic Ovary Syndrome in Indian women: Evidence-based recommendations.</p>
+            </div>
+            <span style="font-size: 0.78rem; color: #64748B;">National Clinical Guideline</span>
+          </div>
+        </div>
+
+        <!-- Ethics Principle -->
+        <div style="background: #FDF4FF; border: 1px solid #F0ABFC; border-radius: var(--radius-sm); padding: 1.1rem 1.4rem; font-size: 0.85rem; color: #701A75;">
+          <strong><i class="fa-solid fa-shield-halved"></i> Data Privacy &amp; Ethics Principle:</strong> Any sensitive health data analyzed in future phases of this research must adhere to informed consent protocols, strict irreversible de-identification, minimal data retention, and institutional review board / clinical oversight principles.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 12: RESEARCH DOCUMENTATION ARCHIVE
+         ====================================================================== -->
+    <section class="case-section bg-subtle" id="archive">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag-pill">12 &bull; Research Documentation Archive</span>
+          <h2 class="section-title">Structured Artifacts &amp; Future Additions</h2>
+          <p class="section-subtitle">
+            Repository slots prepared for progressive upload of research deliverables as the academic investigation progresses.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 3rem;">
+          <div class="ref-card" style="border: 1.5px solid #9333EA; background: #FFFFFF;">
+            <div>
+              <i class="fa-solid fa-file-pdf" style="font-size: 1.8rem; color: #BE185D; margin-bottom: 0.5rem;"></i>
+              <h4 style="font-family: var(--font-heading); font-size: 0.98rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.25rem;">Literature Review Report</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin: 0;">Comprehensive survey on AI-ML models for PCOS identification.</p>
+            </div>
+            <a href="https://manikandan.nayaruvi.in/docs/pcos_identification_using_ai_literature_survey.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="font-size: 0.78rem;">
+              <span>View Survey PDF</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-file-lines" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Research Paper Manuscript</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-table" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Dataset Documentation</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-diagram-project" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Research Methodology Spec</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-chart-line" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Analysis Results</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-square-check" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Model Evaluation Reports</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-chalkboard-user" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Research Presentation Deck</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+
+          <div class="archive-slot-card">
+            <i class="fa-solid fa-award" style="font-size: 1.6rem; color: #94A3B8; margin-bottom: 0.5rem;"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 700; color: #475569; margin-bottom: 0.25rem;">Conference Submissions</h4>
+            <span class="badge" style="background: #E2E8F0; color: #64748B; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 9999px;">Slot Ready for Upload</span>
+          </div>
+        </div>
+
+        <div style="text-align: center;">
+          <a href="index.html#projects" class="btn btn-primary" style="padding: 0.85rem 2.2rem; font-size: 1rem;">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer" style="padding: 3rem 0; border-top: 1px solid var(--border-light); background: #FFFFFF;">
+    <div class="container text-center">
+      <p style="font-size: 0.88rem; color: #64748B; margin-bottom: 0.5rem;">
+        &copy; 2026 Kamalesh Ganesh. All rights reserved. Academic Healthcare Research &amp; Risk Assessment.
+      </p>
+      <p style="font-size: 0.8rem; color: #94A3B8; margin: 0;">
+        Grounded in clinical endocrinology framework &amp; explainable AI &bull; Non-diagnostic academic exploration
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script for Tab Switching -->
+  <script>
+    function switchFrameworkTab(tabId) {
+      document.querySelectorAll('.framework-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+      });
+      document.querySelectorAll('.framework-tab-content').forEach(content => {
+        content.classList.toggle('active', content.id === tabId);
+      });
+    }
+
+    // Smooth scroll for in-page navigation links
+    document.querySelectorAll('.research-nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            const offset = 140;
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

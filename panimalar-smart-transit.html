@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Panimalar Smart Transit — Smart College Bus Tracking System | Kamalesh Ganesh</title>
+  <meta name="title" content="Panimalar Smart Transit — Smart College Bus Tracking System | Kamalesh Ganesh">
+  <meta name="description" content="Panimalar Smart Transit is a smart college transportation tracking platform designed to help students monitor college bus locations, view bus availability, and access transportation information through a digital interface.">
+  <meta name="author" content="Kamalesh Ganesh">
+  <meta name="theme-color" content="#0284C7">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Base & Detail Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       NAVIGATION BAR
+       ====================================================================== -->
+  <header class="detail-navbar">
+    <div class="container detail-nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Kamalesh Ganesh Home">
+        <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
+      </a>
+
+      <a href="index.html#projects" class="btn-back-portfolio">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Portfolio</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION: SMART COLLEGE BUS TRACKING SYSTEM
+         ====================================================================== -->
+    <section class="case-hero">
+      <div class="container">
+        <!-- Top Metadata Badge -->
+        <div class="case-hero-meta-badge">
+          <i class="fa-solid fa-satellite-dish"></i>
+          <span>Smart Mobility Telemetry &bull; Student &bull; Driver &bull; Admin Connected Interface &bull; Live GPS Ready</span>
+        </div>
+
+        <h1 class="case-hero-title">
+          Smart College Bus Tracking System<br>
+          <span class="case-hero-title-accent">Panimalar Smart Transit</span>
+        </h1>
+
+        <p class="case-hero-tagline">
+          Smarter College Transportation. Better Visibility. Real-Time Convenience.
+        </p>
+
+        <p class="case-hero-summary">
+          Panimalar Smart Transit is a smart college transportation tracking platform designed to help students monitor college bus locations, view bus availability, and access transportation information through a digital interface.
+        </p>
+
+        <!-- Tech Categorization Badges -->
+        <div class="case-tag-list">
+          <span class="case-tag-item"><i class="fa-solid fa-globe"></i> Web Application</span>
+          <span class="case-tag-item"><i class="fa-solid fa-location-crosshairs"></i> GPS Tracking</span>
+          <span class="case-tag-item"><i class="fa-solid fa-wave-square"></i> Real-Time Monitoring</span>
+          <span class="case-tag-item"><i class="fa-solid fa-bus"></i> Smart Transportation</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="case-hero-actions">
+          <a href="#features" class="btn btn-primary">
+            <span>Explore Features</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="#workflow" class="btn btn-secondary">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span>View System Flow</span>
+          </a>
+          <a href="#preview" class="btn btn-outline" style="border-color: rgba(2, 132, 199, 0.4); color: var(--transit-blue);">
+            <i class="fa-solid fa-desktop"></i>
+            <span>Interactive Demo</span>
+          </a>
+        </div>
+
+        <!-- Hero Mockup Visual Showcase -->
+        <div class="case-hero-mockup-wrap">
+          <img 
+            src="images/panimalar-transit-mockup.jpg" 
+            alt="Abstract smart college bus tracking dashboard mockup preview" 
+            class="case-hero-mockup-img"
+            onerror="this.onerror=null; this.src='public/images/panimalar-transit-mockup.jpg';"
+          >
+          <div class="case-mockup-caption">
+            <span><i class="fa-solid fa-layer-group"></i> Abstract smart college bus tracking dashboard mockup preview</span>
+            <span><i class="fa-solid fa-circle-check" style="color: #10B981;"></i> Multi-Role Telemetry Architecture</span>
+          </div>
+        </div>
+
+        <!-- Quick KPI Telemetry Stats -->
+        <div class="case-kpi-grid">
+          <div class="case-kpi-card">
+            <div class="case-kpi-label">Telemetry</div>
+            <div class="case-kpi-val">Real-Time Sync</div>
+            <div class="case-kpi-desc">Continuous location streaming via Firebase cloud telemetry</div>
+          </div>
+          <div class="case-kpi-card">
+            <div class="case-kpi-label">Visibility</div>
+            <div class="case-kpi-val">Live Status &amp; ETA</div>
+            <div class="case-kpi-desc">Personalized stop proximity awareness and dynamic countdowns</div>
+          </div>
+          <div class="case-kpi-card">
+            <div class="case-kpi-label">Roles</div>
+            <div class="case-kpi-val">3 Connected Views</div>
+            <div class="case-kpi-desc">Dedicated portals for Student, Driver, and Transit Administration</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         01 · ABOUT THE PROJECT
+         ====================================================================== -->
+    <section class="case-section case-section-light" id="about">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">01 &bull; About The Project</span>
+          <h2 class="case-sec-title">Digital Visibility for Daily Campus Commutes</h2>
+          <p class="case-sec-subtitle">
+            Re-engineering everyday college transportation through automated digital connectivity.
+          </p>
+        </div>
+
+        <div class="case-about-grid">
+          <div class="case-about-text">
+            <p class="case-narrative-p">
+              <strong>Panimalar Smart Transit</strong> was built as a dedicated college transportation management and live visibility platform serving students, drivers, and campus transport administrators within a unified ecosystem.
+            </p>
+            <p class="case-narrative-p">
+              Instead of relying on guesswork, phone calls, or fragmented messaging groups to figure out whether a college shuttle is active or approaching, the platform provides structured real-time GPS visibility, availability indicators, and personalized boarding notifications.
+            </p>
+          </div>
+
+          <div class="case-highlight-box">
+            <div class="case-highlight-item">
+              <div class="case-hi-icon"><i class="fa-solid fa-route"></i></div>
+              <div>
+                <h4 class="case-hi-title">Campus-Wide Coverage</h4>
+                <p class="case-hi-desc">Coordinates multiple shuttle paths connecting colleges across metropolitan pickup nodes.</p>
+              </div>
+            </div>
+            <div class="case-highlight-item">
+              <div class="case-hi-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h4 class="case-hi-title">Instant State Feedback</h4>
+                <p class="case-hi-desc">Live status badges update in sub-second intervals to reflect road delays and route changes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         02 · PROBLEM STATEMENT
+         ====================================================================== -->
+    <section class="case-section case-section-tint" id="problems">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">02 &bull; Problem Statement</span>
+          <h2 class="case-sec-title">Daily Campus Transit Visibility Challenges</h2>
+          <p class="case-sec-subtitle">
+            Addressing commuter friction points through real-time telemetry and unified interfaces.
+          </p>
+        </div>
+
+        <div class="case-problems-grid">
+          <!-- Card 01 -->
+          <div class="case-problem-card">
+            <div class="case-prob-num">01</div>
+            <h3 class="case-prob-title">Uncertainty Around Bus Locations</h3>
+            <p class="case-prob-desc">
+              Students waiting at pickup points previously had no digital way to confirm the current location of their college bus.
+            </p>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="case-problem-card">
+            <div class="case-prob-num">02</div>
+            <h3 class="case-prob-title">Lack of Availability &amp; Active Status Visibility</h3>
+            <p class="case-prob-desc">
+              No centralized indicator existed to confirm whether tracking was active, delayed, or temporarily offline on a given morning.
+            </p>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="case-problem-card">
+            <div class="case-prob-num">03</div>
+            <h3 class="case-prob-title">Manual Coordination Overhead</h3>
+            <p class="case-prob-desc">
+              Transport coordinators and drivers faced repeated inquiries about arrival timing and boarding readiness.
+            </p>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="case-problem-card">
+            <div class="case-prob-num">04</div>
+            <h3 class="case-prob-title">Disconnected Multi-Role Workflows</h3>
+            <p class="case-prob-desc">
+              Students, drivers, and transport administrators lacked a synchronized digital channel for pass validation and live transit status.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         03 · IMPLEMENTED FEATURES
+         ====================================================================== -->
+    <section class="case-section case-section-light" id="features">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">03 &bull; Implemented Features</span>
+          <h2 class="case-sec-title">Core Smart Transit Platform Capabilities</h2>
+          <p class="case-sec-subtitle">
+            Built around real-time GPS state synchronization, clear vehicle availability indicators, and role-specific dashboards.
+          </p>
+        </div>
+
+        <div class="case-features-grid">
+          <!-- Feature 1 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-map-pin"></i></div>
+            <h3 class="case-feat-title">Live College Bus Location Monitoring</h3>
+            <p class="case-feat-desc">Displays live updated vehicle coordinates streamed from the driver client to students and administrators in real time.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-signal"></i></div>
+            <h3 class="case-feat-title">Active &amp; Offline Availability Status</h3>
+            <p class="case-feat-desc">Clear status indicators distinguish active GPS tracking, minor traffic delays, and offline vehicle states at a glance.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3 class="case-feat-title">Interactive Map Tracking View</h3>
+            <p class="case-feat-desc">Smooth animated map markers let users follow live movement across digital street map layers on both mobile and web.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-bell"></i></div>
+            <h3 class="case-feat-title">Personal Boarding Stop Preference &amp; Alerts</h3>
+            <p class="case-feat-desc">Students can choose their personal boarding preference in-app to receive proximity and arrival awareness alerts.</p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <h3 class="case-feat-title">Estimated Arrival Visibility (ETA)</h3>
+            <p class="case-feat-desc">Computes live distance-based arrival countdowns relative to a student’s saved boarding preference.</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <h3 class="case-feat-title">Driver GPS Broadcast &amp; Status Controls</h3>
+            <p class="case-feat-desc">Simple start/stop tracking controls let drivers stream geolocation updates, log boarding counts, and report operational delays.</p>
+          </div>
+
+          <!-- Feature 7 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h3 class="case-feat-title">Administrative Fleet Oversight</h3>
+            <p class="case-feat-desc">Centralized console giving transport staff live multi-vehicle visibility alongside digital student pass and registry tools.</p>
+          </div>
+
+          <!-- Feature 8 -->
+          <div class="case-feature-card">
+            <div class="case-feat-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3 class="case-feat-title">Accessible Web &amp; Mobile Experience</h3>
+            <p class="case-feat-desc">Responsive interface tailored for quick daily commute checks right from a student’s phone or desktop browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         04 · APPLICATION WORKFLOW
+         ====================================================================== -->
+    <section class="case-section case-section-tint" id="workflow">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">04 &bull; Application Workflow</span>
+          <h2 class="case-sec-title">Real-Time Telemetry Flow Across All Roles</h2>
+          <p class="case-sec-subtitle">
+            An end-to-end synchronized lifecycle from driver broadcast to student proximity alerts.
+          </p>
+        </div>
+
+        <div class="case-workflow-track">
+          <!-- Step 1 -->
+          <div class="case-workflow-step">
+            <div class="case-step-meta">
+              <span class="case-step-tag">STEP 01</span>
+              <div class="case-step-role">Driver Console</div>
+            </div>
+            <div class="case-step-content">
+              <h3 class="case-step-title">Driver Starts Live Tracking</h3>
+              <p class="case-step-desc">At the start of a trip, the driver enables location broadcasting on the Driver interface after granting GPS permission.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="case-workflow-step">
+            <div class="case-step-meta">
+              <span class="case-step-tag">STEP 02</span>
+              <div class="case-step-role">Cloud Telemetry</div>
+            </div>
+            <div class="case-step-content">
+              <h3 class="case-step-title">Coordinates Sync to Firebase</h3>
+              <p class="case-step-desc">Geolocation coordinates, accuracy, status flags, and timestamps stream continuously to Firebase Realtime Database.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="case-workflow-step">
+            <div class="case-step-meta">
+              <span class="case-step-tag">STEP 03</span>
+              <div class="case-step-role">Student App / Portal</div>
+            </div>
+            <div class="case-step-content">
+              <h3 class="case-step-title">Students View Live Position &amp; Status</h3>
+              <p class="case-step-desc">Student clients subscribe to live database listeners to update the interactive map marker and active status badge.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="case-workflow-step">
+            <div class="case-step-meta">
+              <span class="case-step-tag">STEP 04</span>
+              <div class="case-step-role">Proximity Engine</div>
+            </div>
+            <div class="case-step-content">
+              <h3 class="case-step-title">Arrival &amp; Proximity Feedback</h3>
+              <p class="case-step-desc">Distance calculation checks proximity to each user’s configured boarding point and triggers in-app ETA notifications.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="case-workflow-step">
+            <div class="case-step-meta">
+              <span class="case-step-tag">STEP 05</span>
+              <div class="case-step-role">Admin Dashboard</div>
+            </div>
+            <div class="case-step-content">
+              <h3 class="case-step-title">Fleet Overview &amp; Coordination</h3>
+              <p class="case-step-desc">Campus administrators oversee live bus availability, student pass approvals, and operational logs from a central console.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         05 · INTERACTIVE PRODUCT PREVIEW
+         ====================================================================== -->
+    <section class="case-section case-section-light" id="preview">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">05 &bull; Interactive Product Preview</span>
+          <h2 class="case-sec-title">Multi-Role Interface Simulation</h2>
+          <p class="case-sec-subtitle">
+            Interactive abstract UI mockup illustrating Student, Driver, and Administrator views with general platform behaviour.
+          </p>
+        </div>
+
+        <div class="sim-stage-card">
+          <!-- Top Toolbar with Role Tabs & Telemetry Sim Controls -->
+          <div class="sim-top-toolbar">
+            <div class="sim-roles-tabs" role="tablist">
+              <button class="btn-sim-tab active" data-role="student" role="tab" aria-selected="true">
+                <i class="fa-solid fa-graduation-cap"></i> Student Portal View
+              </button>
+              <button class="btn-sim-tab" data-role="driver" role="tab" aria-selected="false">
+                <i class="fa-solid fa-id-card"></i> Driver Console View
+              </button>
+              <button class="btn-sim-tab" data-role="admin" role="tab" aria-selected="false">
+                <i class="fa-solid fa-shield-halved"></i> Admin Oversight View
+              </button>
+            </div>
+
+            <div class="sim-state-controls">
+              <span class="sim-state-label">Simulate Telemetry State:</span>
+              <button type="button" class="btn-state-toggle live active" data-state="live" title="Simulate Active Broadcast">
+                <i class="fa-solid fa-circle" style="font-size: 0.6rem;"></i> Live
+              </button>
+              <button type="button" class="btn-state-toggle delay" data-state="delay" title="Simulate Traffic Delay">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 0.6rem;"></i> Delay
+              </button>
+              <button type="button" class="btn-state-toggle offline" data-state="offline" title="Simulate Inactive State">
+                <i class="fa-solid fa-power-off" style="font-size: 0.6rem;"></i> Offline
+              </button>
+            </div>
+          </div>
+
+          <!-- Preview Content Grid -->
+          <div class="sim-content-grid">
+            <!-- Left: Interactive Map Layer Mockup -->
+            <div class="sim-map-visual">
+              <img 
+                src="images/panimalar-transit-mockup.jpg" 
+                alt="Panimalar Smart Transit Interactive Map Layer" 
+                class="sim-map-img"
+                onerror="this.onerror=null; this.src='public/images/panimalar-transit-mockup.jpg';"
+              >
+              <div class="sim-map-overlay-badge badge-live-pulse" id="simBadge">
+                <i class="fa-solid fa-satellite-dish"></i>
+                <span id="simBadgeText">Live GPS Active &bull; Route #14</span>
+              </div>
+            </div>
+
+            <!-- Right: Role Telemetry Details -->
+            <div class="sim-details-panel">
+              <div class="sim-status-title-box">
+                <span class="badge-tag" style="background: rgba(2, 132, 199, 0.08); color: var(--transit-blue); margin-bottom: 0.5rem;" id="simRoleTag">
+                  Student Mobile &amp; Web View
+                </span>
+                <h3 id="simStatusSummary">Approaching Pickup Zone</h3>
+                <p id="simStatusDesc">Vehicle telemetry is streaming continuously via real-time cloud telemetry sync.</p>
+              </div>
+
+              <div class="sim-telemetry-status-card">
+                <div class="sim-tel-row">
+                  <span class="sim-tel-key">Boarding Preference</span>
+                  <span class="sim-tel-val" id="simBoardingPref">Configured (Stop #14 - Guindy)</span>
+                </div>
+                <div class="sim-tel-row">
+                  <span class="sim-tel-key">Arrival Indicator</span>
+                  <span class="sim-tel-val" id="simArrivalEta" style="color: #10B981;">Approaching Pickup Zone (~6 mins)</span>
+                </div>
+                <div class="sim-tel-row">
+                  <span class="sim-tel-key">Proximity Alert</span>
+                  <span class="sim-tel-val" id="simAlertStatus">Enabled &bull; Push Active</span>
+                </div>
+                <div class="sim-tel-row">
+                  <span class="sim-tel-key">Cloud Connection</span>
+                  <span class="sim-tel-val" id="simCloudSync" style="color: #0284C7;"><i class="fa-solid fa-cloud-arrow-down"></i> Firebase Sync Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem; font-size: 0.8rem; color: #94A3B8; text-align: right;">
+            <i class="fa-solid fa-circle-info"></i> Abstract UI Mockup &bull; Privacy-Safe View
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         06 · VERIFIED TECHNICAL STACK
+         ====================================================================== -->
+    <section class="case-section case-section-tint" id="techstack">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">06 &bull; Verified Technical Stack</span>
+          <h2 class="case-sec-title">Technologies Powering Panimalar Smart Transit</h2>
+          <p class="case-sec-subtitle">
+            Reliable real-time frameworks engineered for resilient mobile and web mobility telemetry.
+          </p>
+        </div>
+
+        <div class="case-stack-grid">
+          <!-- Tech 1 -->
+          <div class="case-stack-card">
+            <div class="case-stack-layer">Cross-Platform App</div>
+            <h3 class="case-stack-tech">Flutter &amp; Dart</h3>
+            <p class="case-stack-desc">Powers multi-role Student, Driver, and Admin mobile &amp; web application shells.</p>
+          </div>
+
+          <!-- Tech 2 -->
+          <div class="case-stack-card">
+            <div class="case-stack-layer">Web Student Portal</div>
+            <h3 class="case-stack-tech">HTML5, CSS3 &amp; JavaScript</h3>
+            <p class="case-stack-desc">Lightweight responsive browser interface built for instant student access.</p>
+          </div>
+
+          <!-- Tech 3 -->
+          <div class="case-stack-card">
+            <div class="case-stack-layer">Live Telemetry Sync</div>
+            <h3 class="case-stack-tech">Firebase Realtime Database</h3>
+            <p class="case-stack-desc">Streams real-time location coordinates, active/offline flags, and fleet status.</p>
+          </div>
+
+          <!-- Tech 4 -->
+          <div class="case-stack-card">
+            <div class="case-stack-layer">Identity &amp; Records</div>
+            <h3 class="case-stack-tech">Firebase Auth &amp; Storage</h3>
+            <p class="case-stack-desc">Handles role-based authentication and digital student pass document uploads.</p>
+          </div>
+
+          <!-- Tech 5 -->
+          <div class="case-stack-card">
+            <div class="case-stack-layer">Interactive Mapping</div>
+            <h3 class="case-stack-tech">Leaflet.js &amp; flutter_map</h3>
+            <p class="case-stack-desc">Renders smooth animated live vehicle pins with latlong2 coordinate mapping.</p>
+          </div>
+
+          <!-- Tech 6 -->
+          <div class="case-stack-card">
+            <div class="case-stack-layer">Location Services</div>
+            <h3 class="case-stack-tech">Geolocator GPS Telemetry</h3>
+            <p class="case-stack-desc">Captures accurate device coordinates from the driver client during active trips.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         07 · OUTCOMES & VALUE
+         ====================================================================== -->
+    <section class="case-section case-section-light" id="outcomes">
+      <div class="container">
+        <div class="case-sec-header">
+          <span class="case-sec-idx">07 &bull; Outcomes &amp; Value</span>
+          <h2 class="case-sec-title">Tangible Commuter &amp; Operational Impact</h2>
+          <p class="case-sec-subtitle">
+            Demonstrating tangible value across daily commuter schedules and administrative fleet control.
+          </p>
+        </div>
+
+        <div class="case-outcomes-grid">
+          <!-- Outcome 1 -->
+          <div class="case-outcome-card">
+            <div class="case-outcome-icon"><i class="fa-solid fa-eye"></i></div>
+            <div>
+              <h3 class="case-outcome-title">Improved Commuter Visibility</h3>
+              <p class="case-outcome-desc">Eliminates daily morning uncertainty by giving students real-time visibility into active campus transport.</p>
+            </div>
+          </div>
+
+          <!-- Outcome 2 -->
+          <div class="case-outcome-card">
+            <div class="case-outcome-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+            <div>
+              <h3 class="case-outcome-title">Reduced Wait-Time Confusion</h3>
+              <p class="case-outcome-desc">Proximity indicators and estimated countdown notifications help students reach their pickup points on time.</p>
+            </div>
+          </div>
+
+          <!-- Outcome 3 -->
+          <div class="case-outcome-card">
+            <div class="case-outcome-icon"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+            <div>
+              <h3 class="case-outcome-title">Streamlined Driver &amp; Admin Workflow</h3>
+              <p class="case-outcome-desc">Provides drivers one-tap live broadcasting and gives campus transport coordinators unified oversight.</p>
+            </div>
+          </div>
+
+          <!-- Outcome 4 -->
+          <div class="case-outcome-card">
+            <div class="case-outcome-icon"><i class="fa-solid fa-cube"></i></div>
+            <div>
+              <h3 class="case-outcome-title">Practical Multi-Platform Utility</h3>
+              <p class="case-outcome-desc">Demonstrates complete end-to-end delivery combining mobile engineering, live telemetry databases, and clean UX design.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EXPLORE MORE / BACK TO PORTFOLIO CTA
+         ====================================================================== -->
+    <section class="case-cta-section">
+      <div class="container">
+        <div class="case-cta-box">
+          <h2 class="case-cta-title">Explore More Engineering Projects</h2>
+          <p class="case-cta-text">
+            Return to the main portfolio to browse full-stack platforms, AI initiatives, and hardware-software prototypes.
+          </p>
+          <a href="index.html#projects" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2.2rem;">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Portfolio</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="Kamalesh Ganesh Home" class="footer-brand-link">
+          <img src="images/logo.png" alt="KG Logo" class="footer-brand-logo" onerror="this.onerror=null; this.src='public/images/logo.png';">
+        </a>
+        <div class="footer-brand-name">KAMALESH GANESH</div>
+      </div>
+      <p class="footer-tagline">Building ideas into intelligent solutions.</p>
+
+      <div class="footer-social-row">
+        <a href="https://linkedin.com/in/kamalesh-ganesh-9b8b05329" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Kamalesh6726" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:kamaleshganesh6726@gmail.com" class="footer-social-link" title="Email" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/918300113008" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="WhatsApp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <nav class="footer-nav-links" aria-label="Footer Navigation">
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kamalesh Ganesh. Built with precision &bull; All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simulation Logic Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const roleTabs = document.querySelectorAll('.btn-sim-tab');
+      const stateToggles = document.querySelectorAll('.btn-state-toggle');
+      const simBadge = document.getElementById('simBadge');
+      const simBadgeText = document.getElementById('simBadgeText');
+      const simRoleTag = document.getElementById('simRoleTag');
+      const simStatusSummary = document.getElementById('simStatusSummary');
+      const simStatusDesc = document.getElementById('simStatusDesc');
+      const simBoardingPref = document.getElementById('simBoardingPref');
+      const simArrivalEta = document.getElementById('simArrivalEta');
+      const simAlertStatus = document.getElementById('simAlertStatus');
+      const simCloudSync = document.getElementById('simCloudSync');
+
+      let currentRole = 'student';
+      let currentState = 'live';
+
+      const roleData = {
+        student: {
+          tag: 'Student Mobile & Web View',
+          live: {
+            badge: 'Live GPS Active &bull; Route #14',
+            badgeClass: 'badge-live-pulse',
+            summary: 'Approaching Pickup Zone',
+            desc: 'Vehicle telemetry is streaming continuously via real-time cloud telemetry sync.',
+            pref: 'Configured (Stop #14 - Guindy)',
+            eta: 'Approaching Pickup Zone (~6 mins)',
+            etaColor: '#10B981',
+            alert: 'Enabled &bull; Push Active',
+            cloud: '<i class="fa-solid fa-cloud-arrow-down"></i> Firebase Sync Active'
+          },
+          delay: {
+            badge: 'Traffic Delay Notice &bull; +12m',
+            badgeClass: 'badge-delay-pulse',
+            summary: 'Transit Delayed by Heavy Traffic',
+            desc: 'Driver reported minor slowdown near arterial interchange. Updated ETA computed.',
+            pref: 'Configured (Stop #14 - Guindy)',
+            eta: 'Delayed &bull; Estimated Arrival in ~18 mins',
+            etaColor: '#F59E0B',
+            alert: 'Push Notification Delivered',
+            cloud: '<i class="fa-solid fa-cloud-arrow-down"></i> Syncing Delay Updates'
+          },
+          offline: {
+            badge: 'Shuttle Trip Concluded',
+            badgeClass: 'badge-offline-pulse',
+            summary: 'Vehicle Tracking Inactive',
+            desc: 'Bus is currently not broadcasting. Next scheduled morning pickup at 07:15 AM.',
+            pref: 'Configured (Stop #14 - Guindy)',
+            eta: 'Offline / Scheduled for Tomorrow',
+            etaColor: '#64748B',
+            alert: 'Standby Mode',
+            cloud: '<i class="fa-solid fa-check"></i> Session Logged'
+          }
+        },
+        driver: {
+          tag: 'Driver Console Interface',
+          live: {
+            badge: 'Broadcasting Geolocation',
+            badgeClass: 'badge-live-pulse',
+            summary: 'Trip Active &bull; Route #14 Outbound',
+            desc: 'GPS position broadcasting every 3 seconds to student and dispatch subscribers.',
+            pref: 'Active Vehicle: Bus #14 (48 Seater)',
+            eta: 'Current Speed: 38 km/h &bull; On Schedule',
+            etaColor: '#10B981',
+            alert: 'Passenger Boarding Counter: 32 / 48',
+            cloud: '<i class="fa-solid fa-tower-broadcast"></i> Uplink Streaming (3.2 KB/s)'
+          },
+          delay: {
+            badge: 'Delay Broadcast Sent',
+            badgeClass: 'badge-delay-pulse',
+            summary: 'Delay Reason: Heavy Road Congestion',
+            desc: 'Broadcasting advisory notice to 42 enrolled stop commuters.',
+            pref: 'Active Vehicle: Bus #14 (48 Seater)',
+            eta: 'Current Speed: 12 km/h &bull; +12m Added',
+            etaColor: '#F59E0B',
+            alert: 'Advisory Active on Student Feeds',
+            cloud: '<i class="fa-solid fa-tower-broadcast"></i> Delay Flag Dispatched'
+          },
+          offline: {
+            badge: 'Driver Trip Ended',
+            badgeClass: 'badge-offline-pulse',
+            summary: 'Shift Logged &bull; Telemetry Ended',
+            desc: 'Location broadcast closed. Final trip coordinates and mileage logged to registry.',
+            pref: 'Vehicle Parked at Campus Depot',
+            eta: 'Trip Duration: 46 mins &bull; 24.8 km',
+            etaColor: '#64748B',
+            alert: 'Ready for Next Shift',
+            cloud: '<i class="fa-solid fa-database"></i> Registry Synced'
+          }
+        },
+        admin: {
+          tag: 'Administrative Fleet Oversight',
+          live: {
+            badge: 'All Systems Operational &bull; 18 Active Buses',
+            badgeClass: 'badge-live-pulse',
+            summary: 'Fleet Monitoring Live &bull; 94% On Time',
+            desc: 'Comprehensive oversight of student ridership, pass validations, and vehicle pings.',
+            pref: 'Fleet Status: 18 Active / 2 Standby',
+            eta: 'Network Latency: 42ms &bull; Stable',
+            etaColor: '#10B981',
+            alert: 'Digital Passes Validated: 846 Today',
+            cloud: '<i class="fa-solid fa-server"></i> Realtime DB Operational'
+          },
+          delay: {
+            badge: '1 Route Exception Flagged',
+            badgeClass: 'badge-delay-pulse',
+            summary: 'Bus #14 Experiencing Arterial Delay',
+            desc: 'Admin dashboard highlighted route deviation and alert broadcast status.',
+            pref: 'Incident Log: Route #14 (+12m delay)',
+            eta: 'Dispatch Coordinator Notified',
+            etaColor: '#F59E0B',
+            alert: 'Automatic Student SMS / App Notice',
+            cloud: '<i class="fa-solid fa-server"></i> Exception Recorded'
+          },
+          offline: {
+            badge: 'Fleet Standby &bull; Off-Peak Hours',
+            badgeClass: 'badge-offline-pulse',
+            summary: 'Campus Transit Day Complete',
+            desc: 'Daily performance reports generated. All passes and vehicle metrics archived.',
+            pref: 'All 20 Buses Secured at Depot',
+            eta: 'System Health: 100% Uptime Today',
+            etaColor: '#64748B',
+            alert: 'Automated Daily Backup Complete',
+            cloud: '<i class="fa-solid fa-database"></i> Nightly Maintenance Sync'
+          }
+        }
+      };
+
+      function updateSimulation() {
+        const config = roleData[currentRole][currentState];
+        simRoleTag.textContent = roleData[currentRole].tag;
+        simBadge.className = `sim-map-overlay-badge ${config.badgeClass}`;
+        simBadgeText.innerHTML = config.badge;
+        simStatusSummary.textContent = config.summary;
+        simStatusDesc.textContent = config.desc;
+        simBoardingPref.textContent = config.pref;
+        simArrivalEta.textContent = config.eta;
+        simArrivalEta.style.color = config.etaColor;
+        simAlertStatus.textContent = config.alert;
+        simCloudSync.innerHTML = config.cloud;
+      }
+
+      roleTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          roleTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          currentRole = tab.dataset.role;
+          updateSimulation();
+        });
+      });
+
+      stateToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          stateToggles.forEach(t => t.classList.remove('active'));
+          toggle.classList.add('active');
+          currentState = toggle.dataset.state;
+          updateSimulation();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7047F5"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="200" fill="#F8F7FF"/>
+  <circle cx="200" cy="200" r="190" fill="url(#bgGrad)" opacity="0.08"/>
+  <circle cx="200" cy="200" r="180" fill="#FFFFFF"/>
+  <circle cx="200" cy="155" r="62" fill="url(#bgGrad)"/>
+  <path d="M90 330 C100 245, 150 235, 200 235 C250 235, 300 245, 310 330 Z" fill="url(#bgGrad)"/>
+  <circle cx="200" cy="200" r="190" fill="none" stroke="url(#bgGrad)" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="200" y="375" font-family="'Poppins', sans-serif" font-size="14" font-weight="600" fill="#7047F5" text-anchor="middle" letter-spacing="1">KAMALESH GANESH</text>
+</svg>
