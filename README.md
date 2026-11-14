@@ -3,9 +3,8 @@
 > **AI & Full-Stack Engineer | Systems Architect | Machine Learning Researcher**  
 > B.Tech in Artificial Intelligence & Data Science, Panimalar Engineering College, Chennai.
 
-[![Live Demo](https://img.shields.io/badge/Portfolio-Live_Site-8b5cf6?style=for-the-badge&logo=googlechrome&logoColor=white)](https://kamalesh-ganesh.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Kamalesh6726/Protfolio-)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/kamalesh-ganesh)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/Kamalesh6726)
 
 ---
 
