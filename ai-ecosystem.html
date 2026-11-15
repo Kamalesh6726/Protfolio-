@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>AI &amp; Development Ecosystem — 28 Verified Technologies &amp; 5 Workflows | Kamalesh Ganesh</title>
+  <meta name="title" content="AI &amp; Development Ecosystem — 28 Verified Technologies &amp; 5 Workflows | Kamalesh Ganesh">
+  <meta name="description" content="A comprehensive directory of 28 verified AI tools, agentic development environments, ML frameworks, model APIs, and 5-stage engineering workflows applied in production and academic research.">
+  <meta name="author" content="Kamalesh Ganesh">
+  <meta name="theme-color" content="#7047F5">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Base & Detail Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+
+  <style>
+    :root {
+      --ai-primary: #7047F5;
+      --ai-purple: #8B5CF6;
+      --ai-cyan: #06B6D4;
+      --ai-dark: #0F172A;
+      --ai-bg-light: #F8FAFC;
+    }
+
+    body {
+      background-color: var(--ai-bg-light);
+      color: #1E293B;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .eco-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.15rem;
+      background: rgba(112, 71, 245, 0.08);
+      border: 1px solid rgba(112, 71, 245, 0.25);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ai-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+
+    .eco-hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--ai-dark);
+      margin-bottom: 1rem;
+    }
+
+    .eco-hero-title span {
+      background: linear-gradient(135deg, #7047F5 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .eco-lead {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: #475569;
+      max-width: 840px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* KPI Highlights */
+    .eco-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .eco-stat-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s ease;
+    }
+
+    .eco-stat-card:hover {
+      border-color: var(--ai-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(112, 71, 245, 0.1);
+    }
+
+    .eco-stat-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--ai-primary);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .eco-stat-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 0.2rem;
+    }
+
+    .eco-stat-sub {
+      font-size: 0.85rem;
+      color: #64748B;
+    }
+
+    /* Interactive Search & Filter Controls */
+    .eco-controls-wrap {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 22px;
+      padding: 1.75rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2.5rem;
+    }
+
+    .eco-search-box {
+      position: relative;
+      margin-bottom: 1.25rem;
+    }
+
+    .eco-search-input {
+      width: 100%;
+      padding: 0.95rem 1.25rem 0.95rem 3.1rem;
+      border: 1.5px solid #CBD5E1;
+      border-radius: 14px;
+      font-size: 1rem;
+      color: #1E293B;
+      outline: none;
+      transition: all 0.25s ease;
+      background: #F8FAFC;
+    }
+
+    .eco-search-input:focus {
+      border-color: var(--ai-primary);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(112, 71, 245, 0.12);
+    }
+
+    .eco-search-icon {
+      position: absolute;
+      top: 50%;
+      left: 1.15rem;
+      transform: translateY(-50%);
+      color: #94A3B8;
+      font-size: 1.1rem;
+    }
+
+    .eco-category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .eco-cat-btn {
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #E2E8F0;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .eco-cat-btn:hover {
+      background: rgba(112, 71, 245, 0.08);
+      color: var(--ai-primary);
+      border-color: rgba(112, 71, 245, 0.25);
+    }
+
+    .eco-cat-btn.active {
+      background: var(--ai-primary);
+      color: #FFFFFF;
+      border-color: var(--ai-primary);
+      box-shadow: 0 4px 12px rgba(112, 71, 245, 0.25);
+    }
+
+    /* 28 Tools Directory Grid */
+    .eco-tools-directory {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.35rem;
+      margin-bottom: 4rem;
+    }
+
+    .eco-tool-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .eco-tool-card:hover {
+      border-color: var(--ai-primary);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(112, 71, 245, 0.12);
+    }
+
+    .eco-tool-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .eco-tool-cat-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(112, 71, 245, 0.08);
+      color: var(--ai-primary);
+    }
+
+    .eco-tool-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(112, 71, 245, 0.08);
+      color: var(--ai-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .eco-tool-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 0.4rem;
+    }
+
+    .eco-tool-role {
+      font-size: 0.88rem;
+      color: #64748B;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .eco-tool-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.85rem;
+      border-top: 1px solid #F1F5F9;
+      font-size: 0.8rem;
+      color: #94A3B8;
+    }
+
+    .eco-tool-tag {
+      font-weight: 600;
+      color: var(--ai-primary);
+    }
+
+    /* 5 Workflows Section */
+    .workflows-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin: 2.5rem 0 4rem;
+    }
+
+    .workflow-card {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      border-radius: 20px;
+      padding: 1.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+      position: relative;
+    }
+
+    .workflow-step-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #38BDF8;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .workflow-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .workflow-desc {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: #CBD5E1;
+      margin: 0;
+    }
+
+    /* Applied Projects Banner */
+    .applied-banner {
+      background: linear-gradient(135deg, #7047F5 0%, #0284C7 100%);
+      color: #FFFFFF;
+      border-radius: 24px;
+      padding: 2.75rem;
+      margin: 3rem 0;
+      box-shadow: 0 20px 45px rgba(112, 71, 245, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .applied-text h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.4rem;
+    }
+
+    .applied-text p {
+      font-size: 1.05rem;
+      color: #E0F2FE;
+      margin: 0;
+    }
+
+    .applied-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-applied {
+      padding: 0.65rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.95);
+      color: #0F172A;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-applied:hover {
+      background: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="detail-navbar">
+    <div class="container detail-nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Kamalesh Ganesh Home">
+        <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
+      </a>
+
+      <a href="index.html#ai-ecosystem" class="btn-back-portfolio">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Portfolio</span>
+      </a>
+    </div>
+  </header>
+
+  <main style="padding-top: 5.5rem;">
+    <div class="container">
+
+      <!-- HERO SECTION -->
+      <section style="margin-bottom: 2rem;">
+        <span class="eco-hero-badge">
+          <i class="fa-solid fa-microchip"></i>
+          AI &amp; DEVELOPMENT ECOSYSTEM &bull; 28 Verified Technologies
+        </span>
+
+        <h1 class="eco-hero-title">
+          Building Smarter with<br>
+          <span>Artificial Intelligence</span>
+        </h1>
+
+        <p class="eco-lead">
+          Exploring intelligent systems, agentic development environments (Google Antigravity, Cursor), machine learning pipelines, and model APIs to build smarter, resilient software solutions.
+        </p>
+
+        <!-- KPI Highlights Grid -->
+        <div class="eco-stats-grid">
+          <div class="eco-stat-card">
+            <div class="eco-stat-num">28</div>
+            <div class="eco-stat-label">Verified AI Tools</div>
+            <div class="eco-stat-sub">Across 6 specialized categories</div>
+          </div>
+
+          <div class="eco-stat-card">
+            <div class="eco-stat-num" style="color: #0284C7;">Agentic</div>
+            <div class="eco-stat-label">AI-Assisted Dev</div>
+            <div class="eco-stat-sub">Antigravity, Cursor, Copilot</div>
+          </div>
+
+          <div class="eco-stat-card">
+            <div class="eco-stat-num" style="color: #10B981;">ML &amp; Data</div>
+            <div class="eco-stat-label">Statistical Analysis</div>
+            <div class="eco-stat-sub">Scikit-learn, Colab, Jupyter</div>
+          </div>
+
+          <div class="eco-stat-card">
+            <div class="eco-stat-num" style="color: #F59E0B;">4</div>
+            <div class="eco-stat-label">Applied Projects</div>
+            <div class="eco-stat-sub">Singa Paarvai, PCOS, VITTRO, DiaCare+</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 ENGINEERING WORKFLOWS -->
+      <section style="margin-bottom: 3.5rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+          <span class="badge-tag"><i class="fa-solid fa-diagram-project"></i> Methodologies</span>
+          <h2 style="font-family: 'Poppins', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0F172A; margin-bottom: 0.4rem;">
+            5-Stage Engineering Workflows
+          </h2>
+          <p style="font-size: 0.95rem; color: #64748B;">From natural-language system requirements to robust, interpretable model deployments.</p>
+        </div>
+
+        <div class="workflows-timeline">
+          <div class="workflow-card">
+            <div class="workflow-step-num">01</div>
+            <h4 class="workflow-title">Prompt-to-Code Pipeline</h4>
+            <p class="workflow-desc">Translating clinical and business specifications into clean, typed code architectures using Google Antigravity and Cursor.</p>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-step-num">02</div>
+            <h4 class="workflow-title">Data Preprocessing &amp; QC</h4>
+            <p class="workflow-desc">De-identification, handling missing clinical records, outlier audits, and normalization using Pandas, NumPy, and Scikit-learn.</p>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-step-num">03</div>
+            <h4 class="workflow-title">Model Training &amp; Validation</h4>
+            <p class="workflow-desc">Training interpretable and ensemble classifiers with held-out stratified validation splits in Google Colab and Jupyter.</p>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-step-num">04</div>
+            <h4 class="workflow-title">Interpretability &amp; XAI</h4>
+            <p class="workflow-desc">Explaining predictive decisions through SHAP feature attribution and clinical threshold calibration checks.</p>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-step-num">05</div>
+            <h4 class="workflow-title">Deployment &amp; Feedback</h4>
+            <p class="workflow-desc">Packaging lightweight inference microservices with FastAPI, Vercel edge functions, and telemetry logging.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH & FILTER TOOLBAR -->
+      <section style="margin-bottom: 2.5rem;">
+        <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
+          <span class="badge-tag"><i class="fa-solid fa-toolbox"></i> Complete Tool Directory</span>
+          <h2 style="font-family: 'Poppins', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0F172A; margin-bottom: 0.4rem;">
+            28 Verified Technologies
+          </h2>
+          <p style="font-size: 0.95rem; color: #64748B;">Search and filter across 6 specialized development categories.</p>
+        </div>
+
+        <div class="eco-controls-wrap">
+          <div class="eco-search-box">
+            <i class="fa-solid fa-magnifying-glass eco-search-icon"></i>
+            <input type="text" id="aiToolSearchInput" class="eco-search-input" placeholder="Search by name, role, or category (e.g., Antigravity, Scikit, API, Vision)...">
+          </div>
+
+          <div class="eco-category-pills">
+            <button class="eco-cat-btn active" data-cat="all">All (28)</button>
+            <button class="eco-cat-btn" data-cat="agentic">AI Coding &amp; Agentic (5)</button>
+            <button class="eco-cat-btn" data-cat="generative">Generative &amp; Reasoning (5)</button>
+            <button class="eco-cat-btn" data-cat="ml">Machine Learning (5)</button>
+            <button class="eco-cat-btn" data-cat="compute">MLOps &amp; Compute (5)</button>
+            <button class="eco-cat-btn" data-cat="design">Design &amp; UI (4)</button>
+            <button class="eco-cat-btn" data-cat="api">APIs &amp; Embeddings (4)</button>
+          </div>
+        </div>
+
+        <!-- 28 TOOLS GRID -->
+        <div class="eco-tools-directory" id="aiToolsGrid">
+
+          <!-- 1. Google Antigravity -->
+          <div class="eco-tool-card" data-cat="agentic" id="antigravity">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">AI-Assisted</span>
+              <span class="tech-tag" style="background: rgba(112, 71, 245, 0.1); color: #7047F5;">Flagship</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-robot"></i></div>
+            <h4 class="eco-tool-name">Google Antigravity</h4>
+            <p class="eco-tool-desc">Agentic development environment, automated multi-turn reasoning, and autonomous code generation.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Agentic Engineering</span>
+              <span>Workspace Tools</span>
+            </div>
+          </div>
+
+          <!-- 2. Cursor -->
+          <div class="eco-tool-card" data-cat="agentic" id="cursor">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">AI-Assisted</span>
+              <span class="tech-tag">Editor</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-code"></i></div>
+            <h4 class="eco-tool-name">Cursor</h4>
+            <p class="eco-tool-desc">AI-native code editor with codebase-wide indexing, contextual completions, and multi-file editing.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Full Codebase Context</span>
+              <span>Dev Environment</span>
+            </div>
+          </div>
+
+          <!-- 3. GitHub Copilot -->
+          <div class="eco-tool-card" data-cat="agentic">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">AI-Assisted</span>
+              <span class="tech-tag">Pair Dev</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-brands fa-github"></i></div>
+            <h4 class="eco-tool-name">GitHub Copilot</h4>
+            <p class="eco-tool-desc">Real-time inline code synthesis, boilerplate reduction, and unit-test automation.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Inline Synthesis</span>
+              <span>IDE Integration</span>
+            </div>
+          </div>
+
+          <!-- 4. Claude Code -->
+          <div class="eco-tool-card" data-cat="agentic">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">AI-Assisted</span>
+              <span class="tech-tag">CLI</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h4 class="eco-tool-name">Claude Code</h4>
+            <p class="eco-tool-desc">Agentic command-line software development tool with deep git integration and test execution.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Terminal Agent</span>
+              <span>Architecture</span>
+            </div>
+          </div>
+
+          <!-- 5. Codeium -->
+          <div class="eco-tool-card" data-cat="agentic">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">AI-Assisted</span>
+              <span class="tech-tag">Autocomplete</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h4 class="eco-tool-name">Codeium</h4>
+            <p class="eco-tool-desc">Ultra-fast intelligent code search, multi-language autocompletion, and refactoring assistant.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Latency Optimized</span>
+              <span>Productivity</span>
+            </div>
+          </div>
+
+          <!-- 6. ChatGPT -->
+          <div class="eco-tool-card" data-cat="generative" id="chatgpt">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Generative</span>
+              <span class="tech-tag" style="background: rgba(16, 185, 129, 0.1); color: #10B981;">Flagship</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #10B981; background: rgba(16, 185, 129, 0.1);"><i class="fa-solid fa-comments"></i></div>
+            <h4 class="eco-tool-name">ChatGPT (GPT-4o)</h4>
+            <p class="eco-tool-desc">Conversational reasoning, technical architecture brainstorming, complex prompt synthesis, and research drafting.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Reasoning &amp; Research</span>
+              <span>OpenAI</span>
+            </div>
+          </div>
+
+          <!-- 7. Claude -->
+          <div class="eco-tool-card" data-cat="generative" id="claude">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Generative</span>
+              <span class="tech-tag">Analysis</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #D97706; background: rgba(217, 119, 6, 0.1);"><i class="fa-solid fa-brain"></i></div>
+            <h4 class="eco-tool-name">Claude (Sonnet 3.5)</h4>
+            <p class="eco-tool-desc">Long-context documentation review, clinical text analysis, nuance extraction, and architectural refactoring.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">200K Context Window</span>
+              <span>Anthropic</span>
+            </div>
+          </div>
+
+          <!-- 8. Gemini 2.0 Pro -->
+          <div class="eco-tool-card" data-cat="generative">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Generative</span>
+              <span class="tech-tag">Multimodal</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #0284C7; background: rgba(2, 132, 199, 0.1);"><i class="fa-brands fa-google"></i></div>
+            <h4 class="eco-tool-name">Google Gemini 2.0</h4>
+            <p class="eco-tool-desc">Massive 2M context multimodal reasoning, cross-referencing papers, PDFs, images, and codebase repositories.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Multimodal Native</span>
+              <span>Google DeepMind</span>
+            </div>
+          </div>
+
+          <!-- 9. Perplexity AI -->
+          <div class="eco-tool-card" data-cat="generative">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Generative</span>
+              <span class="tech-tag">Search</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-compass"></i></div>
+            <h4 class="eco-tool-name">Perplexity AI</h4>
+            <p class="eco-tool-desc">Live citation-backed technical search, literature review discovery, and up-to-date library version checks.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Academic Citations</span>
+              <span>Live Retrieval</span>
+            </div>
+          </div>
+
+          <!-- 10. DeepSeek R1 -->
+          <div class="eco-tool-card" data-cat="generative">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Generative</span>
+              <span class="tech-tag">Reasoning</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-atom"></i></div>
+            <h4 class="eco-tool-name">DeepSeek R1</h4>
+            <p class="eco-tool-desc">Reinforcement-learning-driven mathematical reasoning, logic puzzle validation, and algorithmic verification.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Chain of Thought</span>
+              <span>Open Weights</span>
+            </div>
+          </div>
+
+          <!-- 11. Scikit-learn -->
+          <div class="eco-tool-card" data-cat="ml" id="scikit-learn">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Machine Learning</span>
+              <span class="tech-tag">Classical ML</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #EA580C; background: rgba(234, 88, 12, 0.1);"><i class="fa-solid fa-chart-line"></i></div>
+            <h4 class="eco-tool-name">Scikit-learn</h4>
+            <p class="eco-tool-desc">Statistical ML, supervised classification, ROC-AUC validation, and logistic risk modeling in PCOS research.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Statistical Baselines</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <!-- 12. PyTorch -->
+          <div class="eco-tool-card" data-cat="ml">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Machine Learning</span>
+              <span class="tech-tag">Deep Learning</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #EE4C2C; background: rgba(238, 76, 44, 0.1);"><i class="fa-solid fa-fire"></i></div>
+            <h4 class="eco-tool-name">PyTorch</h4>
+            <p class="eco-tool-desc">Dynamic tensor neural networks, custom loss definitions, and deep neural architectures for computer vision.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Tensors &amp; Autograd</span>
+              <span>Deep Learning</span>
+            </div>
+          </div>
+
+          <!-- 13. TensorFlow / Keras -->
+          <div class="eco-tool-card" data-cat="ml">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Machine Learning</span>
+              <span class="tech-tag">Production ML</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #FF6F00; background: rgba(255, 111, 0, 0.1);"><i class="fa-solid fa-network-wired"></i></div>
+            <h4 class="eco-tool-name">TensorFlow</h4>
+            <p class="eco-tool-desc">End-to-end open source platform for machine learning, model export to TF-Lite for mobile and edge IoT devices.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Edge Inference</span>
+              <span>Production Pipeline</span>
+            </div>
+          </div>
+
+          <!-- 14. XGBoost -->
+          <div class="eco-tool-card" data-cat="ml">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Machine Learning</span>
+              <span class="tech-tag">Ensembles</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-tree"></i></div>
+            <h4 class="eco-tool-name">XGBoost</h4>
+            <p class="eco-tool-desc">Scalable gradient-boosted decision trees for tabular clinical datasets with high missing-value resilience.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Gradient Boosting</span>
+              <span>High Precision</span>
+            </div>
+          </div>
+
+          <!-- 15. LightGBM -->
+          <div class="eco-tool-card" data-cat="ml">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Machine Learning</span>
+              <span class="tech-tag">Fast Trees</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-feather"></i></div>
+            <h4 class="eco-tool-name">LightGBM</h4>
+            <p class="eco-tool-desc">High-speed histogram-based decision tree algorithms with lower memory usage and high parallelism.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Histogram Trees</span>
+              <span>Microsoft</span>
+            </div>
+          </div>
+
+          <!-- 16. Google Colab -->
+          <div class="eco-tool-card" data-cat="compute" id="colab">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">MLOps &amp; Compute</span>
+              <span class="tech-tag">Cloud GPU</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #F59E0B; background: rgba(245, 158, 11, 0.1);"><i class="fa-solid fa-laptop-code"></i></div>
+            <h4 class="eco-tool-name">Google Colab</h4>
+            <p class="eco-tool-desc">Cloud-hosted Jupyter notebook environment with free T4/A100 GPU acceleration for ML experiment runs.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">GPU Notebooks</span>
+              <span>Google Cloud</span>
+            </div>
+          </div>
+
+          <!-- 17. JupyterLab -->
+          <div class="eco-tool-card" data-cat="compute">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">MLOps &amp; Compute</span>
+              <span class="tech-tag">Local Notebooks</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-book-open"></i></div>
+            <h4 class="eco-tool-name">JupyterLab</h4>
+            <p class="eco-tool-desc">Interactive computational environment for exploratory data analysis, visualizations, and research reports.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Interactive EDA</span>
+              <span>Python Kernels</span>
+            </div>
+          </div>
+
+          <!-- 18. Kaggle Kernels -->
+          <div class="eco-tool-card" data-cat="compute">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">MLOps &amp; Compute</span>
+              <span class="tech-tag">Datasets</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-database"></i></div>
+            <h4 class="eco-tool-name">Kaggle</h4>
+            <p class="eco-tool-desc">Access to open benchmark healthcare datasets, collaborative community notebooks, and GPU compute.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Public Datasets</span>
+              <span>Benchmarking</span>
+            </div>
+          </div>
+
+          <!-- 19. Hugging Face Hub -->
+          <div class="eco-tool-card" data-cat="compute">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">MLOps &amp; Compute</span>
+              <span class="tech-tag">Models</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-face-smile"></i></div>
+            <h4 class="eco-tool-name">Hugging Face</h4>
+            <p class="eco-tool-desc">Open model repository for downloading fine-tuned transformers, tokenizers, and hosting web demos.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Model Hub</span>
+              <span>Transformers</span>
+            </div>
+          </div>
+
+          <!-- 20. Weights & Biases -->
+          <div class="eco-tool-card" data-cat="compute">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">MLOps &amp; Compute</span>
+              <span class="tech-tag">Tracking</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4 class="eco-tool-name">Weights &amp; Biases</h4>
+            <p class="eco-tool-desc">Machine learning experiment tracking, hyperparameter sweep visualization, and dataset versioning.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Telemetry</span>
+              <span>Experiment Sweeps</span>
+            </div>
+          </div>
+
+          <!-- 21. Figma AI -->
+          <div class="eco-tool-card" data-cat="design" id="figma-ai">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Design &amp; UI</span>
+              <span class="tech-tag">Prototyping</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #A855F7; background: rgba(168, 85, 247, 0.1);"><i class="fa-solid fa-pen-nib"></i></div>
+            <h4 class="eco-tool-name">Figma AI</h4>
+            <p class="eco-tool-desc">AI-assisted UI ideation, layout generation, auto-tagging design tokens, and rapid wireframe variations.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Layout Synthesis</span>
+              <span>Design Systems</span>
+            </div>
+          </div>
+
+          <!-- 22. v0 by Vercel -->
+          <div class="eco-tool-card" data-cat="design">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Design &amp; UI</span>
+              <span class="tech-tag">React UI</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h4 class="eco-tool-name">v0 by Vercel</h4>
+            <p class="eco-tool-desc">Generative UI tool converting natural language prompts into clean React components with Tailwind CSS.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Prompt-to-React</span>
+              <span>Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- 23. Midjourney -->
+          <div class="eco-tool-card" data-cat="design">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Design &amp; UI</span>
+              <span class="tech-tag">Visuals</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-image"></i></div>
+            <h4 class="eco-tool-name">Midjourney</h4>
+            <p class="eco-tool-desc">High-fidelity generative visual generation for project presentation hero graphics and conceptual UI renders.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Diffusion Visuals</span>
+              <span>Creative Media</span>
+            </div>
+          </div>
+
+          <!-- 24. Uizard -->
+          <div class="eco-tool-card" data-cat="design">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">Design &amp; UI</span>
+              <span class="tech-tag">Wireframing</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h4 class="eco-tool-name">Uizard</h4>
+            <p class="eco-tool-desc">Rapid mobile application wireframe generation from hand-drawn sketches and text briefs.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Sketch-to-UI</span>
+              <span>Rapid Prototyping</span>
+            </div>
+          </div>
+
+          <!-- 25. OpenAI API -->
+          <div class="eco-tool-card" data-cat="api" id="openai-api">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">APIs &amp; Embeddings</span>
+              <span class="tech-tag">Model API</span>
+            </div>
+            <div class="eco-tool-icon" style="color: #0284C7; background: rgba(2, 132, 199, 0.1);"><i class="fa-solid fa-plug"></i></div>
+            <h4 class="eco-tool-name">OpenAI API</h4>
+            <p class="eco-tool-desc">Direct REST access to GPT-4o, function calling, json_schema structured outputs, and text embeddings.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Structured Output</span>
+              <span>Production API</span>
+            </div>
+          </div>
+
+          <!-- 26. Anthropic API -->
+          <div class="eco-tool-card" data-cat="api">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">APIs &amp; Embeddings</span>
+              <span class="tech-tag">Tool Use</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <h4 class="eco-tool-name">Anthropic API</h4>
+            <p class="eco-tool-desc">High-reliability Claude API integration with native tool-use and precise prompt caching features.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Prompt Caching</span>
+              <span>Enterprise API</span>
+            </div>
+          </div>
+
+          <!-- 27. Google AI Studio API -->
+          <div class="eco-tool-card" data-cat="api">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">APIs &amp; Embeddings</span>
+              <span class="tech-tag">Gemini API</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <h4 class="eco-tool-name">Google AI Studio API</h4>
+            <p class="eco-tool-desc">Low-latency API integration for Gemini 2.0 Flash with native audio/visual streaming capabilities.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">Flash Inference</span>
+              <span>Gemini Ecosystem</span>
+            </div>
+          </div>
+
+          <!-- 28. LangChain & RAG -->
+          <div class="eco-tool-card" data-cat="api">
+            <div class="eco-tool-header">
+              <span class="eco-tool-cat-badge">APIs &amp; Embeddings</span>
+              <span class="tech-tag">Orchestration</span>
+            </div>
+            <div class="eco-tool-icon"><i class="fa-solid fa-link"></i></div>
+            <h4 class="eco-tool-name">LangChain</h4>
+            <p class="eco-tool-desc">Composable framework for chaining LLM calls, chunking medical literature, and building RAG pipelines.</p>
+            <div class="eco-tool-footer">
+              <span class="eco-tool-tag">RAG Pipelines</span>
+              <span>Vector Search</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- APPLIED PROJECTS BANNER -->
+      <section style="margin-bottom: 4rem;">
+        <div class="applied-banner">
+          <div class="applied-text">
+            <h3>4 Applied AI Engineering Implementations</h3>
+            <p>Explore production case studies and research initiatives leveraging these technologies.</p>
+          </div>
+          <div class="applied-links">
+            <a href="singa-paarvai-ai.html" class="btn-applied"><i class="fa-solid fa-eye"></i> Singa Paarvai AI</a>
+            <a href="ai-assisted-pcos-research.html" class="btn-applied"><i class="fa-solid fa-dna"></i> PCOS Research</a>
+            <a href="tambaram-medical-centre.html" class="btn-applied"><i class="fa-solid fa-hospital"></i> DiaCare+ (TMC)</a>
+            <a href="panimalar-smart-transit.html" class="btn-applied"><i class="fa-solid fa-bus"></i> Smart Transit</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer" style="background: #0B0F17; color: #94A3B8; padding: 2rem 0; text-align: center; border-top: 1px solid #1E293B;">
+    <div class="container">
+      <p style="font-size: 0.9rem; margin: 0;">&copy; 2026 Kamalesh Ganesh. All rights reserved &bull; AI &amp; Development Ecosystem</p>
+    </div>
+  </footer>
+
+  <!-- Search & Category Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('aiToolSearchInput');
+      const catButtons = document.querySelectorAll('.eco-cat-btn');
+      const toolCards = document.querySelectorAll('.eco-tool-card');
+
+      let currentCat = 'all';
+      let searchQuery = '';
+
+      function filterTools() {
+        toolCards.forEach(card => {
+          const cardCat = card.getAttribute('data-cat') || '';
+          const cardText = card.textContent.toLowerCase();
+
+          const matchesCat = (currentCat === 'all' || cardCat === currentCat);
+          const matchesSearch = (searchQuery === '' || cardText.includes(searchQuery));
+
+          if (matchesCat && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          filterTools();
+        });
+      }
+
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCat = btn.getAttribute('data-cat') || 'all';
+          filterTools();
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

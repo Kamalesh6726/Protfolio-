@@ -14,17 +14,23 @@ A modern, high-performance, and responsive personal engineering portfolio showca
 
 ---
 
-## 🚀 Featured Engineering Projects
+## 🚀 Engineering Projects & Inventions (14 Total)
 
+Top Featured Projects on Main Page:
 1. **MediLong** — Automated Medical Bill Extraction & OCR Analysis System.
-2. **Singa Paarvai AI** — Real-time Intelligent Traffic Violation Detection & Enforcement System using YOLOv8 and computer vision.
+2. **Singa Paarvai AI** — Real-time Intelligent Traffic Violation Detection & Emergency Alert System using YOLOv8 and computer vision (presented to AI Minister R. Kumar).
 3. **Panimalar Smart Transit** — IoT Campus Fleet Tracking & Transit Telematics platform with live GPS updates.
-4. **Real Estate Management & Analytics** — Multi-tenant property valuation and analytics portal with spatial filtering.
-5. **AI Multi-Disease Diagnostic Decision Engine** — Multi-modal clinical risk stratification combining laboratory parameters and imaging.
-6. **Autonomous Ground Vehicle (AGV)** — LiDAR-based obstacle avoidance and autonomous indoor path planning.
-7. **Automated Soil & Environmental Testing Rig** — Multi-sensor microclimate analysis and soil chemistry telemetry.
-8. **Smart Hydroponics & Crop Monitoring System** — Closed-loop nutrient doser with IoT-driven telemetry.
-9. **Advanced Robotic Arm for Sorting & Pick-and-Place** — 4-DOF inverse kinematics robotic arm with color and shape classification.
+
+👉 **[Explore Full 14 Projects Directory (projects.html)](projects.html)**: Including registered Intellectual Property (VITTRO), DiaCare+ Mobile App, PlotChoice Geospatial Directory, Autonomous Ground Vehicle (AGV), Automated Soil Testing Rig, Smart Hydroponics, and 4-DOF Robotic Arm.
+
+---
+
+## 🤖 AI & Development Ecosystem (28 Tools & 5 Workflows)
+
+Detailed technology directory exploring agentic development environments, ML pipelines, and model APIs:
+- **28 Verified AI Tools:** Google Antigravity, Cursor, GitHub Copilot, Claude Code, Codeium, ChatGPT, Claude, Gemini 2.0, Perplexity, DeepSeek, Scikit-learn, PyTorch, TensorFlow, XGBoost, LightGBM, Google Colab, JupyterLab, Kaggle, Hugging Face, Weights & Biases, Figma AI, v0 by Vercel, Midjourney, Uizard, OpenAI API, Anthropic API, Google AI Studio, LangChain.
+- **5 Engineering Workflows:** Prompt-to-Code Pipeline, Data Preprocessing & QC, Model Training & Validation, Interpretability & XAI, Deployment & Feedback.
+- 👉 **[Explore Dedicated AI Ecosystem Showcase (ai-ecosystem.html)](ai-ecosystem.html)**
 
 ---
 
@@ -34,15 +40,17 @@ A modern, high-performance, and responsive personal engineering portfolio showca
 - **Exploratory Scope:** Investigating explainable machine learning models for early risk indication and clinical indicator correlation.
 - **Clinical Foundation:** Rotterdam Diagnostic Framework & Government of India Standard Treatment Guidelines for Endocrinology.
 - **Interpretable ML:** Feature attribution, multi-parameter metabolic and hormonal correlation analysis, non-diagnostic decision support.
+- 👉 **[Explore Dedicated Research Microsite (ai-assisted-pcos-research.html)](ai-assisted-pcos-research.html)**
 
 ---
 
-## 💼 Industry Experience & Internships
+## 💼 Industry Experience & Clinical Internships (5 Total)
 
-- **Macrodyne Presses & Automation** — AI/ML Intern (Predictive maintenance and sensor anomaly models).
-- **REL Group** — Full-Stack Engineering Intern (Enterprise telemetry dashboard and high-throughput pipelines).
-- **PlotChoice** — Software Development Intern (Geospatial property analytics engine).
-- **Infomatronics Project Solutions** — Machine Learning Trainee (Computer vision and deep learning architectures).
+- **Tambaram Medical Centre** — AI & Data Science Intern (Healthcare technology engagement mentored by Dr. Hariharan; engineered DiaCare+ diabetes tracking mobile app).
+- **PlotChoice** — App Development Intern (Active 6-Month software engineering internship; full-stack web engineering with Next.js, PostgreSQL, and MapLibre GL).
+- **Macrodyne Presses & Automation** — Full Stack Developer Intern (Automated balloon drawing inspection interfaces and real-time reporting pipeline).
+- **REL Group** — Full-Stack Engineering Intern (Enterprise telemetry dashboard, responsive layout upgrades, performance optimization).
+- **Infomatronics Project Solutions** — Web Development Intern (Modern web engineering and responsive interface standards).
 
 ---
 

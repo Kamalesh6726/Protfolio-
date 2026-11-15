@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       void card.offsetHeight;
 
-      const reverseIndex = 3 - index;
+      const reverseIndex = (interactiveCards.length - 1) - index;
       card.style.transition = `transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) ${reverseIndex * 60}ms, box-shadow 0.4s ease`;
       card.style.transform = ''; // Lets the CSS stacked-mode rules smoothly take over
 
