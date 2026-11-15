@@ -2207,12 +2207,123 @@ ul, ol {
 
 .achieve-silver-box {
   background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.25);
+}
+
+.achieve-bronze-box {
+  background: linear-gradient(135deg, #D97706 0%, #92400E 100%);
+  box-shadow: 0 8px 18px rgba(217, 119, 6, 0.25);
+}
+
+.achieve-honor-box {
+  background: linear-gradient(135deg, #10B981 0%, #047857 100%);
+  box-shadow: 0 8px 18px rgba(16, 185, 129, 0.25);
 }
 
 .achieve-info {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.achieve-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.achieve-place-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.achieve-place-badge.badge-gold {
+  background: rgba(245, 158, 11, 0.12);
+  color: #D97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.achieve-place-badge.badge-silver {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7C3AED;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.achieve-place-badge.badge-bronze {
+  background: rgba(217, 119, 6, 0.12);
+  color: #B45309;
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+.achieve-place-badge.badge-honor {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.achieve-year-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+.achieve-institution {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.achieve-project-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: rgba(112, 71, 245, 0.07);
+  border: 1px solid rgba(112, 71, 245, 0.18);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  margin: 0.15rem 0 0.35rem 0;
+  width: fit-content;
+}
+
+.achieve-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed var(--border-light);
+}
+
+.achieve-pill-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-body, #F8FAFC);
+  border: 1px solid var(--border-light);
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .achieve-badge {
