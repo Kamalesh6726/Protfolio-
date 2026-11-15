@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>MediLong — Founder Case Study | Digital Hospital Management Platform | Kamalesh Ganesh</title>
+  <meta name="title" content="MediLong — Founder Case Study | Digital Hospital Management Platform | Kamalesh Ganesh">
+  <meta name="description" content="Founder case study of MediLong by Kamalesh Ganesh — 1st Prize Winner at Ideathon '25. An enterprise healthcare SaaS platform modernizing hospital workflows, EHR, and patient scheduling.">
+  <meta name="author" content="Kamalesh Ganesh">
+  <meta name="theme-color" content="#7047F5">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+
+  <!-- Google Fonts: Poppins & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Base & Detail Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/project-detail.css">
+
+  <style>
+    :root {
+      --med-primary: #7047F5;
+      --med-accent: #06B6D4;
+      --med-dark: #0F172A;
+      --med-light: #F8FAFC;
+    }
+
+    body {
+      background-color: var(--med-light);
+      color: #1E293B;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .med-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.15rem;
+      background: rgba(112, 71, 245, 0.08);
+      border: 1px solid rgba(112, 71, 245, 0.25);
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--med-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+
+    .med-hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2.3rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--med-dark);
+      margin-bottom: 1rem;
+    }
+
+    .med-hero-title span {
+      background: linear-gradient(135deg, #7047F5 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .med-lead {
+      font-size: 1.18rem;
+      line-height: 1.65;
+      color: #475569;
+      max-width: 860px;
+      margin-bottom: 2.25rem;
+    }
+
+    .med-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.75rem;
+    }
+
+    .med-meta-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 1.35rem 1.5rem;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s ease;
+    }
+
+    .med-meta-card:hover {
+      border-color: var(--med-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(112, 71, 245, 0.1);
+    }
+
+    .med-meta-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94A3B8;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .med-meta-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 0.2rem;
+    }
+
+    .med-meta-sub {
+      font-size: 0.85rem;
+      color: #64748B;
+    }
+
+    /* Founder Vision Showcase */
+    .founder-vision-box {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      border-radius: 24px;
+      padding: 2.75rem 2.25rem;
+      margin: 3rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .founder-vision-box::after {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(112, 71, 245, 0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .founder-vision-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.9rem;
+      background: rgba(112, 71, 245, 0.25);
+      border: 1px solid rgba(112, 71, 245, 0.5);
+      color: #C4B5FD;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .founder-vision-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.6rem;
+    }
+
+    .founder-vision-desc {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #E2E8F0;
+      max-width: 840px;
+      margin-bottom: 2rem;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      padding: 1.35rem;
+      transition: all 0.25s ease;
+    }
+
+    .pillar-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #8B5CF6;
+      transform: translateY(-2px);
+    }
+
+    .pillar-card h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #38BDF8;
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: #CBD5E1;
+      margin: 0;
+    }
+
+    /* Recognition Banner */
+    .award-banner-card {
+      background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+      border: 2px solid #F59E0B;
+      border-radius: 20px;
+      padding: 1.75rem 2rem;
+      margin: 2.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.15);
+    }
+
+    .award-icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #D97706;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3);
+    }
+
+    .award-info h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #78350F;
+      margin-bottom: 0.2rem;
+    }
+
+    .award-info p {
+      font-size: 0.95rem;
+      color: #92400E;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Mockup Frame */
+    .med-mockup-frame {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 1.5rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .med-mockup-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      margin: 0 auto;
+      display: block;
+    }
+
+    .internship-nav-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2.5rem 0 4rem;
+      border-top: 1px solid #E2E8F0;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="detail-navbar">
+    <div class="container detail-nav-container">
+      <a href="index.html" class="nav-brand" aria-label="Kamalesh Ganesh Home">
+        <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" style="display: flex; gap: 1.25rem; align-items: center;">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="ai-ecosystem.html" class="nav-link nav-pill-btn" title="AI Tools">
+          <span class="nav-dot dot-purple"></span>
+          <span>AI Tools</span>
+        </a>
+        <a href="index.html#research" class="nav-link nav-pill-btn pill-cyan" title="Upcoming">
+          <span class="nav-dot dot-cyan"></span>
+          <span>Upcoming</span>
+        </a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="index.html#projects" class="btn-back-portfolio">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back to Home</span>
+      </a>
+    </div>
+  </header>
+
+  <main style="padding-top: 5.5rem;">
+    <div class="container">
+
+      <!-- HERO SECTION -->
+      <section style="margin-bottom: 2rem;">
+        <span class="med-hero-badge">
+          <i class="fa-solid fa-crown" style="color: #F59E0B;"></i>
+          Founder Case Study &bull; Entrepreneurial Leadership &bull; 1st Prize Ideathon '25
+        </span>
+
+        <h1 class="med-hero-title">
+          MediLong<br>
+          <span>Hospital Management Platform</span>
+        </h1>
+
+        <p class="med-lead">
+          An enterprise-grade, cloud-native healthcare management platform founded and engineered by Kamalesh Ganesh to simplify clinical administration, unify Electronic Health Records (EHR), and eliminate operational bottlenecks.
+        </p>
+
+        <!-- Organization Metadata Grid -->
+        <div class="med-meta-grid">
+          <div class="med-meta-card">
+            <span class="med-meta-label"><i class="fa-solid fa-user-tie"></i> Role &amp; Leadership</span>
+            <div class="med-meta-val">Founder &amp; Systems Lead</div>
+            <div class="med-meta-sub">Product Vision, Tech Stack &amp; Architecture</div>
+          </div>
+
+          <div class="med-meta-card">
+            <span class="med-meta-label"><i class="fa-solid fa-trophy"></i> Key Milestone</span>
+            <div class="med-meta-val">1st Prize — Ideathon '25</div>
+            <div class="med-meta-sub">Best Healthcare Innovation</div>
+          </div>
+
+          <div class="med-meta-card">
+            <span class="med-meta-label"><i class="fa-solid fa-layer-group"></i> Architecture</span>
+            <div class="med-meta-val">Healthcare SaaS Platform</div>
+            <div class="med-meta-sub">React, Node.js, Python, Firebase, Cloud DBMS</div>
+          </div>
+
+          <div class="med-meta-card">
+            <span class="med-meta-label"><i class="fa-solid fa-hospital"></i> Clinical Scope</span>
+            <div class="med-meta-val">Multi-Department Operations</div>
+            <div class="med-meta-sub">EHR, Telemedicine, Scheduling &amp; Diagnostics</div>
+          </div>
+        </div>
+
+        <!-- Award Highlight Banner -->
+        <div class="award-banner-card">
+          <div class="award-icon-circle">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="award-info">
+            <h4>First Prize Winner &bull; Ideathon '25 &amp; Paper Presentation Honors</h4>
+            <p>
+              Recognized with <strong>1st Place at Ideathon '25</strong> and <strong>3rd Prize at National Paper Presentation</strong> for technical rigor, scalable cloud architecture, and real-world deployment viability in clinical environments.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hero Mockup Frame -->
+        <div class="med-mockup-frame">
+          <img src="images/project-medilong.png" alt="MediLong Hospital Management Platform Interface" class="med-mockup-img" onerror="this.onerror=null; this.src='images/project-medilong.svg';">
+        </div>
+      </section>
+
+      <!-- FOUNDER'S VISION & CORE PILLARS -->
+      <section style="margin-bottom: 3.5rem;">
+        <div class="founder-vision-box">
+          <span class="founder-vision-pill"><i class="fa-solid fa-lightbulb"></i> Architectural Blueprint &bull; Leadership Focus</span>
+          <h2 class="founder-vision-title">The MediLong Platform Architecture</h2>
+          <p class="founder-vision-desc">
+            As the Founder of MediLong, I led the complete product lifecycle from domain research and clinician interviews to full-stack engineering and cloud deployment. The platform addresses fragmented patient data, high clinic waiting times, and error-prone billing through six integrated modules:
+          </p>
+
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <h4><i class="fa-solid fa-file-waveform"></i> Unified EHR &amp; RBAC</h4>
+              <p>Secure, centralized Electronic Health Records with granular role-based access for physicians, nurses, receptionists, and patients.</p>
+            </div>
+
+            <div class="pillar-card">
+              <h4><i class="fa-solid fa-calendar-check"></i> Intelligent Appointment Queue</h4>
+              <p>Automated slot allocation and real-time patient queue optimization minimizing waiting room congestion across departments.</p>
+            </div>
+
+            <div class="pillar-card">
+              <h4><i class="fa-solid fa-prescription-bottle-medical"></i> Digital Prescriptions &amp; Pharmacy</h4>
+              <p>Structured e-prescriptions with automatic dosage conflict checks and direct dispatch to hospital dispensary inventories.</p>
+            </div>
+
+            <div class="pillar-card">
+              <h4><i class="fa-solid fa-vial-circle-check"></i> Laboratory Diagnostics Telemetry</h4>
+              <p>Direct laboratory panel ingestion with instant patient notifications and automated physician alert triggers on abnormal metrics.</p>
+            </div>
+
+            <div class="pillar-card">
+              <h4><i class="fa-solid fa-file-invoice-dollar"></i> Smart Billing &amp; Insurance Claims</h4>
+              <p>Transparent itemized billing pipelines integrated with standard diagnosis codes and instant exportable invoice summaries.</p>
+            </div>
+
+            <div class="pillar-card">
+              <h4><i class="fa-solid fa-chart-line"></i> Hospital Capacity Analytics</h4>
+              <p>Real-time executive telemetry tracking bed occupancy, daily patient throughput, and multi-department resource utilization.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION FOOTER -->
+      <div class="internship-nav-footer">
+        <a href="index.html#projects" class="btn btn-outline" style="border-color: #CBD5E1; color: #475569;">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Home Portfolio</span>
+        </a>
+
+        <a href="singa-paarvai-ai.html" class="btn btn-primary">
+          <span>Next Project: Singa Paarvai AI</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer" style="background: #0B0F17; color: #94A3B8; padding: 2rem 0; text-align: center; border-top: 1px solid #1E293B;">
+    <div class="container">
+      <p style="font-size: 0.9rem; margin: 0;">&copy; 2026 Kamalesh Ganesh. All rights reserved &bull; MediLong Founder Showcase</p>
+    </div>
+  </footer>
+
+</body>
+</html>
