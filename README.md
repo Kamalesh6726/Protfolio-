@@ -14,14 +14,28 @@ A modern, high-performance, and responsive personal engineering portfolio showca
 
 ---
 
-## 🚀 Engineering Projects & Inventions (14 Total)
+## 🚀 All Projects & Technical Inventions
 
 Top Featured Projects on Main Page:
-1. **MediLong** — Automated Medical Bill Extraction & OCR Analysis System.
-2. **Singa Paarvai AI** — Real-time Intelligent Traffic Violation Detection & Emergency Alert System using YOLOv8 and computer vision (presented to AI Minister R. Kumar).
-3. **Panimalar Smart Transit** — IoT Campus Fleet Tracking & Transit Telematics platform with live GPS updates.
+1. **MediLong** — Digital Hospital Management System (*First Prize – Ideathon '25*).
+2. **Singa Paarvai AI** — Smart Real-Time Crime Detection and Emergency Alert System using YOLOv8 & computer vision (*Presented to AI Minister R. Kumar*).
+3. **Panimalar Smart Transit** — Smart College Bus Tracking & Transit Telematics platform (*Real-Time Campus Mobility*).
 
-👉 **[Explore Full 14 Projects Directory (projects.html)](projects.html)**: Including registered Intellectual Property (VITTRO), DiaCare+ Mobile App, PlotChoice Geospatial Directory, Autonomous Ground Vehicle (AGV), Automated Soil Testing Rig, Smart Hydroponics, and 4-DOF Robotic Arm.
+👉 **[Explore All Projects & Inventions Directory (projects.html)](projects.html)**:
+Featuring all original hardware-software intellectual property, enterprise business software, AI systems, and mobile applications:
+- **Singa Paarvai AI** — Real-Time Crime Detection & Emergency Alert System
+- **Panimalar Smart Transit** — Smart College Bus Tracking System
+- **REL Group – Quotation Management System** — Corporate Quotation Preparation Platform
+- **VITTRO** — Smart Invoice Management System (Client: Srinivasa Marriage Catering Service)
+- **ObjectID Pro** — Smart Product Identification via QR & Code128 Barcodes
+- **Cloud9 Pastries** — Modern Boutique Bakery Web Platform & E-Commerce
+- **The Cafe – Java Application** — Gamified Java OOP Computer-Based Assessment Engine
+- **Nayaruvi Yukti** (`nayaruviyukti.app`) — Delivery Challan Management System
+- **DiaCare** (`diacare.app`) — Diabetes Management & Biometric Tracking Mobile App
+- **MediLong** (`medilong.app`) — Enterprise Hospital Management Platform
+- **PlotChoice** (`plotchoice.app`) — Location-Based Real Estate Marketplace with MapLibre GL
+- **Macrodyne Automation Interface** (`macrodyneautomationinterface.app`) — Automated Inspection Reporting System
+- **NGO Food Donation Platform** (`ngofooddonationplatform.app`) — Surplus Food Redistribution Network
 
 ---
 

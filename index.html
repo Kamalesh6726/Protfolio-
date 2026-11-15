@@ -46,18 +46,75 @@
         <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
       </a>
 
-      <!-- Desktop & Mobile Navigation Links -->
+      <!-- Desktop & Mobile Navigation Links (Matching Screenshot Header) -->
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
-        <a href="#hero" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
-        <a href="#education" class="nav-link">Education</a>
+        <a href="ai-ecosystem.html" class="nav-link nav-pill-btn" title="AI Tools & Ecosystem">
+          <span class="nav-dot dot-purple"></span>
+          <span>AI Tools</span>
+        </a>
+        <a href="#research" class="nav-link nav-pill-btn pill-cyan" title="Upcoming Research & Initiatives">
+          <span class="nav-dot dot-cyan"></span>
+          <span>Upcoming</span>
+        </a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#ai-ecosystem" class="nav-link">AI Ecosystem</a>
-        <a href="#research" class="nav-link">Research</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
+
+        <!-- Explore Dropdown Popover -->
+        <div class="nav-dropdown-wrap" id="exploreDropdownWrap">
+          <button type="button" class="nav-dropdown-btn" id="exploreDropdownBtn" aria-haspopup="true" aria-expanded="false" aria-label="Explore Highlights">
+            <span>Explore</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </button>
+          <div class="nav-dropdown-menu" id="exploreDropdownMenu" role="menu">
+            <div class="dropdown-header">PORTFOLIO HIGHLIGHTS</div>
+            
+            <a href="#research" class="dropdown-item" role="menuitem">
+              <div class="item-icon-box box-teal">
+                <i class="fa-solid fa-microscope"></i>
+              </div>
+              <div class="item-content">
+                <div class="item-title">Research</div>
+                <div class="item-sub">Healthcare AI &amp; academic inquiry</div>
+              </div>
+              <i class="fa-solid fa-arrow-right item-arrow"></i>
+            </a>
+
+            <a href="#about" class="dropdown-item" role="menuitem">
+              <div class="item-icon-box box-blue">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <div class="item-content">
+                <div class="item-title">Leadership</div>
+                <div class="item-sub">Nayaruvi startup initiatives</div>
+              </div>
+              <i class="fa-solid fa-arrow-right item-arrow"></i>
+            </a>
+
+            <a href="#achievements" class="dropdown-item" role="menuitem">
+              <div class="item-icon-box box-amber">
+                <i class="fa-solid fa-trophy"></i>
+              </div>
+              <div class="item-content">
+                <div class="item-title">Achievements</div>
+                <div class="item-sub">Hackathons, awards &amp; honors</div>
+              </div>
+              <i class="fa-solid fa-arrow-right item-arrow"></i>
+            </a>
+
+            <a href="#certifications" class="dropdown-item" role="menuitem">
+              <div class="item-icon-box box-purple">
+                <i class="fa-solid fa-award"></i>
+              </div>
+              <div class="item-content">
+                <div class="item-title">Certifications</div>
+                <div class="item-sub">Global credentials &amp; badges</div>
+              </div>
+              <i class="fa-solid fa-arrow-right item-arrow"></i>
+            </a>
+          </div>
+        </div>
+
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
@@ -1054,18 +1111,18 @@
               </span>
               <h3 class="projects-more-title">Looking for More Projects &amp; Inventions?</h3>
               <p class="projects-more-desc">
-                Visit the dedicated projects directory to view all 14 engineering projects — including registered Intellectual Property, full-stack web platforms, mobile apps, and hospital systems.
+                Visit the dedicated projects directory to view all original engineering projects — including registered Intellectual Property, full-stack web platforms, mobile apps, and hospital systems.
               </p>
               <div class="projects-more-pills">
                 <span class="p-pill"><i class="fa-solid fa-certificate"></i> Original IP &amp; Patents</span>
-                <span class="p-pill"><i class="fa-solid fa-microscope"></i> 6 Deep-Dive Case Studies</span>
+                <span class="p-pill"><i class="fa-solid fa-microscope"></i> 7 Deep-Dive Case Studies</span>
                 <span class="p-pill"><i class="fa-solid fa-magnifying-glass"></i> Live Search &amp; Filter</span>
-                <span class="p-pill"><i class="fa-solid fa-cubes"></i> 14 Total Projects</span>
+                <span class="p-pill"><i class="fa-solid fa-cubes"></i> All Projects &amp; Inventions</span>
               </div>
               <div class="projects-more-actions">
-                <a href="projects.html" class="btn btn-primary btn-lg" style="padding: 0.85rem 2rem; font-size: 1.05rem;" title="Explore All 14 Projects Directory">
+                <a href="projects.html" class="btn btn-primary btn-lg" style="padding: 0.85rem 2rem; font-size: 1.05rem;" title="Explore All Projects Directory">
                   <i class="fa-solid fa-compass"></i>
-                  <span>Explore All 14 Projects</span>
+                  <span>Explore All Projects &amp; Inventions</span>
                   <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>

@@ -281,6 +281,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 1B. Explore Dropdown Popover Click & Touch Toggle
+  const exploreDropdownWrap = document.getElementById('exploreDropdownWrap');
+  const exploreDropdownBtn = document.getElementById('exploreDropdownBtn');
+  if (exploreDropdownBtn && exploreDropdownWrap) {
+    exploreDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = exploreDropdownWrap.classList.toggle('active');
+      exploreDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!exploreDropdownWrap.contains(e.target)) {
+        exploreDropdownWrap.classList.remove('active');
+        exploreDropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // ------------------------------------------------------------------------
   // 5. ScrollSpy — Highlight Active Nav Link
   // ------------------------------------------------------------------------

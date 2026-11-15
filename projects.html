@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-  <title>Engineering Projects Directory (14 Projects &amp; Inventions) | Kamalesh Ganesh</title>
-  <meta name="title" content="Engineering Projects Directory (14 Projects &amp; Inventions) | Kamalesh Ganesh">
-  <meta name="description" content="Explore all 14 engineering projects, healthcare software architectures, AI systems, registered IP patents, full-stack web platforms, and automated robotic systems by Kamalesh Ganesh.">
+  <title>All Projects &amp; Technical Inventions | Kamalesh Ganesh</title>
+  <meta name="title" content="All Projects &amp; Technical Inventions | Kamalesh Ganesh">
+  <meta name="description" content="A comprehensive directory of original hardware-software intellectual property, enterprise business software, AI systems, and mobile applications built with rigorous architecture.">
   <meta name="author" content="Kamalesh Ganesh">
   <meta name="theme-color" content="#7047F5">
 
@@ -69,7 +69,7 @@
       font-size: 1.15rem;
       line-height: 1.65;
       color: #475569;
-      max-width: 840px;
+      max-width: 860px;
       margin-bottom: 2.5rem;
     }
 
@@ -77,10 +77,10 @@
     .proj-controls-wrap {
       background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      border-radius: 22px;
+      border-radius: 24px;
       padding: 1.75rem;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.75rem;
     }
 
     .proj-search-box {
@@ -122,9 +122,9 @@
     }
 
     .proj-cat-btn {
-      padding: 0.5rem 1.1rem;
+      padding: 0.55rem 1.2rem;
       border-radius: 9999px;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       font-weight: 600;
       background: #F1F5F9;
       color: #475569;
@@ -146,26 +146,201 @@
       box-shadow: 0 4px 12px rgba(112, 71, 245, 0.25);
     }
 
-    .projects-all-grid {
+    /* Projects Directory Grid */
+    .projects-directory-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
       gap: 1.75rem;
-      margin-bottom: 4rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .dir-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dir-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(112, 71, 245, 0.12);
+    }
+
+    .dir-thumb-box {
+      position: relative;
+      height: 200px;
+      background: #F1F5F9;
+      overflow: hidden;
+    }
+
+    .dir-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .dir-card:hover .dir-thumb-img {
+      transform: scale(1.04);
+    }
+
+    .dir-badge-overlay {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 9999px;
+      letter-spacing: 0.04em;
+    }
+
+    .dir-badge-overlay.badge-case-study {
+      background: linear-gradient(135deg, #0284C7 0%, #7047F5 100%);
+    }
+
+    .dir-badge-overlay.badge-prize {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    }
+
+    .dir-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .dir-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .dir-category {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .dir-slug {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      font-family: monospace;
+    }
+
+    .dir-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+    }
+
+    .dir-subtitle {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .dir-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #64748B;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .dir-milestone-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: rgba(14, 165, 233, 0.08);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+      color: #0284C7;
+      margin-bottom: 1.25rem;
+      width: fit-content;
+    }
+
+    .dir-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .dir-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.22rem 0.6rem;
+      border-radius: 6px;
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #E2E8F0;
+    }
+
+    .dir-tag.tag-more {
+      background: rgba(112, 71, 245, 0.08);
+      color: var(--primary);
+      font-weight: 700;
+      border-color: rgba(112, 71, 245, 0.2);
+    }
+
+    .dir-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid #F1F5F9;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
+  <!-- NAVIGATION BAR (MATCHING REFERENCE HEADER) -->
   <header class="detail-navbar">
     <div class="container detail-nav-container">
       <a href="index.html" class="nav-brand" aria-label="Kamalesh Ganesh Home">
         <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
       </a>
 
+      <!-- Navigation Links -->
+      <nav class="nav-menu" style="display: flex; gap: 1.25rem; align-items: center;">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="ai-ecosystem.html" class="nav-link nav-pill-btn" title="AI Tools">
+          <span class="nav-dot dot-purple"></span>
+          <span>AI Tools</span>
+        </a>
+        <a href="index.html#research" class="nav-link nav-pill-btn pill-cyan" title="Upcoming">
+          <span class="nav-dot dot-cyan"></span>
+          <span>Upcoming</span>
+        </a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
       <a href="index.html#projects" class="btn-back-portfolio">
         <i class="fa-solid fa-arrow-left"></i>
-        <span>Back to Portfolio</span>
+        <span>Back to Home</span>
       </a>
     </div>
   </header>
@@ -176,17 +351,17 @@
       <!-- HERO SECTION -->
       <section style="margin-bottom: 2rem;">
         <span class="proj-hero-badge">
-          <i class="fa-solid fa-cubes"></i>
-          Original IP, Patents &amp; Deep-Dive Engineering Portfolio
+          <i class="fa-solid fa-layer-group"></i>
+          Original Directory &bull; 13 Engineered Platforms
         </span>
 
         <h1 class="proj-hero-title">
-          All 14 Engineering Projects<br>
-          <span>&amp; Technical Inventions</span>
+          All Projects &amp;<br>
+          <span>Technical Inventions</span>
         </h1>
 
         <p class="proj-lead">
-          A comprehensive directory spanning healthcare AI architectures, registered Intellectual Property, telematics platforms, full-stack web applications, and autonomous robotics.
+          A comprehensive directory of original hardware-software intellectual property, enterprise business software, AI systems, and mobile applications built with rigorous architecture.
         </p>
       </section>
 
@@ -194,369 +369,470 @@
       <div class="proj-controls-wrap">
         <div class="proj-search-box">
           <i class="fa-solid fa-magnifying-glass proj-search-icon"></i>
-          <input type="text" id="projectSearchInput" class="proj-search-input" placeholder="Search by name, technology, or domain (e.g. YOLO, Diabetes, Transit, IP, LiDAR)...">
+          <input type="text" id="projectSearchInput" class="proj-search-input" placeholder="Search projects by name, keyword, or technology (e.g. YOLO, Quotation, Barcode, Flutter, Java, React)...">
         </div>
 
         <div class="proj-category-pills">
-          <button class="proj-cat-btn active" data-cat="all">All Projects (14)</button>
-          <button class="proj-cat-btn" data-cat="healthcare-ai">AI &amp; Healthcare (4)</button>
-          <button class="proj-cat-btn" data-cat="web-fullstack">Web &amp; Full-Stack (4)</button>
-          <button class="proj-cat-btn" data-cat="automation">Automation &amp; Robotics (4)</button>
-          <button class="proj-cat-btn" data-cat="patents">Original IP &amp; Patents (2)</button>
+          <button class="proj-cat-btn active" data-cat="all">All</button>
+          <button class="proj-cat-btn" data-cat="ai-smart">AI &amp; Smart Systems</button>
+          <button class="proj-cat-btn" data-cat="ip">Intellectual Property</button>
+          <button class="proj-cat-btn" data-cat="full-stack">Full Stack</button>
+          <button class="proj-cat-btn" data-cat="healthcare">Healthcare</button>
+          <button class="proj-cat-btn" data-cat="mobile">Mobile</button>
         </div>
       </div>
 
-      <!-- 14 PROJECTS GRID -->
-      <div class="projects-all-grid" id="projectsGrid">
+      <!-- 13 PROJECTS DIRECTORY GRID -->
+      <div class="projects-directory-grid" id="projectsDirectoryGrid">
 
-        <!-- PROJECT 1: MEDILONG -->
-        <div class="project-card" data-category="healthcare-ai">
-          <div class="project-thumb-box">
-            <img src="images/project-medilong.png" alt="MediLong Hospital Management Platform" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-medilong.svg';" loading="lazy">
-            <span class="project-badge-overlay">Founder Project</span>
+        <!-- 1. SINGA PAARVAI AI -->
+        <div class="dir-card" data-category="ai-smart">
+          <div class="dir-thumb-box">
+            <img src="images/project-singapaarvai.jpg" alt="Singa Paarvai AI" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/singapaarvai-full.jpg';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Healthcare AI | SaaS</span>
-              <span class="project-role-badge">Founder &amp; Dev</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">AI &amp; Public Safety</span>
+              <span class="dir-slug">/projects/singa-paarvai-ai</span>
             </div>
-            <h3 class="project-title">MediLong — Hospital Platform</h3>
-            <p class="project-desc">A hospital management platform designed to simplify healthcare administration through digital workflows, patient management, doctor management, appointments, medical records and intelligent healthcare features.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Healthcare AI</span>
-              <span class="tech-tag">Full-Stack</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">REST APIs</span>
+            <h3 class="dir-title">Singa Paarvai AI</h3>
+            <p class="dir-subtitle">Smart Real-Time Crime Detection and Emergency Alert System</p>
+            <p class="dir-desc">An AI-powered public safety and intelligent surveillance initiative designed to identify potentially suspicious or dangerous activities through real-time video analysis and support faster emergency communication.</p>
+            
+            <div class="dir-milestone-pill">
+              <i class="fa-solid fa-microchip"></i>
+              <span>Presented to AI Minister R. Kumar</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#projects" class="btn btn-outline btn-sm"><span>View Summary</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-crown" style="color: #F59E0B;"></i> Active Venture</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">Artificial Intelligence</span>
+              <span class="dir-tag">Computer Vision</span>
+              <span class="dir-tag">Machine Learning</span>
+              <span class="dir-tag">GPS</span>
+              <span class="dir-tag tag-more">+4</span>
+            </div>
+
+            <div class="dir-card-footer">
+              <a href="singa-paarvai-ai.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>View Case Study</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 2: SINGA PAARVAI AI -->
-        <div class="project-card" data-category="healthcare-ai automation">
-          <div class="project-thumb-box">
-            <img src="images/project-singapaarvai.jpg" alt="Singa Paarvai AI" class="project-thumb-img" onerror="this.onerror=null; this.src='images/singapaarvai-full.jpg';" loading="lazy">
-            <span class="project-badge-overlay" style="background: linear-gradient(135deg, #0284C7 0%, #7047F5 100%); color: #fff;">Case Study</span>
+        <!-- 2. PANIMALAR SMART TRANSIT -->
+        <div class="dir-card" data-category="ai-smart full-stack mobile">
+          <div class="dir-thumb-box">
+            <img src="images/panimalar-transit-mockup.jpg" alt="Panimalar Smart Transit" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-bustracking.png';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">AI &amp; Public Safety</span>
-              <span class="project-role-badge">AI &amp; Systems Lead</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Smart Transportation</span>
+              <span class="dir-slug">/projects/panimalar-smart-transit</span>
             </div>
-            <h3 class="project-title">Singa Paarvai AI</h3>
-            <p class="project-desc">An AI-powered public safety and intelligent surveillance initiative designed to identify potentially suspicious activities through real-time computer vision and emergency jurisdiction routing.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Computer Vision</span>
-              <span class="tech-tag">Smart Surveillance</span>
-              <span class="tech-tag">YOLOv8</span>
+            <h3 class="dir-title">Panimalar Smart Transit</h3>
+            <p class="dir-subtitle">Smart College Bus Tracking System</p>
+            <p class="dir-desc">A smart college transportation tracking platform designed to help students monitor college bus locations, view bus availability, and access transportation information through a digital interface.</p>
+            
+            <div class="dir-milestone-pill" style="color: #10B981; background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.25);">
+              <i class="fa-solid fa-bus"></i>
+              <span>Real-Time Campus Mobility</span>
             </div>
-            <div class="project-card-footer">
-              <a href="singa-paarvai-ai.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
-              <span class="project-status-label"><i class="fa-solid fa-microchip"></i> Presented to AI Minister</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">Flutter</span>
+              <span class="dir-tag">Dart</span>
+              <span class="dir-tag">Firebase Realtime DB</span>
+              <span class="dir-tag">Leaflet.js</span>
+              <span class="dir-tag tag-more">+2</span>
+            </div>
+
+            <div class="dir-card-footer">
+              <a href="panimalar-smart-transit.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                <span>View Case Study</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 3: PANIMALAR SMART TRANSIT -->
-        <div class="project-card" data-category="web-fullstack automation">
-          <div class="project-thumb-box">
-            <img src="images/panimalar-transit-mockup.jpg" alt="Panimalar Smart Transit" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-bustracking.png';" loading="lazy">
-            <span class="project-badge-overlay">Transit Logistics</span>
+        <!-- 3. REL GROUP – QUOTATION MANAGEMENT SYSTEM -->
+        <div class="dir-card" data-category="full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/project-rel.png" alt="REL Group – Quotation Management System" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-rel.svg';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">IoT &amp; Transit</span>
-              <span class="project-role-badge">Full-Stack Dev</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Business Application | Software Development</span>
+              <span class="dir-slug">/projects/rel-group-quotation-management</span>
             </div>
-            <h3 class="project-title">Panimalar Smart Transit</h3>
-            <p class="project-desc">A campus transportation management system designed to coordinate bus routes, monitor pickup stops, and keep students informed on arrival times across institutional transit paths.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Transit Logistics</span>
-              <span class="tech-tag">Geolocation</span>
-              <span class="tech-tag">Full-Stack</span>
+            <h3 class="dir-title">REL Group – Quotation Management</h3>
+            <p class="dir-subtitle">Streamlining Business Quotation Preparation Through Digital Workflows.</p>
+            <p class="dir-desc">A quotation management application developed for REL Group to simplify quotation preparation, organize business information, and streamline quotation-related workflows through a structured digital interface.</p>
+            
+            <div class="dir-milestone-pill">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+              <span>Corporate Quotation Workflow</span>
             </div>
-            <div class="project-card-footer">
-              <a href="panimalar-smart-transit.html" class="btn btn-outline btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
-              <span class="project-status-label"><i class="fa-solid fa-circle-check" style="color: #10B981;"></i> Campus Ready</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">React 19</span>
+              <span class="dir-tag">JavaScript (ES6+)</span>
+              <span class="dir-tag">Tailwind CSS</span>
+              <span class="dir-tag">Firebase Realtime DB</span>
+              <span class="dir-tag tag-more">+2</span>
+            </div>
+
+            <div class="dir-card-footer">
+              <a href="index.html#experience" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>View Case Study</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 4: DIACARE+ -->
-        <div class="project-card" data-category="healthcare-ai">
-          <div class="project-thumb-box">
-            <img src="images/project-diacare.png" alt="DiaCare+ Diabetes Management" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-diacare.svg';" loading="lazy">
-            <span class="project-badge-overlay">Clinical Mobile App</span>
+        <!-- 4. VITTRO -->
+        <div class="dir-card" data-category="ip full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/test_em1.png" alt="VITTRO" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/singapaarvai-full.jpg';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Healthcare AI | Mobile</span>
-              <span class="project-role-badge">TMC Intern</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Business Applications / Software Engineering</span>
+              <span class="dir-slug">/projects/vittro</span>
             </div>
-            <h3 class="project-title">DiaCare+ Diabetes Management</h3>
-            <p class="project-desc">Digital diabetes management application supporting fasting &amp; post-prandial glucose logging, HbA1c progress tracking, and interactive glycemic variance curves.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Expo</span>
-              <span class="tech-tag">Health Analytics</span>
+            <h3 class="dir-title">VITTRO</h3>
+            <p class="dir-subtitle">Smart Invoice Management System</p>
+            <p class="dir-desc">A customized invoice management application developed for Srinivasa Marriage Catering Service to simplify invoice preparation and streamline business billing workflows.</p>
+            
+            <div class="dir-milestone-pill" style="color: #7047F5; background: rgba(112, 71, 245, 0.08); border-color: rgba(112, 71, 245, 0.25);">
+              <i class="fa-solid fa-receipt"></i>
+              <span>Client: Srinivasa Marriage Catering Service</span>
             </div>
-            <div class="project-card-footer">
-              <a href="tambaram-medical-centre.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
-              <span class="project-status-label"><i class="fa-solid fa-hospital"></i> TMC Mentored</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">JavaScript (ES6+)</span>
+              <span class="dir-tag">HTML5</span>
+              <span class="dir-tag">Tailwind CSS</span>
+              <span class="dir-tag">Print CSS Engine</span>
+              <span class="dir-tag tag-more">+2</span>
+            </div>
+
+            <div class="dir-card-footer" style="display: flex; gap: 0.5rem;">
+              <a href="index.html#achievements" class="btn btn-primary btn-sm" style="flex: 1;">
+                <span>View Case Study</span>
+              </a>
+              <a href="index.html#achievements" class="btn btn-outline btn-sm" style="flex: 1;" title="View IP & Architecture Details">
+                <span>View IP Details</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 5: PLOTCHOICE PLATFORM -->
-        <div class="project-card" data-category="web-fullstack">
-          <div class="project-thumb-box">
-            <img src="images/project-rel.png" alt="PlotChoice Platform" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-rel.svg';" loading="lazy">
-            <span class="project-badge-overlay">Geospatial Platform</span>
+        <!-- 5. OBJECTID PRO -->
+        <div class="dir-card" data-category="ai-smart full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/test.png" alt="ObjectID Pro" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-markgen.png';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Full Stack | Web</span>
-              <span class="project-role-badge">App Dev Intern</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Software Engineering | Product Identification</span>
+              <span class="dir-slug">/projects/objectid-pro</span>
             </div>
-            <h3 class="project-title">PlotChoice Platform Modules</h3>
-            <p class="project-desc">Interactive geospatial discovery, neighborhood boundary layers with MapLibre GL, and high-performance property directory with Prisma and PostgreSQL.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">MapLibre GL</span>
-              <span class="tech-tag">Prisma ORM</span>
+            <h3 class="dir-title">ObjectID Pro</h3>
+            <p class="dir-subtitle">Smart Product Identification Through QR and Barcode Technology</p>
+            <p class="dir-desc">A product identification and management application designed to organize product information, capture multi-angle images, and simplify identification through QR codes and Code128 barcodes with live scanning.</p>
+            
+            <div class="dir-milestone-pill">
+              <i class="fa-solid fa-barcode"></i>
+              <span>QR &amp; Barcode Scanning Engine</span>
             </div>
-            <div class="project-card-footer">
-              <a href="plotchoice.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Case Study</a>
-              <span class="project-status-label"><i class="fa-solid fa-hourglass-half"></i> Active Engagement</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">JavaScript</span>
+              <span class="dir-tag">FastAPI</span>
+              <span class="dir-tag">MongoDB Atlas</span>
+              <span class="dir-tag">JsBarcode</span>
+              <span class="dir-tag tag-more">+2</span>
+            </div>
+
+            <div class="dir-card-footer">
+              <a href="index.html#projects" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>View Case Study</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 6: REL WEBSITE ENHANCEMENT -->
-        <div class="project-card" data-category="web-fullstack">
-          <div class="project-thumb-box">
-            <img src="images/project-rel.png" alt="REL Website Enhancement" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-rel.svg';" loading="lazy">
-            <span class="project-badge-overlay">Web Enhancement</span>
+        <!-- 6. CLOUD9 PASTRIES -->
+        <div class="dir-card" data-category="full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/project-food.png" alt="Cloud9 Pastries" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-food.svg';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Web Engineering</span>
-              <span class="project-role-badge">REL Intern</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Web Development | E-Commerce</span>
+              <span class="dir-slug">/projects/cloud9-pastries</span>
             </div>
-            <h3 class="project-title">REL Website Enhancement</h3>
-            <p class="project-desc">Worked on enhancing website functionality, interface and user experience, implementing responsive layout upgrades, and optimizing cross-browser performance standards.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">UI/UX</span>
-              <span class="tech-tag">Performance</span>
-              <span class="tech-tag">Cross-Browser</span>
+            <h3 class="dir-title">Cloud9 Pastries</h3>
+            <p class="dir-subtitle">A Digital Ordering Experience for a Modern Bakery</p>
+            <p class="dir-desc">A luxury boutique bakery web application featuring dynamic product catalogues, real-time shopping cart workflows, automated multi-channel order dispatch, and an administrative control panel.</p>
+            
+            <div class="dir-milestone-pill" style="color: #EA580C; background: rgba(234, 88, 12, 0.08); border-color: rgba(234, 88, 12, 0.25);">
+              <i class="fa-solid fa-cake-candles"></i>
+              <span>Digital Bakery Ordering</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#experience" class="btn btn-outline btn-sm"><span>View Internship</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-shield-halved"></i> Verified</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">JavaScript</span>
+              <span class="dir-tag">Node.js</span>
+              <span class="dir-tag">Express.js</span>
+              <span class="dir-tag">MongoDB</span>
+              <span class="dir-tag tag-more">+2</span>
+            </div>
+
+            <div class="dir-card-footer">
+              <a href="index.html#projects" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>View Case Study</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 7: MACRODYNE AUTOMATION UI -->
-        <div class="project-card" data-category="automation">
-          <div class="project-thumb-box">
-            <img src="images/project-macrodyne.png" alt="Macrodyne Automation UI" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-macrodyne.svg';" loading="lazy">
-            <span class="project-badge-overlay">Industrial UI</span>
+        <!-- 7. THE CAFE – JAVA APPLICATION -->
+        <div class="dir-card" data-category="full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/project-grocery.png" alt="The Cafe – Java Application" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-grocery.svg';" loading="lazy">
+            <span class="dir-badge-overlay badge-case-study">Case Study Available</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Industrial Automation</span>
-              <span class="project-role-badge">Macrodyne Intern</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Java Development | Business Application</span>
+              <span class="dir-slug">/projects/the-cafe-java</span>
             </div>
-            <h3 class="project-title">Macrodyne Automation UI</h3>
-            <p class="project-desc">Developed an intuitive user interface for automation-related workflows, enabling operators to control machine cycles, monitor state transitions, and review system telemetry.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Industrial UI</span>
-              <span class="tech-tag">Telemetry</span>
-              <span class="tech-tag">JavaScript</span>
+            <h3 class="dir-title">The Cafe – Java Application</h3>
+            <p class="dir-subtitle">Java-Powered Application Development for Café Operations</p>
+            <p class="dir-desc">A gamified Java Computer-Based Assessment and Quiz Platform built around a cafe theme to evaluate Object-Oriented Programming (OOP) paradigms with multi-round tests, proctored anti-cheat monitoring, and automated grading.</p>
+            
+            <div class="dir-milestone-pill" style="color: #0D9488; background: rgba(13, 148, 136, 0.08); border-color: rgba(13, 148, 136, 0.25);">
+              <i class="fa-solid fa-mug-hot"></i>
+              <span>Gamified Java OOP Assessment</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#experience" class="btn btn-outline btn-sm"><span>View Internship</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-shield-halved"></i> Verified</span>
+
+            <div class="dir-tech-tags">
+              <span class="dir-tag">Java</span>
+              <span class="dir-tag">OOP Principles</span>
+              <span class="dir-tag">JavaScript</span>
+              <span class="dir-tag">Full Stack Architecture</span>
+              <span class="dir-tag tag-more">+1</span>
+            </div>
+
+            <div class="dir-card-footer" style="display: flex; gap: 0.5rem;">
+              <a href="index.html#projects" class="btn btn-primary btn-sm" style="flex: 1;">
+                <span>View Case Study</span>
+              </a>
+              <a href="index.html#achievements" class="btn btn-outline btn-sm" style="flex: 1;">
+                <span>View Architecture</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 8: AI MULTI-DISEASE DIAGNOSTIC DECISION ENGINE -->
-        <div class="project-card" data-category="healthcare-ai">
-          <div class="project-thumb-box">
-            <img src="images/project-pcos.png" alt="AI Multi-Disease Diagnostic Engine" class="project-thumb-img" loading="lazy">
-            <span class="project-badge-overlay">Research Model</span>
+        <!-- 8. NAYARUVI YUKTI -->
+        <div class="dir-card" data-category="full-stack ip">
+          <div class="dir-thumb-box">
+            <img src="images/project-rel.svg" alt="Nayaruvi Yukti" class="dir-thumb-img" loading="lazy">
+            <span class="dir-badge-overlay">nayaruviyukti.app</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Healthcare AI</span>
-              <span class="project-role-badge">Lead Researcher</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Business Software</span>
+              <span class="dir-slug">nayaruviyukti.app</span>
             </div>
-            <h3 class="project-title">AI Multi-Disease Diagnostic Engine</h3>
-            <p class="project-desc">Interpretable multi-disease decision support engine combining biomarker panels, metabolic factors, and explainable feature attributions.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Healthcare AI</span>
-              <span class="tech-tag">Scikit-learn</span>
-              <span class="tech-tag">Explainable AI</span>
+            <h3 class="dir-title">Nayaruvi Yukti</h3>
+            <p class="dir-subtitle">Delivery Challan Management System</p>
+            <p class="dir-desc">A business-focused digital platform designed to simplify delivery challan creation, document management, and dispatch operations.</p>
+            
+            <div class="dir-tech-tags" style="margin-top: 1rem;">
+              <span class="dir-tag">React</span>
+              <span class="dir-tag">Node.js</span>
+              <span class="dir-tag">Express.js</span>
+              <span class="dir-tag">MongoDB</span>
+              <span class="dir-tag tag-more">+1</span>
             </div>
-            <div class="project-card-footer">
-              <a href="ai-assisted-pcos-research.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square"></i> Research Site</a>
-              <span class="project-status-label"><i class="fa-solid fa-flask"></i> Academic Scope</span>
+
+            <div class="dir-card-footer">
+              <a href="index.html#projects" class="btn btn-outline btn-sm" style="width: 100%;">
+                <span>View Project Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 9: AUTONOMOUS GROUND VEHICLE (AGV) -->
-        <div class="project-card" data-category="automation">
-          <div class="project-thumb-box">
-            <img src="images/project-food.png" alt="Autonomous Ground Vehicle" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-food.svg';" loading="lazy">
-            <span class="project-badge-overlay">Robotics</span>
+        <!-- 9. DIACARE -->
+        <div class="dir-card" data-category="healthcare mobile">
+          <div class="dir-thumb-box">
+            <img src="images/project-diacare.png" alt="DiaCare" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-diacare.svg';" loading="lazy">
+            <span class="dir-badge-overlay" style="background: #0284C7;">diacare.app</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Robotics &amp; Autonomous</span>
-              <span class="project-role-badge">Hardware &amp; AI</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Healthcare</span>
+              <span class="dir-slug">diacare.app</span>
             </div>
-            <h3 class="project-title">Autonomous Ground Vehicle (AGV)</h3>
-            <p class="project-desc">Autonomous indoor mapping and payload navigation platform utilizing 2D LiDAR scanning, wheel encoders, and SLAM obstacle avoidance algorithms.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">LiDAR</span>
-              <span class="tech-tag">SLAM</span>
-              <span class="tech-tag">ROS</span>
-              <span class="tech-tag">Embedded C++</span>
+            <h3 class="dir-title">DiaCare</h3>
+            <p class="dir-subtitle">Diabetes Management &amp; Health Tracking App</p>
+            <p class="dir-desc">A mobile diabetes management application designed to support health tracking, glucose monitoring, and personalized insights.</p>
+            
+            <div class="dir-tech-tags" style="margin-top: 1rem;">
+              <span class="dir-tag">React Native</span>
+              <span class="dir-tag">Expo</span>
+              <span class="dir-tag">Firebase</span>
+              <span class="dir-tag">Razorpay</span>
+              <span class="dir-tag tag-more">+1</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#projects" class="btn btn-outline btn-sm"><span>View Summary</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-robot"></i> Prototype</span>
+
+            <div class="dir-card-footer">
+              <a href="tambaram-medical-centre.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>View Project Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 10: AUTOMATED SOIL & ENVIRONMENTAL TESTING RIG -->
-        <div class="project-card" data-category="automation">
-          <div class="project-thumb-box">
-            <img src="images/project-grocery.png" alt="Soil Testing Rig" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-grocery.svg';" loading="lazy">
-            <span class="project-badge-overlay">Agritech Hardware</span>
+        <!-- 10. MEDILONG -->
+        <div class="dir-card" data-category="healthcare full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/project-medilong.png" alt="MediLong" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-medilong.svg';" loading="lazy">
+            <span class="dir-badge-overlay badge-prize"><i class="fa-solid fa-award"></i> First Prize – Ideathon '25</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">IoT &amp; Embedded</span>
-              <span class="project-role-badge">Hardware Lead</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Healthcare</span>
+              <span class="dir-slug">medilong.app</span>
             </div>
-            <h3 class="project-title">Automated Soil Testing Rig</h3>
-            <p class="project-desc">Microcontroller-driven multi-sensor probe measuring NPK levels, moisture, electrical conductivity, and pH with automated telemetry logging.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">IoT</span>
-              <span class="tech-tag">Microcontroller</span>
-              <span class="tech-tag">Sensors</span>
+            <h3 class="dir-title">MediLong</h3>
+            <p class="dir-subtitle">Digital Hospital Management System</p>
+            <p class="dir-desc">A digital hospital management platform designed to support patient, healthcare, and administrative workflows.</p>
+            
+            <div class="dir-tech-tags" style="margin-top: 1rem;">
+              <span class="dir-tag">React</span>
+              <span class="dir-tag">Node.js</span>
+              <span class="dir-tag">Firebase</span>
+              <span class="dir-tag">Tailwind CSS</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#projects" class="btn btn-outline btn-sm"><span>View Summary</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-microchip"></i> Hardware</span>
+
+            <div class="dir-card-footer">
+              <a href="index.html#projects" class="btn btn-outline btn-sm" style="width: 100%;">
+                <span>View Project Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 11: SMART HYDROPONICS & CROP MONITORING -->
-        <div class="project-card" data-category="automation">
-          <div class="project-thumb-box">
-            <img src="images/project-food.png" alt="Smart Hydroponics" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-food.svg';" loading="lazy">
-            <span class="project-badge-overlay">Smart Agriculture</span>
+        <!-- 11. PLOTCHOICE -->
+        <div class="dir-card" data-category="full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/plotchoice-card.png" alt="PlotChoice" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-rel.png';" loading="lazy">
+            <span class="dir-badge-overlay" style="background: #0F766E;">plotchoice.app</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Smart Agriculture</span>
-              <span class="project-role-badge">Systems Engineer</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Real Estate</span>
+              <span class="dir-slug">plotchoice.app</span>
             </div>
-            <h3 class="project-title">Smart Hydroponics Monitor</h3>
-            <p class="project-desc">Closed-loop nutrient dosing system with automated pH correction, water temperature management, and cloud monitoring telemetry.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">IoT Doser</span>
-              <span class="tech-tag">Cloud Telemetry</span>
-              <span class="tech-tag">Automation</span>
+            <h3 class="dir-title">PlotChoice</h3>
+            <p class="dir-subtitle">Location-Based Real Estate Marketplace</p>
+            <p class="dir-desc">A real estate marketplace supporting property listing, discovery, and buyer-seller workflows.</p>
+            
+            <div class="dir-tech-tags" style="margin-top: 1rem;">
+              <span class="dir-tag">Next.js</span>
+              <span class="dir-tag">React</span>
+              <span class="dir-tag">Tailwind CSS</span>
+              <span class="dir-tag">MapLibre GL</span>
+              <span class="dir-tag tag-more">+4</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#projects" class="btn btn-outline btn-sm"><span>View Summary</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-seedling"></i> Deployed</span>
+
+            <div class="dir-card-footer">
+              <a href="plotchoice.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                <span>View Project Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 12: ADVANCED ROBOTIC ARM FOR SORTING -->
-        <div class="project-card" data-category="automation">
-          <div class="project-thumb-box">
-            <img src="images/project-macrodyne.png" alt="Robotic Arm" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-macrodyne.svg';" loading="lazy">
-            <span class="project-badge-overlay">Mechatronics</span>
+        <!-- 12. MACRODYNE AUTOMATION INTERFACE -->
+        <div class="dir-card" data-category="ai-smart full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/project-macrodyne.png" alt="Macrodyne Automation Interface" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-macrodyne.svg';" loading="lazy">
+            <span class="dir-badge-overlay">macrodyneautomationinterface.app</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Robotics &amp; Vision</span>
-              <span class="project-role-badge">Lead Developer</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Automation</span>
+              <span class="dir-slug">macrodyneautomationinterface.app</span>
             </div>
-            <h3 class="project-title">Advanced Robotic Arm (4-DOF)</h3>
-            <p class="project-desc">Inverse kinematics 4-axis robotic arm integrated with top-down computer vision camera for sorting and pick-and-place operations.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Kinematics</span>
-              <span class="tech-tag">Computer Vision</span>
-              <span class="tech-tag">Servo Control</span>
+            <h3 class="dir-title">Macrodyne Automation Interface</h3>
+            <p class="dir-subtitle">Automated Inspection Reporting System</p>
+            <p class="dir-desc">An interface for an automated balloon drawing and inspection reporting system, displaying inspection data through API integrations.</p>
+            
+            <div class="dir-tech-tags" style="margin-top: 1rem;">
+              <span class="dir-tag">HTML5</span>
+              <span class="dir-tag">CSS3</span>
+              <span class="dir-tag">JavaScript (ES6+)</span>
+              <span class="dir-tag">REST APIs</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#projects" class="btn btn-outline btn-sm"><span>View Summary</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-gears"></i> Lab Validated</span>
+
+            <div class="dir-card-footer">
+              <a href="index.html#experience" class="btn btn-outline btn-sm" style="width: 100%;">
+                <span>View Project Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 13: VITTRO (ORIGINAL IP & PATENT) -->
-        <div class="project-card" data-category="patents healthcare-ai">
-          <div class="project-thumb-box">
-            <img src="images/singapaarvai-full.jpg" alt="VITTRO Intellectual Property" class="project-thumb-img" loading="lazy">
-            <span class="project-badge-overlay" style="background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); color: #fff;">Registered IP</span>
+        <!-- 13. NGO FOOD DONATION PLATFORM -->
+        <div class="dir-card" data-category="full-stack">
+          <div class="dir-thumb-box">
+            <img src="images/project-food.png" alt="NGO Food Donation Platform" class="dir-thumb-img" onerror="this.onerror=null; this.src='images/project-food.svg';" loading="lazy">
+            <span class="dir-badge-overlay">ngofooddonationplatform.app</span>
           </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Patent &bull; Medical AI</span>
-              <span class="project-role-badge">Inventor</span>
+          <div class="dir-content">
+            <div class="dir-meta-row">
+              <span class="dir-category">Social Impact</span>
+              <span class="dir-slug">ngofooddonationplatform.app</span>
             </div>
-            <h3 class="project-title">VITTRO — Intelligent Medical Assistant</h3>
-            <p class="project-desc">Proprietary medical computer vision and assistive diagnostics invention registered for Intellectual Property protection.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Intellectual Property</span>
-              <span class="tech-tag">Computer Vision</span>
-              <span class="tech-tag">Diagnostic AI</span>
+            <h3 class="dir-title">NGO Food Donation Platform</h3>
+            <p class="dir-subtitle">Surplus Food Redistribution Network</p>
+            <p class="dir-desc">A platform connecting hotels and caterers with NGOs to facilitate food donation and distribution.</p>
+            
+            <div class="dir-tech-tags" style="margin-top: 1rem;">
+              <span class="dir-tag">PHP</span>
+              <span class="dir-tag">SQL</span>
+              <span class="dir-tag">Cloud Database</span>
+              <span class="dir-tag">JavaScript</span>
             </div>
-            <div class="project-card-footer">
-              <a href="index.html#achievements" class="btn btn-outline btn-sm"><span>View Patent Info</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-certificate" style="color: #F59E0B;"></i> Registered IP</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- PROJECT 14: MARKGEN -->
-        <div class="project-card" data-category="web-fullstack">
-          <div class="project-thumb-box">
-            <img src="images/project-markgen.png" alt="MarkGen Academic Analytics" class="project-thumb-img" onerror="this.onerror=null; this.src='images/project-markgen.svg';" loading="lazy">
-            <span class="project-badge-overlay">Education Platform</span>
-          </div>
-          <div class="project-content">
-            <div class="project-meta-row">
-              <span class="project-category">Full-Stack &bull; Education</span>
-              <span class="project-role-badge">Lead Developer</span>
-            </div>
-            <h3 class="project-title">MarkGen — Grade Analytics Engine</h3>
-            <p class="project-desc">Automated grade evaluation and performance analytics engine enabling faculty to generate performance distributions and student transcripts.</p>
-            <div class="project-tech-tags">
-              <span class="tech-tag">Academic Analytics</span>
-              <span class="tech-tag">Full-Stack</span>
-              <span class="tech-tag">PDF Generation</span>
-            </div>
-            <div class="project-card-footer">
-              <a href="index.html#projects" class="btn btn-outline btn-sm"><span>View Summary</span></a>
-              <span class="project-status-label"><i class="fa-solid fa-graduation-cap"></i> Complete</span>
+            <div class="dir-card-footer">
+              <a href="index.html#projects" class="btn btn-outline btn-sm" style="width: 100%;">
+                <span>View Project Details</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -568,7 +844,7 @@
 
   <footer class="footer" style="background: #0B0F17; color: #94A3B8; padding: 2rem 0; text-align: center; border-top: 1px solid #1E293B;">
     <div class="container">
-      <p style="font-size: 0.9rem; margin: 0;">&copy; 2026 Kamalesh Ganesh. All rights reserved &bull; Engineering Projects Directory</p>
+      <p style="font-size: 0.9rem; margin: 0;">&copy; 2026 Kamalesh Ganesh. All rights reserved &bull; All Projects &amp; Technical Inventions</p>
     </div>
   </footer>
 
@@ -577,7 +853,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       const searchInput = document.getElementById('projectSearchInput');
       const catButtons = document.querySelectorAll('.proj-cat-btn');
-      const projectCards = document.querySelectorAll('#projectsGrid .project-card');
+      const projectCards = document.querySelectorAll('#projectsDirectoryGrid .dir-card');
 
       let currentCat = 'all';
       let searchQuery = '';
