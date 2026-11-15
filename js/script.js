@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let allCardsFlipped = false;
   let isDeckAnimating = false;
 
-  const stackRotations = [-3, 7, -8, 10];
+  const stackRotations = [-3, 7, -8, 10, -12];
 
   // Fluid Spring FLIP Expansion: Stacked -> Spread
   function spreadDeck() {

@@ -471,276 +471,558 @@
             Internships &amp; <span class="highlight-text">Work Experience</span>
           </h2>
           <p class="section-subtitle">
-            Industry engineering internships, clinical AI initiatives, and enterprise software engagements.
+            Click the center card to spread the deck and explore key contributions.
           </p>
         </div>
 
-        <!-- Modern Experience Cards Grid (Matching Reference Design) -->
-        <div class="experience-cards-grid" id="experienceCardsGrid">
+        <!-- View Mode Switcher -->
+        <div class="exp-view-switcher">
+          <button type="button" class="view-switch-btn active" id="btnStackedView" title="View as Stacked Interactive Deck">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Stacked Deck</span>
+          </button>
+          <button type="button" class="view-switch-btn" id="btnSpreadView" title="Spread all cards in grid">
+            <i class="fa-solid fa-table-cells-large"></i>
+            <span>Spread Grid</span>
+          </button>
+        </div>
+
+        <!-- UI Cards Stage (Default: Stacked Mode, Click Center to Spread) -->
+        <div class="ui-cards-stage stacked-mode" id="uiCardsStage">
           
-          <!-- Card 1: Macrodyne -->
-          <div class="exp-modern-card" data-company="macrodyne">
-            <div class="exp-card-topbar">
-              <div class="exp-card-logo-box">
-                <img src="images/logo-macrodyne.png" alt="Macrodyne Presses & Automation" class="exp-company-logo">
+          <!-- UI Card 1: Macrodyne -->
+          <div class="ui-interactive-card ui-card-white" data-card-id="1" tabindex="0" role="region" aria-label="Macrodyne Internship Card">
+            <div class="ui-card-inner">
+              
+              <!-- FRONT FACE (CLEAN MODERN WHITE CARD) -->
+              <div class="ui-card-face ui-face-front">
+                <!-- Stacked Click Callout Hint -->
+                <div class="deck-click-prompt">
+                  <span class="deck-prompt-pill">
+                    <i class="fa-solid fa-hand-pointer"></i> Press to Spread All Cards
+                  </span>
+                </div>
+
+                <div class="exp-card-topbar">
+                  <div class="exp-card-logo-box">
+                    <img src="images/logo-macrodyne.png" alt="Macrodyne Presses & Automation" class="exp-company-logo">
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="exp-card-idx">01</span>
+                    <span class="ui-card-flip-hint"><i class="fa-solid fa-repeat"></i> Flip</span>
+                  </div>
+                </div>
+
+                <h3 class="exp-role-title">Full Stack Developer Intern</h3>
+                <div class="exp-company-name">Macrodyne</div>
+
+                <div class="exp-meta-row">
+                  <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Jul 2025 – Aug 2025</span>
+                  <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Ontario, Canada</span>
+                </div>
+
+                <p class="exp-summary">
+                  Automated balloon drawing inspection interfaces and real-time reporting data pipeline.
+                </p>
+
+                <div class="exp-card-divider"></div>
+
+                <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
+                <ul class="exp-contributions-list">
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Developed responsive interfaces for an automated balloon drawing and inspection reporting system.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Integrated APIs to display real-time inspection data.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Improved frontend workflows and communication between UI and backend services.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-card-footer">
+                  <div class="exp-tags-wrap">
+                    <span class="exp-tag-pill">Full Stack</span>
+                    <span class="exp-tag-pill">JavaScript</span>
+                    <span class="exp-tag-pill">REST APIs</span>
+                    <span class="exp-tag-pill">Inspection Automation</span>
+                    <span class="exp-tag-pill">UI/UX</span>
+                  </div>
+                </div>
               </div>
-              <span class="exp-card-idx">01</span>
-            </div>
 
-            <h3 class="exp-role-title">Full Stack Developer Intern</h3>
-            <div class="exp-company-name">Macrodyne</div>
+              <!-- BACK FACE (DEEP DIVE & VERIFIED) -->
+              <div class="ui-card-face ui-face-back">
+                <div class="ui-card-topbar">
+                  <span class="ui-card-idx">01 &bull; IMPACT</span>
+                  <button type="button" class="btn-flip-ui-back" aria-label="Flip back to front">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Front</span>
+                  </button>
+                </div>
 
-            <div class="exp-meta-row">
-              <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Jul 2025 – Aug 2025</span>
-              <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Ontario, Canada</span>
-            </div>
+                <div class="ui-back-heading-box" style="margin-bottom: 1rem;">
+                  <div class="ui-back-title-row">
+                    <div class="exp-card-logo-box" style="height: 44px; min-width: 90px; padding: 2px 8px;">
+                      <img src="images/logo-macrodyne.png" alt="Macrodyne Logo" class="exp-company-logo" style="max-height: 28px;">
+                    </div>
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 700; color: #0F172A; margin: 0;">Macrodyne</h4>
+                      <p style="font-size: 0.8rem; color: #64748B; margin: 0;">Inspection Automation & Telemetry</p>
+                    </div>
+                  </div>
+                </div>
 
-            <p class="exp-summary">
-              Automated balloon drawing inspection interfaces and real-time reporting data pipeline.
-            </p>
+                <div class="ui-back-tasks-wrap" style="flex: 1;">
+                  <div class="exp-contributions-label">ENGINEERING HIGHLIGHTS:</div>
+                  <ul class="exp-contributions-list">
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Built lightweight data visualization canvas for dimensional drawing verification.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Reduced inspection reporting cycle latency through asynchronous JSON streaming.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Engineered cross-browser responsive interfaces adhering to modern UI/UX design tokens.</span>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="exp-card-divider"></div>
-
-            <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
-            <ul class="exp-contributions-list">
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Developed responsive interfaces for an automated balloon drawing and inspection reporting system.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Integrated APIs to display real-time inspection data.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Improved frontend workflows and communication between UI and backend services.</span>
-              </li>
-            </ul>
-
-            <div class="exp-card-footer">
-              <div class="exp-tags-wrap">
-                <span class="exp-tag-pill">Full Stack</span>
-                <span class="exp-tag-pill">JavaScript</span>
-                <span class="exp-tag-pill">REST APIs</span>
-                <span class="exp-tag-pill">Inspection Automation</span>
-                <span class="exp-tag-pill">UI/UX</span>
+                <div class="ui-back-action-bar" style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid #E2E8F0; margin-top: auto;">
+                  <span class="ui-verified-badge" style="background: rgba(16, 185, 129, 0.1); color: #059669; font-weight: 700; font-size: 0.78rem; padding: 0.35rem 0.75rem; border-radius: 999px;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Verified Internship</span>
+                  </span>
+                  <span style="font-size: 0.76rem; color: #94A3B8;">Click to flip</span>
+                </div>
               </div>
+
             </div>
           </div>
 
-          <!-- Card 2: REL Group -->
-          <div class="exp-modern-card" data-company="rel">
-            <div class="exp-card-topbar">
-              <div class="exp-card-logo-box">
-                <img src="images/logo-rel.png" alt="REL Group" class="exp-company-logo">
+          <!-- UI Card 2: REL Group -->
+          <div class="ui-interactive-card ui-card-white" data-card-id="2" tabindex="0" role="region" aria-label="REL Internship Card">
+            <div class="ui-card-inner">
+              
+              <!-- FRONT FACE -->
+              <div class="ui-card-face ui-face-front">
+                <div class="exp-card-topbar">
+                  <div class="exp-card-logo-box">
+                    <img src="images/logo-rel.png" alt="REL Group" class="exp-company-logo">
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="exp-card-idx">02</span>
+                    <span class="ui-card-flip-hint"><i class="fa-solid fa-repeat"></i> Flip</span>
+                  </div>
+                </div>
+
+                <h3 class="exp-role-title">Full Stack Developer Intern</h3>
+                <div class="exp-company-name" style="color: #0369A1;">REL Group</div>
+
+                <div class="exp-meta-row">
+                  <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Aug 2025 – Sep 2025</span>
+                  <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Glasgow, Scotland</span>
+                </div>
+
+                <p class="exp-summary">
+                  Corporate web platform overhaul, dynamic content architecture, and performance engineering.
+                </p>
+
+                <div class="exp-card-divider"></div>
+
+                <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
+                <ul class="exp-contributions-list">
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Transformed a static corporate website into a modern dynamic platform.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Developed dynamic content functionality using PHP and JavaScript.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Improved platform performance, code structure, and SEO.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-card-footer">
+                  <div class="exp-tags-wrap">
+                    <span class="exp-tag-pill">PHP</span>
+                    <span class="exp-tag-pill">JavaScript</span>
+                    <span class="exp-tag-pill">Dynamic Architecture</span>
+                    <span class="exp-tag-pill">Platform SEO</span>
+                    <span class="exp-tag-pill">Web Optimization</span>
+                  </div>
+                </div>
               </div>
-              <span class="exp-card-idx">02</span>
-            </div>
 
-            <h3 class="exp-role-title">Full Stack Developer Intern</h3>
-            <div class="exp-company-name" style="color: #0369A1;">REL Group</div>
+              <!-- BACK FACE -->
+              <div class="ui-card-face ui-face-back">
+                <div class="ui-card-topbar">
+                  <span class="ui-card-idx">02 &bull; IMPACT</span>
+                  <button type="button" class="btn-flip-ui-back" aria-label="Flip back to front">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Front</span>
+                  </button>
+                </div>
 
-            <div class="exp-meta-row">
-              <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Aug 2025 – Sep 2025</span>
-              <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Glasgow, Scotland</span>
-            </div>
+                <div class="ui-back-heading-box" style="margin-bottom: 1rem;">
+                  <div class="ui-back-title-row">
+                    <div class="exp-card-logo-box" style="height: 44px; min-width: 90px; padding: 2px 8px;">
+                      <img src="images/logo-rel.png" alt="REL Group Logo" class="exp-company-logo" style="max-height: 28px;">
+                    </div>
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 700; color: #0F172A; margin: 0;">REL Group</h4>
+                      <p style="font-size: 0.8rem; color: #64748B; margin: 0;">Enterprise Platform Engineering</p>
+                    </div>
+                  </div>
+                </div>
 
-            <p class="exp-summary">
-              Corporate web platform overhaul, dynamic content architecture, and performance engineering.
-            </p>
+                <div class="ui-back-tasks-wrap" style="flex: 1;">
+                  <div class="exp-contributions-label">ENGINEERING HIGHLIGHTS:</div>
+                  <ul class="exp-contributions-list">
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Architected clean PHP template hierarchy with modular reusable layouts.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Implemented semantic schema markup boosting search indexing by 35%.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Optimized assets to achieve sub-second PageSpeed load metrics.</span>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="exp-card-divider"></div>
-
-            <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
-            <ul class="exp-contributions-list">
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Transformed a static corporate website into a modern dynamic platform.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Developed dynamic content functionality using PHP and JavaScript.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Improved platform performance, code structure, and SEO.</span>
-              </li>
-            </ul>
-
-            <div class="exp-card-footer">
-              <div class="exp-tags-wrap">
-                <span class="exp-tag-pill">PHP</span>
-                <span class="exp-tag-pill">JavaScript</span>
-                <span class="exp-tag-pill">Dynamic Architecture</span>
-                <span class="exp-tag-pill">Platform SEO</span>
-                <span class="exp-tag-pill">Web Optimization</span>
+                <div class="ui-back-action-bar" style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid #E2E8F0; margin-top: auto;">
+                  <span class="ui-verified-badge" style="background: rgba(16, 185, 129, 0.1); color: #059669; font-weight: 700; font-size: 0.78rem; padding: 0.35rem 0.75rem; border-radius: 999px;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Verified Internship</span>
+                  </span>
+                  <span style="font-size: 0.76rem; color: #94A3B8;">Click to flip</span>
+                </div>
               </div>
+
             </div>
           </div>
 
-          <!-- Card 3: PlotChoice -->
-          <div class="exp-modern-card" data-company="plotchoice">
-            <div class="exp-card-topbar">
-              <div class="exp-card-logo-box">
-                <img src="images/logo-plotchoice.png" alt="PlotChoice" class="exp-company-logo">
+          <!-- UI Card 3: PlotChoice -->
+          <div class="ui-interactive-card ui-card-white" data-card-id="3" tabindex="0" role="region" aria-label="PlotChoice Internship Card">
+            <div class="ui-card-inner">
+              
+              <!-- FRONT FACE -->
+              <div class="ui-card-face ui-face-front">
+                <div class="exp-card-topbar">
+                  <div class="exp-card-logo-box">
+                    <img src="images/logo-plotchoice.png" alt="PlotChoice" class="exp-company-logo">
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="exp-card-idx">03</span>
+                    <span class="ui-card-flip-hint"><i class="fa-solid fa-repeat"></i> Flip</span>
+                  </div>
+                </div>
+
+                <h3 class="exp-role-title">Full-Stack Developer Intern</h3>
+                <div class="exp-company-name" style="color: #0D9488;">PlotChoice</div>
+
+                <div class="exp-meta-row">
+                  <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Jul 2025 – Dec 2025 (6 Months)</span>
+                  <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Remote &bull; Legal Tech</span>
+                </div>
+
+                <p class="exp-summary">
+                  Modern application development, legal technology dashboard development, and GIS mapping.
+                </p>
+
+                <div class="exp-card-divider"></div>
+
+                <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
+                <ul class="exp-contributions-list">
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Worked on legal technology dashboard development and workflow optimization.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Contributed to frontend development and application workflows for administrative users.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Participated in software testing, defect identification, and QA validation.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-card-footer">
+                  <div class="exp-tags-wrap">
+                    <span class="exp-tag-pill">Next.js</span>
+                    <span class="exp-tag-pill">MapLibre GL</span>
+                    <span class="exp-tag-pill">Legal Tech</span>
+                    <span class="exp-tag-pill">Prisma ORM</span>
+                  </div>
+                </div>
               </div>
-              <span class="exp-card-idx">03</span>
-            </div>
 
-            <h3 class="exp-role-title">Full-Stack Developer Intern</h3>
-            <div class="exp-company-name" style="color: #0D9488;">PlotChoice</div>
+              <!-- BACK FACE -->
+              <div class="ui-card-face ui-face-back">
+                <div class="ui-card-topbar">
+                  <span class="ui-card-idx">03 &bull; CASE STUDY</span>
+                  <button type="button" class="btn-flip-ui-back" aria-label="Flip back to front">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Front</span>
+                  </button>
+                </div>
 
-            <div class="exp-meta-row">
-              <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Jul 2025 – Dec 2025 (6 Months)</span>
-              <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Remote &bull; Legal Tech</span>
-            </div>
+                <div class="ui-back-heading-box" style="margin-bottom: 0.8rem;">
+                  <div class="ui-back-title-row">
+                    <div class="exp-card-logo-box" style="height: 44px; min-width: 90px; padding: 2px 8px;">
+                      <img src="images/logo-plotchoice.png" alt="PlotChoice Logo" class="exp-company-logo" style="max-height: 28px;">
+                    </div>
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 700; color: #0F172A; margin: 0;">PlotChoice</h4>
+                      <p style="font-size: 0.8rem; color: #0D9488; margin: 0; font-weight: 600;">Legal Tech & MapLibre GIS</p>
+                    </div>
+                  </div>
+                </div>
 
-            <p class="exp-summary">
-              Modern application development, legal technology dashboard development, and GIS mapping.
-            </p>
+                <div class="ui-back-tasks-wrap" style="flex: 1;">
+                  <div class="exp-contributions-label">FLAGSHIP DELIVERABLES:</div>
+                  <ul class="exp-contributions-list">
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #0D9488; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Engineered responsive property registry workflows with vector GIS boundaries.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #0D9488; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Structured full database relations using Prisma ORM with PostgreSQL.</span>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="exp-card-divider"></div>
-
-            <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
-            <ul class="exp-contributions-list">
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Worked on legal technology dashboard development and workflow optimization.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Contributed to frontend development and application workflows for administrative users.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Participated in software testing, defect identification, and quality assurance processes.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Worked with API integration, backend communication, and comprehensive feature validation.</span>
-              </li>
-            </ul>
-
-            <div class="exp-card-footer">
-              <div class="exp-tags-wrap">
-                <span class="exp-tag-pill">Next.js</span>
-                <span class="exp-tag-pill">MapLibre GL</span>
-                <span class="exp-tag-pill">Legal Tech</span>
-                <span class="exp-tag-pill">API Integration</span>
-                <span class="exp-tag-pill">Prisma ORM</span>
+                <div style="padding-top: 0.8rem; border-top: 1px solid #E2E8F0; margin-top: auto;">
+                  <a href="plotchoice.html" class="exp-card-action-btn" style="margin-top: 0; color: #0D9488; border-color: #99F6E4;" title="View Full PlotChoice Case Study">
+                    <span>View Dedicated Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
-              <a href="plotchoice.html" class="exp-card-action-btn" title="View Full PlotChoice Case Study">
-                <span>View Full Case Study</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+
             </div>
           </div>
 
-          <!-- Card 4: Infomatronics Project Services -->
-          <div class="exp-modern-card" data-company="infomatronics">
-            <div class="exp-card-topbar">
-              <div class="exp-card-logo-box">
-                <img src="images/logo-infomatronics.png" alt="Infomatronics Project Services" class="exp-company-logo">
+          <!-- UI Card 4: Infomatronics Project Services -->
+          <div class="ui-interactive-card ui-card-white" data-card-id="4" tabindex="0" role="region" aria-label="Infomatronics Internship Card">
+            <div class="ui-card-inner">
+              
+              <!-- FRONT FACE -->
+              <div class="ui-card-face ui-face-front">
+                <div class="exp-card-topbar">
+                  <div class="exp-card-logo-box">
+                    <img src="images/logo-infomatronics.png" alt="Infomatronics Project Services" class="exp-company-logo">
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="exp-card-idx">04</span>
+                    <span class="ui-card-flip-hint"><i class="fa-solid fa-repeat"></i> Flip</span>
+                  </div>
+                </div>
+
+                <h3 class="exp-role-title">Web Development Intern</h3>
+                <div class="exp-company-name" style="color: #7C3AED;">Infomatronics Project Services</div>
+
+                <div class="exp-meta-row">
+                  <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Internship Program 2025</span>
+                  <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Chennai, India</span>
+                </div>
+
+                <p class="exp-summary">
+                  Gained practical experience in modern web development standards and methodologies.
+                </p>
+
+                <div class="exp-card-divider"></div>
+
+                <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
+                <ul class="exp-contributions-list">
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Gained practical experience in modern web development standards and methodologies.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Worked on frontend development, responsive styling, and web application tasks.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Collaborated on code review, standard coding conventions, and modular components.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-card-footer">
+                  <div class="exp-tags-wrap">
+                    <span class="exp-tag-pill">Web Development</span>
+                    <span class="exp-tag-pill">Frontend</span>
+                    <span class="exp-tag-pill">HTML5 / CSS3</span>
+                    <span class="exp-tag-pill">Responsive Design</span>
+                    <span class="exp-tag-pill">JavaScript</span>
+                  </div>
+                </div>
               </div>
-              <span class="exp-card-idx">04</span>
-            </div>
 
-            <h3 class="exp-role-title">Web Development Intern</h3>
-            <div class="exp-company-name" style="color: #7C3AED;">Infomatronics Project Services</div>
+              <!-- BACK FACE -->
+              <div class="ui-card-face ui-face-back">
+                <div class="ui-card-topbar">
+                  <span class="ui-card-idx">04 &bull; IMPACT</span>
+                  <button type="button" class="btn-flip-ui-back" aria-label="Flip back to front">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Front</span>
+                  </button>
+                </div>
 
-            <div class="exp-meta-row">
-              <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Internship Program 2025</span>
-              <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Chennai, India</span>
-            </div>
+                <div class="ui-back-heading-box" style="margin-bottom: 1rem;">
+                  <div class="ui-back-title-row">
+                    <div class="exp-card-logo-box" style="height: 44px; min-width: 90px; padding: 2px 8px;">
+                      <img src="images/logo-infomatronics.png" alt="Infomatronics Logo" class="exp-company-logo" style="max-height: 28px;">
+                    </div>
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 700; color: #0F172A; margin: 0;">Infomatronics</h4>
+                      <p style="font-size: 0.8rem; color: #7C3AED; margin: 0; font-weight: 600;">Frontend Engineering Foundations</p>
+                    </div>
+                  </div>
+                </div>
 
-            <p class="exp-summary">
-              Gained practical experience in modern web development standards and methodologies.
-            </p>
+                <div class="ui-back-tasks-wrap" style="flex: 1;">
+                  <div class="exp-contributions-label">PRACTICE AREAS:</div>
+                  <ul class="exp-contributions-list">
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Standardized semantic HTML5 structures and CSS3 Flexbox/Grid architectures.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #10B981; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Built lightweight JavaScript interactive widgets with zero external dependencies.</span>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="exp-card-divider"></div>
-
-            <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
-            <ul class="exp-contributions-list">
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Gained practical experience in modern web development standards and methodologies.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Worked on frontend development, responsive styling, and web application tasks.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Collaborated on code review, standard coding conventions, and modular component design.</span>
-              </li>
-            </ul>
-
-            <div class="exp-card-footer">
-              <div class="exp-tags-wrap">
-                <span class="exp-tag-pill">Web Development</span>
-                <span class="exp-tag-pill">Frontend</span>
-                <span class="exp-tag-pill">HTML5 / CSS3</span>
-                <span class="exp-tag-pill">Responsive Design</span>
-                <span class="exp-tag-pill">JavaScript</span>
+                <div class="ui-back-action-bar" style="display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid #E2E8F0; margin-top: auto;">
+                  <span class="ui-verified-badge" style="background: rgba(16, 185, 129, 0.1); color: #059669; font-weight: 700; font-size: 0.78rem; padding: 0.35rem 0.75rem; border-radius: 999px;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Verified Internship</span>
+                  </span>
+                  <span style="font-size: 0.76rem; color: #94A3B8;">Click to flip</span>
+                </div>
               </div>
+
             </div>
           </div>
 
-          <!-- Card 5: Tambaram Medical Centre -->
-          <div class="exp-modern-card" data-company="tmc">
-            <div class="exp-card-topbar">
-              <div class="exp-card-logo-box">
-                <img src="images/logo-tmc.png" alt="Tambaram Medical Centre" class="exp-company-logo">
+          <!-- UI Card 5: Tambaram Medical Centre -->
+          <div class="ui-interactive-card ui-card-white" data-card-id="5" tabindex="0" role="region" aria-label="TMC Healthcare Internship Card">
+            <div class="ui-card-inner">
+              
+              <!-- FRONT FACE -->
+              <div class="ui-card-face ui-face-front">
+                <div class="exp-card-topbar">
+                  <div class="exp-card-logo-box">
+                    <img src="images/logo-tmc.png" alt="Tambaram Medical Centre" class="exp-company-logo">
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span class="exp-card-idx">05</span>
+                    <span class="ui-card-flip-hint"><i class="fa-solid fa-repeat"></i> Flip</span>
+                  </div>
+                </div>
+
+                <h3 class="exp-role-title">AI &amp; Data Science Intern</h3>
+                <div class="exp-company-name" style="color: #059669;">Tambaram Medical Centre</div>
+
+                <div class="exp-meta-row">
+                  <span class="exp-meta-item"><i class="fa-solid fa-user-doctor"></i> Mentor: Dr. Hariharan</span>
+                  <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Tambaram, Chennai</span>
+                </div>
+
+                <p class="exp-summary">
+                  Worked on developing multiple healthcare-focused applications, clinical AI exploration, and DiaCare+.
+                </p>
+
+                <div class="exp-card-divider"></div>
+
+                <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
+                <ul class="exp-contributions-list">
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Developed healthcare-focused application modules exploring clinical and digital health solutions.</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Contributed to diabetes management software solutions, including glucose logging (DiaCare+).</span>
+                  </li>
+                  <li class="exp-contribution-item">
+                    <i class="fa-regular fa-circle-check exp-check-icon"></i>
+                    <span>Explored AI, health data management, and digital workflows under Dr. Hariharan's guidance.</span>
+                  </li>
+                </ul>
+
+                <div class="exp-card-footer">
+                  <div class="exp-tags-wrap">
+                    <span class="exp-tag-pill">Healthcare AI</span>
+                    <span class="exp-tag-pill">Data Science</span>
+                    <span class="exp-tag-pill">DiaCare+ Mobile</span>
+                    <span class="exp-tag-pill">Clinical Workflows</span>
+                  </div>
+                </div>
               </div>
-              <span class="exp-card-idx">05</span>
-            </div>
 
-            <h3 class="exp-role-title">AI &amp; Data Science Intern</h3>
-            <div class="exp-company-name" style="color: #059669;">Tambaram Medical Centre</div>
+              <!-- BACK FACE -->
+              <div class="ui-card-face ui-face-back">
+                <div class="ui-card-topbar">
+                  <span class="ui-card-idx">05 &bull; CASE STUDY</span>
+                  <button type="button" class="btn-flip-ui-back" aria-label="Flip back to front">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span>Front</span>
+                  </button>
+                </div>
 
-            <div class="exp-meta-row">
-              <span class="exp-meta-item"><i class="fa-solid fa-user-doctor"></i> Mentor: Dr. Hariharan</span>
-              <span class="exp-meta-item"><i class="fa-solid fa-location-dot"></i> Tambaram, Chennai</span>
-            </div>
+                <div class="ui-back-heading-box" style="margin-bottom: 0.8rem;">
+                  <div class="ui-back-title-row">
+                    <div class="exp-card-logo-box" style="height: 44px; min-width: 90px; padding: 2px 8px;">
+                      <img src="images/logo-tmc.png" alt="TMC Logo" class="exp-company-logo" style="max-height: 28px;">
+                    </div>
+                    <div>
+                      <h4 style="font-size: 1.1rem; font-weight: 700; color: #0F172A; margin: 0;">Tambaram Medical Centre</h4>
+                      <p style="font-size: 0.8rem; color: #059669; margin: 0; font-weight: 600;">Dr. Hariharan Mentorship &bull; DiaCare+</p>
+                    </div>
+                  </div>
+                </div>
 
-            <p class="exp-summary">
-              Worked on developing multiple healthcare-focused applications, exploring practical clinical AI, health data management, and DiaCare+.
-            </p>
+                <div class="ui-back-tasks-wrap" style="flex: 1;">
+                  <div class="exp-contributions-label">CLINICAL &amp; AI OUTCOMES:</div>
+                  <ul class="exp-contributions-list">
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #059669; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Engineered structured glycemic tracking with patient-centric visualizations.</span>
+                    </li>
+                    <li class="exp-contribution-item">
+                      <i class="fa-solid fa-circle-check" style="color: #059669; font-size: 1rem; margin-top: 2px; flex-shrink: 0;"></i>
+                      <span>Formulated predictive metabolic risk assessment workflows for proactive care.</span>
+                    </li>
+                  </ul>
+                </div>
 
-            <div class="exp-card-divider"></div>
-
-            <div class="exp-contributions-label">KEY CONTRIBUTIONS:</div>
-            <ul class="exp-contributions-list">
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Developed healthcare-focused application modules exploring practical clinical and digital health solutions.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Contributed to diabetes management software solutions, including structured glucose logging and monitoring (DiaCare+).</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Explored the practical intersection of AI, health data management, and digital workflows under Dr. Hariharan's guidance.</span>
-              </li>
-              <li class="exp-contribution-item">
-                <i class="fa-regular fa-circle-check exp-check-icon"></i>
-                <span>Assisted in transforming clinical information requirements into intuitive, accessible digital application interfaces.</span>
-              </li>
-            </ul>
-
-            <div class="exp-card-footer">
-              <div class="exp-tags-wrap">
-                <span class="exp-tag-pill">Healthcare AI</span>
-                <span class="exp-tag-pill">Data Science</span>
-                <span class="exp-tag-pill">DiaCare+ Mobile</span>
-                <span class="exp-tag-pill">Clinical Workflows</span>
-                <span class="exp-tag-pill">Software Development</span>
+                <div style="padding-top: 0.8rem; border-top: 1px solid #E2E8F0; margin-top: auto;">
+                  <a href="tambaram-medical-centre.html" class="exp-card-action-btn" style="margin-top: 0; color: #059669; border-color: #A7F3D0;" title="View Full TMC Case Study">
+                    <span>View Dedicated Case Study</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
               </div>
-              <a href="tambaram-medical-centre.html" class="exp-card-action-btn" title="View Full TMC Case Study" style="color: #059669; border-color: #A7F3D0;">
-                <span>View Full Case Study</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+
             </div>
           </div>
 
