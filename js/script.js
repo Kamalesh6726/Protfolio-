@@ -262,6 +262,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Close menu when clicking any item in the Explore dropdown on mobile
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        if (mobileToggleBtn) {
+          mobileToggleBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          mobileToggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !mobileToggleBtn.contains(e.target) && navMenu.classList.contains('open')) {
@@ -463,6 +474,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // In Spread Mode: Clicking flips between Front and Back (Key Contributions)
       card.classList.toggle('is-flipped');
     });
+
+    // Explicit Flip Back Button Handler
+    const backBtn = card.querySelector('.btn-flip-ui-back');
+    if (backBtn) {
+      backBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        card.classList.remove('is-flipped');
+      });
+    }
 
     // Keyboard accessibility
     card.addEventListener('keydown', (e) => {
