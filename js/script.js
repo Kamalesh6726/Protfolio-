@@ -9,6 +9,101 @@ document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   // ------------------------------------------------------------------------
+  // 0. High-Craft Editorial Preloader Controller ("KAMALESH G")
+  // ------------------------------------------------------------------------
+  const sitePreloader = document.getElementById('sitePreloader');
+  const preloaderProgressFill = document.getElementById('preloaderProgressFill');
+  const preloaderCounter = document.getElementById('preloaderCounter');
+  const preloaderCanisterImg = document.getElementById('preloaderCanisterImg');
+  const preloaderSkipBtn = document.getElementById('preloaderSkipBtn');
+
+  if (sitePreloader) {
+    let progress = 0;
+    let isFinished = false;
+
+    // Dismiss & Curtain Exit Handler
+    function dismissPreloader() {
+      if (isFinished) return;
+      isFinished = true;
+      
+      if (preloaderProgressFill) preloaderProgressFill.style.width = '100%';
+      if (preloaderCounter) preloaderCounter.textContent = '100%';
+      
+      // Trigger curtain slide-up
+      sitePreloader.classList.add('preloader-exit');
+      document.body.classList.remove('preloader-locked');
+
+      // Trigger entrance reveal on hero elements
+      setTimeout(() => {
+        document.querySelectorAll('#hero .hero-badge, #hero .hero-title, #hero .hero-lead, #hero .hero-actions').forEach(el => {
+          el.classList.add('revealed');
+        });
+      }, 250);
+
+      // Clean up DOM after curtain animation finishes
+      setTimeout(() => {
+        sitePreloader.style.display = 'none';
+      }, 900);
+    }
+
+    // Fast, organic progress ticker (0% -> 100% in ~1.3s)
+    const startTime = performance.now();
+    const duration = 1250; // ms
+
+    function tickProgress(now) {
+      if (isFinished) return;
+      const elapsed = now - startTime;
+      const factor = Math.min(elapsed / duration, 1);
+      // Smooth cubic ease-out
+      const eased = 1 - Math.pow(1 - factor, 2.5);
+      const currentPercent = Math.min(Math.floor(eased * 100), 100);
+
+      if (preloaderProgressFill) preloaderProgressFill.style.width = `${currentPercent}%`;
+      if (preloaderCounter) preloaderCounter.textContent = `${currentPercent < 10 ? '0' : ''}${currentPercent}%`;
+
+      if (factor < 1) {
+        requestAnimationFrame(tickProgress);
+      } else {
+        setTimeout(dismissPreloader, 180);
+      }
+    }
+
+    requestAnimationFrame(tickProgress);
+
+    // Click anywhere to immediately enter
+    sitePreloader.addEventListener('click', () => {
+      dismissPreloader();
+    });
+
+    if (preloaderSkipBtn) {
+      preloaderSkipBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dismissPreloader();
+      });
+    }
+
+    // Subtle 3D Mouse Parallax Tilt on Canister (Desktop only)
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && preloaderCanisterImg) {
+      sitePreloader.addEventListener('mousemove', (e) => {
+        if (isFinished) return;
+        const rect = sitePreloader.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        preloaderCanisterImg.style.transform = `translateY(-4px) rotateY(${x * 24}deg) rotateX(${-y * 24}deg) rotateZ(${x * 10}deg)`;
+      });
+
+      sitePreloader.addEventListener('mouseleave', () => {
+        if (isFinished) return;
+        preloaderCanisterImg.style.transform = '';
+      });
+    }
+
+    // Fail-safe: Always dismiss after max 2.5s
+    setTimeout(dismissPreloader, 2500);
+  }
+
+
+  // ------------------------------------------------------------------------
   // 1. DOM Element References
   // ------------------------------------------------------------------------
   const navbar = document.getElementById('navbar');

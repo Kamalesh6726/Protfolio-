@@ -29,7 +29,7 @@
   <!-- Google Fonts: Poppins (Display/Headings) & Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -37,7 +37,43 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="preloader-locked">
+
+  <!-- ======================================================================
+       EDITORIAL PRELOADER ("KAMALESH G" WITH 3D FILM CANISTER)
+       ====================================================================== -->
+  <div id="sitePreloader" class="site-preloader" aria-label="Loading Kamalesh Ganesh Portfolio" role="status">
+    <div class="preloader-inner">
+      
+      <!-- Centerpiece: "KAMALESH G" with Staggered Character Mask & Floating Canister -->
+      <div class="preloader-hero-word" id="preloaderHeroWord">
+        <span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.04s;">K</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.08s;">A</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.12s;">M</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.16s;">A</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.20s;">L</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.24s;">E</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.28s;">S</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.32s;">H</span></span><span style="display: inline-block; width: 0.25em;"></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.38s;">G</span></span>
+        
+        <!-- 3D Yellow Film Canister (Bobbing Micro-Motion & Mouse Tilt) -->
+        <div class="preloader-canister-box" id="preloaderCanisterBox" title="Creative Development & System Architecture">
+          <img src="images/film-canister-badge.png" alt="3D Film Canister" class="preloader-canister-img" id="preloaderCanisterImg">
+          <div class="canister-ground-shadow"></div>
+        </div>
+      </div>
+
+      <!-- Minimalist Progress Meter & Subtitle -->
+      <div class="preloader-meta-wrap">
+        <div class="preloader-progress-track">
+          <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
+        </div>
+        <div class="preloader-meta-labels">
+          <span>PORTFOLIO &bull; 2026</span>
+          <span class="preloader-counter" id="preloaderCounter">00%</span>
+        </div>
+      </div>
+
+      <!-- Dismiss Button Hint -->
+      <button type="button" class="preloader-skip-hint" id="preloaderSkipBtn" aria-label="Skip Intro Animation">
+        Click anywhere to enter &rarr;
+      </button>
+    </div>
+  </div>
+
 
   <!-- ======================================================================
        NAVIGATION BAR
