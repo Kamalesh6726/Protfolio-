@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="software" data-radius="soft" data-buttons="pill" data-motion="1">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
   
   <!-- Primary Meta Tags -->
   <title>Kamalesh Ganesh — AI Engineer | Full-Stack Developer | Founder of MediLong</title>
@@ -45,6 +47,7 @@
       <a href="#hero" class="nav-brand" aria-label="Kamalesh Ganesh Home">
         <img src="images/logo-icon.png" alt="KG Logo" class="nav-brand-logo" onerror="this.onerror=null; this.src='public/images/logo-icon.png';">
       </a>
+      <div class="mobile-app-header-title">Kamalesh Ganesh</div>
 
       <!-- Desktop & Mobile Navigation Links (Matching Screenshot Header) -->
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
@@ -118,11 +121,14 @@
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Nav Action Button -->
+      <!-- Nav Action Button & Mobile Header Controls -->
       <div class="nav-actions">
-        <a href="Kamalesh-Ganesh-Resume.pdf" target="_blank" download="Kamalesh-Ganesh-Resume.pdf" class="btn btn-primary btn-sm" title="Download Official Resume PDF">
+        <a href="Kamalesh-Ganesh-Resume.pdf" target="_blank" download="Kamalesh-Ganesh-Resume.pdf" class="btn btn-primary btn-sm desktop-only-btn" title="Download Official Resume PDF">
           <i class="fa-solid fa-file-arrow-down"></i>
           <span>Resume</span>
+        </a>
+        <a href="#contact" class="mobile-header-btn" title="Quick Contact" aria-label="Contact">
+          <i class="fa-solid fa-paper-plane"></i>
         </a>
         <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
@@ -733,6 +739,12 @@
 
                 <h3 class="exp-role-title">Full-Stack Developer Intern</h3>
                 <div class="exp-company-name" style="color: #0D9488;">PlotChoice</div>
+                <div style="margin-bottom: 0.85rem;">
+                  <span class="badge-pill pill-cyan" style="display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 9999px; background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0;">
+                    <span style="width: 7px; height: 7px; border-radius: 50%; background: #10B981; display: inline-block;"></span>
+                    Active 6-Month Opportunity
+                  </span>
+                </div>
 
                 <div class="exp-meta-row">
                   <span class="exp-meta-item"><i class="fa-regular fa-calendar"></i> Jul 2025 – Dec 2025 (6 Months)</span>
@@ -941,6 +953,14 @@
 
                 <h3 class="exp-role-title">AI &amp; Data Science Intern</h3>
                 <div class="exp-company-name" style="color: #059669;">Tambaram Medical Centre</div>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.85rem;">
+                  <span class="badge-pill" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 9999px; background: #F0FDF4; color: #166534; border: 1px solid #BBF7D0;">
+                    <i class="fa-solid fa-hospital" style="color: #16A34A;"></i> Clinical Institution
+                  </span>
+                  <span class="badge-pill" style="display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.74rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 9999px; background: #ECFDF5; color: #065F46; border: 1px solid #A7F3D0;">
+                    <i class="fa-solid fa-user-doctor" style="color: #059669;"></i> Dr. Hariharan Mentorship
+                  </span>
+                </div>
 
                 <div class="exp-meta-row">
                   <span class="exp-meta-item"><i class="fa-solid fa-user-doctor"></i> Mentor: Dr. Hariharan</span>
@@ -2204,6 +2224,186 @@
   <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+
+
+
+  <!-- ======================================================================
+       MOBILE-FIRST NATIVE APP BOTTOM NAVIGATION BAR (Visible <= 768px)
+       ====================================================================== -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="Mobile Bottom Navigation">
+    <a href="#hero" class="bottom-nav-item active" data-nav-target="hero">
+      <div class="bottom-nav-icon-wrap"><i class="fa-solid fa-house"></i></div>
+      <span class="bottom-nav-label">Home</span>
+    </a>
+    <a href="#projects" class="bottom-nav-item" data-nav-target="projects">
+      <div class="bottom-nav-icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
+      <span class="bottom-nav-label">Projects</span>
+    </a>
+    <a href="#experience" class="bottom-nav-item" data-nav-target="experience">
+      <div class="bottom-nav-icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
+      <span class="bottom-nav-label">Experience</span>
+    </a>
+    <a href="ai-ecosystem.html" class="bottom-nav-item">
+      <div class="bottom-nav-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+      <span class="bottom-nav-label">AI Tools</span>
+    </a>
+    <button type="button" class="bottom-nav-item" id="bottomNavMenuBtn" aria-label="More Navigation Options">
+      <div class="bottom-nav-icon-wrap"><i class="fa-solid fa-grip"></i></div>
+      <span class="bottom-nav-label">More</span>
+    </button>
+  </nav>
+
+  <!-- ======================================================================
+       MOBILE-FIRST ACTION DRAWER / BOTTOM SHEET
+       ====================================================================== -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true">
+    <div class="mobile-drawer-sheet" id="mobileDrawerSheet" role="dialog" aria-modal="true" aria-label="Quick Actions &amp; Navigation">
+      <div class="drawer-drag-handle"></div>
+
+      <!-- App User Profile Header -->
+      <div class="drawer-header">
+        <div class="drawer-profile">
+          <div class="drawer-avatar-wrap">
+            <img src="images/kamalesh-profile.jpg" alt="Kamalesh Ganesh" class="drawer-avatar">
+          </div>
+          <div class="drawer-profile-info">
+            <div class="drawer-profile-name">Kamalesh Ganesh</div>
+            <div class="drawer-profile-title">Full-Stack &amp; Healthcare AI Engineer</div>
+          </div>
+        </div>
+        <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Drawer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="drawer-quick-actions">
+        <a href="Kamalesh-Ganesh-Resume.pdf" target="_blank" download="Kamalesh-Ganesh-Resume.pdf" class="drawer-quick-btn resume">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Resume PDF</span>
+        </a>
+        <a href="https://wa.me/918300113008" target="_blank" rel="noopener noreferrer" class="drawer-quick-btn whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Navigation & Highlights Grid -->
+      <div class="drawer-section-title">PORTFOLIO &amp; SHOWCASES</div>
+      <div class="drawer-nav-grid">
+        <a href="medilong.html" class="drawer-grid-item item-founder">
+          <div class="drawer-item-icon"><i class="fa-solid fa-crown"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">MediLong Platform</div>
+            <div class="drawer-item-sub">Founder &bull; Hospital Management Architecture</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="pcos-research.html" class="drawer-grid-item item-research">
+          <div class="drawer-item-icon"><i class="fa-solid fa-microscope"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">PCOS Diagnostic AI</div>
+            <div class="drawer-item-sub">Healthcare AI &bull; 97.4% Clinical Screening Model</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="projects.html" class="drawer-grid-item item-projects">
+          <div class="drawer-item-icon"><i class="fa-solid fa-folder-tree"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">All 14 Projects Directory</div>
+            <div class="drawer-item-sub">Full-Stack Platforms, Mobile Apps &amp; Patents</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="ai-ecosystem.html" class="drawer-grid-item item-ai">
+          <div class="drawer-item-icon"><i class="fa-solid fa-brain"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">AI &amp; Dev Ecosystem</div>
+            <div class="drawer-item-sub">28 Verified AI Tools &bull; 5 Engineering Workflows</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="plotchoice.html" class="drawer-grid-item item-certs">
+          <div class="drawer-item-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">PlotChoice Case Study</div>
+            <div class="drawer-item-sub">Active 6-Month Opportunity &bull; Legal Tech</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="tambaram-medical-centre.html" class="drawer-grid-item item-research">
+          <div class="drawer-item-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">Tambaram Medical Centre</div>
+            <div class="drawer-item-sub">Clinical AI &bull; Dr. Hariharan Mentorship</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="#achievements" class="drawer-grid-item item-awards drawer-link">
+          <div class="drawer-item-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">Achievements &amp; Honors</div>
+            <div class="drawer-item-sub">1st Place SDG Vision 2035, Ideathon &bull; 6 Awards</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="#certifications" class="drawer-grid-item item-certs drawer-link">
+          <div class="drawer-item-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">Certifications &amp; Credentials</div>
+            <div class="drawer-item-sub">Google, Microsoft, IBM, Cisco &amp; HackerRank</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="#skills" class="drawer-grid-item item-skills drawer-link">
+          <div class="drawer-item-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">Technical Skills Matrix</div>
+            <div class="drawer-item-sub">Frontend, Backend, AI/ML, Cloud &amp; DBs</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+
+        <a href="#about" class="drawer-grid-item item-about drawer-link">
+          <div class="drawer-item-icon"><i class="fa-solid fa-user"></i></div>
+          <div class="drawer-item-text">
+            <div class="drawer-item-title">About &amp; Journey</div>
+            <div class="drawer-item-sub">Background, Mission &amp; Engineering Philosophy</div>
+          </div>
+          <i class="fa-solid fa-arrow-right drawer-item-arrow"></i>
+        </a>
+      </div>
+
+      <!-- Social & Direct Channels -->
+      <div class="drawer-section-title" style="margin-top: 1rem;">GET IN TOUCH</div>
+      <div class="drawer-social-row">
+        <a href="https://wa.me/918300113008" target="_blank" rel="noopener noreferrer" class="drawer-social-pill whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://linkedin.com/in/kamalesh-ganesh-9b8b05329" target="_blank" rel="noopener noreferrer" class="drawer-social-pill linkedin">
+          <i class="fa-brands fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Kamalesh6726" target="_blank" rel="noopener noreferrer" class="drawer-social-pill github">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="mailto:kamaleshganesh6726@gmail.com" class="drawer-social-pill email">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- JavaScript -->
   <script src="js/script.js"></script>

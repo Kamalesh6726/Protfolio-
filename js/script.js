@@ -292,6 +292,81 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  
+  // ------------------------------------------------------------------------
+  // 4B. Native Mobile Action Drawer / Bottom Sheet Controller
+  // ------------------------------------------------------------------------
+  const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+  const bottomNavMenuBtn = document.getElementById('bottomNavMenuBtn');
+
+  function openMobileDrawer() {
+    if (mobileDrawerOverlay) {
+      mobileDrawerOverlay.classList.add('active');
+      mobileDrawerOverlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeMobileDrawer() {
+    if (mobileDrawerOverlay) {
+      mobileDrawerOverlay.classList.remove('active');
+      mobileDrawerOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (bottomNavMenuBtn) {
+    bottomNavMenuBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openMobileDrawer();
+    });
+  }
+
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMobileDrawer();
+    });
+  }
+
+  if (mobileDrawerOverlay) {
+    mobileDrawerOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileDrawerOverlay) {
+        closeMobileDrawer();
+      }
+    });
+  }
+
+  // Close drawer when any internal navigation link in drawer is clicked
+  document.querySelectorAll('.mobile-drawer-sheet a').forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        closeMobileDrawer();
+      }
+    });
+  });
+
+  // Connect header mobile hamburger button to drawer on mobile viewport
+  if (mobileToggleBtn) {
+    mobileToggleBtn.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+        openMobileDrawer();
+      }
+    });
+  }
+
+  // Keyboard accessibility: ESC key closes drawer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawerOverlay && mobileDrawerOverlay.classList.contains('active')) {
+      closeMobileDrawer();
+    }
+  });
+
   // 1B. Explore Dropdown Popover Click & Touch Toggle
   const exploreDropdownWrap = document.getElementById('exploreDropdownWrap');
   const exploreDropdownBtn = document.getElementById('exploreDropdownBtn');
@@ -314,7 +389,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. ScrollSpy — Highlight Active Nav Link
   // ------------------------------------------------------------------------
   function updateActiveNavLink() {
-    const scrollPosition = window.scrollY + 120;
+    const scrollPosition = window.scrollY + 140;
+    const bottomNavItems = document.querySelectorAll('.bottom-nav-item[data-nav-target]');
 
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
@@ -328,6 +404,15 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
           }
         });
+
+        if (bottomNavItems.length > 0) {
+          bottomNavItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-nav-target') === sectionId) {
+              item.classList.add('active');
+            }
+          });
+        }
       }
     });
   }
