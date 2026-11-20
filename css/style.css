@@ -5261,17 +5261,53 @@ body {
 
 
 
+
+
 /* ==========================================================================
-   CIRCULAR AVATAR & 3D EMOTES PRELOADER ("KAMALESH G" SILENT MINIMALIST)
+   YOUTUBE-STYLE TOP LOADING PROGRESS BAR & CIRCULAR BUFFER SPINNER
    ========================================================================== */
 
-/* Locked body while loading */
+/* 1. YouTube Top Red Progress Bar */
+.yt-top-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #FF0000;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.85), 0 0 5px rgba(255, 0, 0, 0.5);
+  z-index: 100000000;
+  pointer-events: none;
+  opacity: 1;
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  will-change: width, opacity;
+}
+
+/* Glowing tip of YouTube progress bar */
+.yt-top-loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  box-shadow: 0 0 14px #FF0000, 0 0 7px #FF3333;
+  opacity: 1;
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.yt-top-loader.yt-finish {
+  width: 100% !important;
+  opacity: 0;
+  transition: width 0.15s ease-out, opacity 0.35s 0.15s ease;
+}
+
+/* 2. YouTube-Style Circular Loading Screen */
 body.preloader-locked {
   overflow: hidden !important;
   touch-action: none;
 }
 
-/* Fullscreen Curtain Overlay */
 .site-preloader {
   position: fixed;
   inset: 0;
@@ -5289,7 +5325,6 @@ body.preloader-locked {
   cursor: pointer;
 }
 
-/* Slide Up Curtain Exit */
 .site-preloader.preloader-exit {
   transform: translateY(-100%);
   pointer-events: none;
@@ -5306,9 +5341,7 @@ body.preloader-locked {
   width: 100%;
 }
 
-/* --------------------------------------------------------------------------
-   Center Circular Stage (SVG Progress Ring + Avatar + Orbiting 3D Emotes)
-   -------------------------------------------------------------------------- */
+/* Circular Stage */
 .preloader-circle-stage {
   position: relative;
   width: 180px;
@@ -5319,30 +5352,52 @@ body.preloader-locked {
   margin-bottom: 2rem;
 }
 
-/* SVG Progress Ring */
-.preloader-svg-ring {
+/* YouTube Circular Spinner SVG */
+.yt-spinner-svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transform: rotate(-90deg); /* Start at 12 o'clock */
+  animation: ytSpinnerRotate 1.6s linear infinite;
+  transform-origin: center center;
 }
 
-.ring-bg {
+.yt-spinner-track {
   fill: none;
   stroke: rgba(15, 23, 42, 0.08);
-  stroke-width: 4.5px;
+  stroke-width: 4px;
 }
 
-.ring-progress {
+.yt-spinner-head {
   fill: none;
-  stroke: url(#preloaderGrad);
+  stroke: #FF0000;
   stroke-width: 4.5px;
   stroke-linecap: round;
-  stroke-dasharray: 439.82; /* 2 * PI * 70 */
-  stroke-dashoffset: 439.82;
-  transition: stroke-dashoffset 0.08s linear;
+  stroke-dasharray: 1, 264;
+  stroke-dashoffset: 0;
+  animation: ytSpinnerDash 1.5s ease-in-out infinite;
+}
+
+@keyframes ytSpinnerRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ytSpinnerDash {
+  0% {
+    stroke-dasharray: 1, 264;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 185, 264;
+    stroke-dashoffset: -40px;
+  }
+  100% {
+    stroke-dasharray: 185, 264;
+    stroke-dashoffset: -264px;
+  }
 }
 
 /* Central Avatar / Logo Pod */
@@ -5351,7 +5406,7 @@ body.preloader-locked {
   height: 124px;
   border-radius: 50%;
   background: #FFFFFF;
-  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08), 0 0 0 6px rgba(112, 71, 245, 0.06);
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08), 0 0 0 6px rgba(255, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5364,11 +5419,11 @@ body.preloader-locked {
 @keyframes avatarBreathing {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08), 0 0 0 6px rgba(112, 71, 245, 0.06);
+    box-shadow: 0 10px 32px rgba(15, 23, 42, 0.08), 0 0 0 6px rgba(255, 0, 0, 0.06);
   }
   50% {
     transform: scale(1.03);
-    box-shadow: 0 16px 40px rgba(112, 71, 245, 0.18), 0 0 0 9px rgba(112, 71, 245, 0.1);
+    box-shadow: 0 16px 40px rgba(255, 0, 0, 0.15), 0 0 0 9px rgba(255, 0, 0, 0.1);
   }
 }
 
@@ -5445,9 +5500,7 @@ body.preloader-locked {
   50% { transform: translateY(-8px) rotate(8deg); }
 }
 
-/* --------------------------------------------------------------------------
-   Typography & Minimalist Progress Info
-   -------------------------------------------------------------------------- */
+/* Typography & Info */
 .preloader-name-row {
   margin-bottom: 0.5rem;
 }
@@ -5473,7 +5526,7 @@ body.preloader-locked {
 .preloader-circle-percent {
   font-size: 1.15rem;
   font-weight: 800;
-  color: #0F172A;
+  color: #FF0000;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
 }
@@ -5486,7 +5539,7 @@ body.preloader-locked {
   text-transform: uppercase;
 }
 
-/* Subtle Click to Skip Hint */
+/* Skip Button */
 .preloader-skip-hint {
   margin-top: 1.75rem;
   background: transparent;
@@ -5502,7 +5555,7 @@ body.preloader-locked {
 
 .preloader-skip-hint:hover {
   opacity: 1;
-  color: #0F172A;
+  color: #FF0000;
 }
 
 /* Mobile Screens (<= 480px) */

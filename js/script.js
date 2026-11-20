@@ -11,30 +11,66 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ------------------------------------------------------------------------
-  // 0. Circular Avatar & 3D Emotes Preloader ("KAMALESH G" Silent Minimalist)
+  // 0. YouTube-Style Top Loading Bar & Circular Buffer Preloader
   // ------------------------------------------------------------------------
+  let ytTopLoader = document.getElementById('ytTopLoader');
+  if (!ytTopLoader) {
+    ytTopLoader = document.createElement('div');
+    ytTopLoader.id = 'ytTopLoader';
+    ytTopLoader.className = 'yt-top-loader';
+    ytTopLoader.setAttribute('aria-hidden', 'true');
+    document.body.prepend(ytTopLoader);
+  }
+
+  const YtLoader = {
+    timer: null,
+    start(initial = 25) {
+      if (this.timer) clearInterval(this.timer);
+      ytTopLoader.classList.remove('yt-finish');
+      ytTopLoader.style.opacity = '1';
+      ytTopLoader.style.width = initial + '%';
+
+      let current = initial;
+      this.timer = setInterval(() => {
+        if (current < 88) {
+          const step = Math.max(0.8, (88 - current) * 0.15);
+          current += step;
+          ytTopLoader.style.width = current + '%';
+        }
+      }, 90);
+    },
+    progress(val) {
+      if (this.timer) clearInterval(this.timer);
+      ytTopLoader.classList.remove('yt-finish');
+      ytTopLoader.style.opacity = '1';
+      ytTopLoader.style.width = Math.min(val, 98) + '%';
+    },
+    finish() {
+      if (this.timer) clearInterval(this.timer);
+      ytTopLoader.style.width = '100%';
+      setTimeout(() => {
+        ytTopLoader.classList.add('yt-finish');
+      }, 120);
+    }
+  };
+
   const sitePreloader = document.getElementById('sitePreloader');
-  const preloaderCircleProgress = document.getElementById('preloaderCircleProgress');
   const preloaderCounter = document.getElementById('preloaderCounter');
   const preloaderAvatarPod = document.getElementById('preloaderAvatarPod');
   const preloaderSkipBtn = document.getElementById('preloaderSkipBtn');
 
+  // Trigger YouTube top bar loading immediately
+  YtLoader.start(25);
+
   if (sitePreloader) {
     let isFinished = false;
-    const circumference = 2 * Math.PI * 70; // 439.82px
-
-    // Set initial stroke-dasharray and dashoffset
-    if (preloaderCircleProgress) {
-      preloaderCircleProgress.style.strokeDasharray = `${circumference}`;
-      preloaderCircleProgress.style.strokeDashoffset = `${circumference}`;
-    }
 
     // Dismiss & Curtain Exit Handler
     function dismissPreloader() {
       if (isFinished) return;
       isFinished = true;
       
-      if (preloaderCircleProgress) preloaderCircleProgress.style.strokeDashoffset = '0';
+      YtLoader.finish();
       if (preloaderCounter) preloaderCounter.textContent = '100%';
 
       // Trigger curtain slide-up
@@ -46,17 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('#hero .hero-badge, #hero .hero-title, #hero .hero-lead, #hero .hero-actions').forEach(el => {
           el.classList.add('revealed');
         });
-      }, 250);
+      }, 200);
 
       // Clean up DOM after curtain animation finishes
       setTimeout(() => {
         sitePreloader.style.display = 'none';
-      }, 900);
+      }, 850);
     }
 
-    // Smooth organic progress ticker (0% -> 100% in ~1.25s)
+    // Smooth organic progress ticker (0% -> 100% in ~1.15s)
     const startTime = performance.now();
-    const duration = 1250; // ms
+    const duration = 1150; // ms
 
     function tickProgress(now) {
       if (isFinished) return;
@@ -66,11 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const eased = 1 - Math.pow(1 - factor, 2.2);
       const currentPercent = Math.min(Math.floor(eased * 100), 100);
 
-      // Update circular stroke
-      if (preloaderCircleProgress) {
-        const offset = circumference - (currentPercent / 100) * circumference;
-        preloaderCircleProgress.style.strokeDashoffset = `${offset}`;
-      }
+      // Sync top loader progress
+      YtLoader.progress(currentPercent);
 
       // Update percentage number
       if (preloaderCounter) {
@@ -80,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (factor < 1) {
         requestAnimationFrame(tickProgress);
       } else {
-        setTimeout(dismissPreloader, 180);
+        setTimeout(dismissPreloader, 150);
       }
     }
 
@@ -114,9 +147,30 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Fail-safe: Always dismiss after max 2.5s
-    setTimeout(dismissPreloader, 2500);
+    // Fail-safe: Always dismiss after max 2.2s
+    setTimeout(dismissPreloader, 2200);
+  } else {
+    // If loaded on sub-page without full curtain, complete the YouTube top loader smoothly
+    window.addEventListener('load', () => {
+      YtLoader.finish();
+    });
+    setTimeout(() => {
+      YtLoader.finish();
+    }, 400);
   }
+
+  // Hook navigation links to trigger YouTube top loader
+  document.querySelectorAll('a[href^="#"], .nav-link, .drawer-nav-item, .dropdown-item').forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      if (href && href !== '#' && !href.startsWith('javascript:')) {
+        YtLoader.start(35);
+        setTimeout(() => {
+          YtLoader.finish();
+        }, 260);
+      }
+    });
+  });
 
   // ------------------------------------------------------------------------
   // 1. DOM Element References

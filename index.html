@@ -39,13 +39,16 @@
 </head>
 <body class="preloader-locked">
 
+  <!-- YouTube Red Top Progress Bar -->
+  <div id="ytTopLoader" class="yt-top-loader" aria-hidden="true"></div>
+
   <!-- ======================================================================
-       EDITORIAL CIRCULAR PRELOADER ("KAMALESH G" WITH AVATAR & 3D EMOTES)
+       YOUTUBE-STYLE CIRCULAR BUFFER PRELOADER ("KAMALESH G" WITH AVATAR & 3D EMOTES)
        ====================================================================== -->
   <div id="sitePreloader" class="site-preloader" aria-label="Loading Kamalesh Ganesh Portfolio" role="status">
     <div class="preloader-inner">
       
-      <!-- Center Circular Stage: Progress Ring + Avatar Pod + Orbiting 3D Emotes -->
+      <!-- Circular Buffer Stage: YouTube Red Rotating Arc + Central Avatar Pod + Orbiting Emotes -->
       <div class="preloader-circle-stage">
         
         <!-- Orbiting / Floating 3D Emotes around the Avatar -->
@@ -62,18 +65,10 @@
           <span class="emote-emoji">📷</span>
         </div>
 
-        <!-- Circular SVG Progress Ring -->
-        <svg class="preloader-svg-ring" viewBox="0 0 160 160" aria-hidden="true">
-          <defs>
-            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#7047F5" />
-              <stop offset="100%" stop-color="#2563EB" />
-            </linearGradient>
-          </defs>
-          <!-- Background Track -->
-          <circle class="ring-bg" cx="80" cy="80" r="70" />
-          <!-- Animated Progress Stroke -->
-          <circle class="ring-progress" id="preloaderCircleProgress" cx="80" cy="80" r="70" />
+        <!-- YouTube Circular Buffering Spinner SVG -->
+        <svg class="yt-spinner-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="yt-spinner-track" cx="50" cy="50" r="42" />
+          <circle class="yt-spinner-head" cx="50" cy="50" r="42" />
         </svg>
 
         <!-- Center Avatar / Logo Pod -->
