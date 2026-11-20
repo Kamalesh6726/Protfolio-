@@ -40,57 +40,66 @@
 <body class="preloader-locked">
 
   <!-- ======================================================================
-       EDITORIAL PRELOADER ("KAMALESH G" WITH 3D CREATIVE STICKER TRAIL & AUDIO)
+       EDITORIAL CIRCULAR PRELOADER ("KAMALESH G" WITH AVATAR & 3D EMOTES)
        ====================================================================== -->
   <div id="sitePreloader" class="site-preloader" aria-label="Loading Kamalesh Ganesh Portfolio" role="status">
     <div class="preloader-inner">
       
-      <!-- Centerpiece: "KAMALESH G" with Staggered Character Reveal & Floating 3D Stickers -->
-      <div class="preloader-hero-word" id="preloaderHeroWord">
-        <span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.04s;">K</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.08s;">A</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.12s;">M</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.16s;">A</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.20s;">L</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.24s;">E</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.28s;">S</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.32s;">H</span></span><span style="display: inline-block; width: 0.25em;"></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.38s;">G</span></span>
+      <!-- Center Circular Stage: Progress Ring + Avatar Pod + Orbiting 3D Emotes -->
+      <div class="preloader-circle-stage">
         
-        <!-- 3D Creative Travel & Technology Sticker Cluster (from Reference) -->
-        <div class="preloader-canister-box" id="preloaderCanisterBox" title="Creative Development & System Architecture">
-          <img src="images/loader-stickers.png" alt="Creative 3D Elements Trail" class="preloader-canister-img" id="preloaderCanisterImg">
-          <div class="canister-ground-shadow"></div>
+        <!-- Orbiting / Floating 3D Emotes around the Avatar -->
+        <div class="circle-emote emote-top-left" title="Creative Development & Film">
+          <img src="images/film-canister-badge.png" alt="3D Film Canister" class="emote-img emote-canister">
+        </div>
+        <div class="circle-emote emote-top-right" title="Global Exploration">
+          <span class="emote-emoji">🧭</span>
+        </div>
+        <div class="circle-emote emote-bottom-left" title="AI & Innovation">
+          <span class="emote-emoji">✨</span>
+        </div>
+        <div class="circle-emote emote-bottom-right" title="Photography & Media">
+          <span class="emote-emoji">📷</span>
+        </div>
+
+        <!-- Circular SVG Progress Ring -->
+        <svg class="preloader-svg-ring" viewBox="0 0 160 160" aria-hidden="true">
+          <defs>
+            <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7047F5" />
+              <stop offset="100%" stop-color="#2563EB" />
+            </linearGradient>
+          </defs>
+          <!-- Background Track -->
+          <circle class="ring-bg" cx="80" cy="80" r="70" />
+          <!-- Animated Progress Stroke -->
+          <circle class="ring-progress" id="preloaderCircleProgress" cx="80" cy="80" r="70" />
+        </svg>
+
+        <!-- Center Avatar / Logo Pod -->
+        <div class="preloader-avatar-pod" id="preloaderAvatarPod">
+          <img src="images/logo-icon.png" alt="Kamalesh Ganesh Logo" class="preloader-avatar-img">
         </div>
       </div>
 
-      <!-- Minimalist Progress Meter & Subtitle -->
-      <div class="preloader-meta-wrap">
-        <div class="preloader-progress-track">
-          <div class="preloader-progress-fill" id="preloaderProgressFill"></div>
-        </div>
-        <div class="preloader-meta-labels">
-          <span>PORTFOLIO &bull; 2026</span>
-          <span class="preloader-counter" id="preloaderCounter">00%</span>
-        </div>
+      <!-- Editorial Typography Wordmark ("KAMALESH G") -->
+      <div class="preloader-name-row">
+        <h2 class="preloader-circle-name">KAMALESH G</h2>
       </div>
 
-      <!-- Controls Row: Audio Toggle & Quick Enter -->
-      <div class="preloader-controls-row">
-        <button type="button" class="preloader-sound-btn" id="preloaderSoundBtn" aria-label="Toggle Sound">
-          <i class="fa-solid fa-volume-high" id="preloaderSoundIcon"></i>
-          <span id="preloaderSoundLabel">Sound ON</span>
-        </button>
-        <button type="button" class="preloader-skip-hint" id="preloaderSkipBtn" aria-label="Skip Intro Animation">
-          Click anywhere to enter &rarr;
-        </button>
+      <!-- Minimalist Live Counter -->
+      <div class="preloader-counter-row">
+        <span class="preloader-circle-percent" id="preloaderCounter">00%</span>
+        <span class="preloader-circle-kicker">PORTFOLIO &bull; 2026</span>
       </div>
+
+      <!-- Subtle Click Anywhere to Skip Hint -->
+      <button type="button" class="preloader-skip-hint" id="preloaderSkipBtn" aria-label="Skip Loading Screen">
+        Click anywhere to enter &rarr;
+      </button>
     </div>
-
-    <!-- Background Audio Element -->
-    <audio id="preloaderAudio" preload="auto">
-      <source src="audio/loader-audio.mp3" type="audio/mpeg">
-      <source src="audio/loader-audio.mp4" type="audio/mp4">
-      <source src="audio/loader-audio.m4a" type="audio/mp4">
-    </audio>
   </div>
 
-
-  <!-- ======================================================================
-       NAVIGATION BAR
-       ====================================================================== -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-brand" aria-label="Kamalesh Ganesh Home">
