@@ -40,18 +40,18 @@
 <body class="preloader-locked">
 
   <!-- ======================================================================
-       EDITORIAL PRELOADER ("KAMALESH G" WITH 3D FILM CANISTER)
+       EDITORIAL PRELOADER ("KAMALESH G" WITH 3D CREATIVE STICKER TRAIL & AUDIO)
        ====================================================================== -->
   <div id="sitePreloader" class="site-preloader" aria-label="Loading Kamalesh Ganesh Portfolio" role="status">
     <div class="preloader-inner">
       
-      <!-- Centerpiece: "KAMALESH G" with Staggered Character Mask & Floating Canister -->
+      <!-- Centerpiece: "KAMALESH G" with Staggered Character Reveal & Floating 3D Stickers -->
       <div class="preloader-hero-word" id="preloaderHeroWord">
         <span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.04s;">K</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.08s;">A</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.12s;">M</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.16s;">A</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.20s;">L</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.24s;">E</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.28s;">S</span></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.32s;">H</span></span><span style="display: inline-block; width: 0.25em;"></span><span class="preloader-char-wrap"><span class="preloader-char" style="animation-delay: 0.38s;">G</span></span>
         
-        <!-- 3D Yellow Film Canister (Bobbing Micro-Motion & Mouse Tilt) -->
+        <!-- 3D Creative Travel & Technology Sticker Cluster (from Reference) -->
         <div class="preloader-canister-box" id="preloaderCanisterBox" title="Creative Development & System Architecture">
-          <img src="images/film-canister-badge.png" alt="3D Film Canister" class="preloader-canister-img" id="preloaderCanisterImg">
+          <img src="images/loader-stickers.png" alt="Creative 3D Elements Trail" class="preloader-canister-img" id="preloaderCanisterImg">
           <div class="canister-ground-shadow"></div>
         </div>
       </div>
@@ -67,11 +67,24 @@
         </div>
       </div>
 
-      <!-- Dismiss Button Hint -->
-      <button type="button" class="preloader-skip-hint" id="preloaderSkipBtn" aria-label="Skip Intro Animation">
-        Click anywhere to enter &rarr;
-      </button>
+      <!-- Controls Row: Audio Toggle & Quick Enter -->
+      <div class="preloader-controls-row">
+        <button type="button" class="preloader-sound-btn" id="preloaderSoundBtn" aria-label="Toggle Sound">
+          <i class="fa-solid fa-volume-high" id="preloaderSoundIcon"></i>
+          <span id="preloaderSoundLabel">Sound ON</span>
+        </button>
+        <button type="button" class="preloader-skip-hint" id="preloaderSkipBtn" aria-label="Skip Intro Animation">
+          Click anywhere to enter &rarr;
+        </button>
+      </div>
     </div>
+
+    <!-- Background Audio Element -->
+    <audio id="preloaderAudio" preload="auto">
+      <source src="audio/loader-audio.mp3" type="audio/mpeg">
+      <source src="audio/loader-audio.mp4" type="audio/mp4">
+      <source src="audio/loader-audio.m4a" type="audio/mp4">
+    </audio>
   </div>
 
 

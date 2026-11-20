@@ -8,18 +8,78 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+
   // ------------------------------------------------------------------------
-  // 0. High-Craft Editorial Preloader Controller ("KAMALESH G")
+  // 0. High-Craft Editorial Preloader Controller ("KAMALESH G" + Audio + 3D Stickers)
   // ------------------------------------------------------------------------
   const sitePreloader = document.getElementById('sitePreloader');
   const preloaderProgressFill = document.getElementById('preloaderProgressFill');
   const preloaderCounter = document.getElementById('preloaderCounter');
   const preloaderCanisterImg = document.getElementById('preloaderCanisterImg');
   const preloaderSkipBtn = document.getElementById('preloaderSkipBtn');
+  const preloaderSoundBtn = document.getElementById('preloaderSoundBtn');
+  const preloaderSoundIcon = document.getElementById('preloaderSoundIcon');
+  const preloaderSoundLabel = document.getElementById('preloaderSoundLabel');
+  const preloaderAudio = document.getElementById('preloaderAudio');
 
   if (sitePreloader) {
     let progress = 0;
     let isFinished = false;
+    let isMuted = false;
+
+    // Web Audio API Harmonic Synthesis Fallback for Crisp Audio
+    let audioCtx = null;
+    function playChime(freq = 520, duration = 0.18, type = 'sine') {
+      if (isMuted) return;
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    // Play MP3/MP4 audio track
+    function playLoaderAudio() {
+      if (isMuted || !preloaderAudio) return;
+      preloaderAudio.volume = 0.7;
+      const playPromise = preloaderAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay policy prevented immediate playback; will play on first click/touch
+        });
+      }
+    }
+
+    // Sound Toggle Button Handler
+    if (preloaderSoundBtn) {
+      preloaderSoundBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isMuted = !isMuted;
+        if (isMuted) {
+          if (preloaderAudio) preloaderAudio.pause();
+          preloaderSoundBtn.classList.add('is-muted');
+          if (preloaderSoundIcon) preloaderSoundIcon.className = 'fa-solid fa-volume-xmark';
+          if (preloaderSoundLabel) preloaderSoundLabel.textContent = 'Muted';
+        } else {
+          preloaderSoundBtn.classList.remove('is-muted');
+          if (preloaderSoundIcon) preloaderSoundIcon.className = 'fa-solid fa-volume-high';
+          if (preloaderSoundLabel) preloaderSoundLabel.textContent = 'Sound ON';
+          playLoaderAudio();
+          playChime(660, 0.2);
+        }
+      });
+    }
 
     // Dismiss & Curtain Exit Handler
     function dismissPreloader() {
@@ -29,9 +89,25 @@ document.addEventListener('DOMContentLoaded', () => {
       if (preloaderProgressFill) preloaderProgressFill.style.width = '100%';
       if (preloaderCounter) preloaderCounter.textContent = '100%';
       
+      // Play soft completion chime
+      playChime(880, 0.35, 'triangle');
+
       // Trigger curtain slide-up
       sitePreloader.classList.add('preloader-exit');
       document.body.classList.remove('preloader-locked');
+
+      // Fade out audio smoothly
+      if (preloaderAudio && !preloaderAudio.paused) {
+        let fadeVol = preloaderAudio.volume;
+        const fadeInterval = setInterval(() => {
+          fadeVol = Math.max(0, fadeVol - 0.15);
+          preloaderAudio.volume = fadeVol;
+          if (fadeVol <= 0.05) {
+            preloaderAudio.pause();
+            clearInterval(fadeInterval);
+          }
+        }, 80);
+      }
 
       // Trigger entrance reveal on hero elements
       setTimeout(() => {
@@ -48,30 +124,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fast, organic progress ticker (0% -> 100% in ~1.3s)
     const startTime = performance.now();
-    const duration = 1250; // ms
+    const duration = 1350; // ms
+    let lastTickStep = 0;
 
     function tickProgress(now) {
       if (isFinished) return;
       const elapsed = now - startTime;
       const factor = Math.min(elapsed / duration, 1);
       // Smooth cubic ease-out
-      const eased = 1 - Math.pow(1 - factor, 2.5);
+      const eased = 1 - Math.pow(1 - factor, 2.2);
       const currentPercent = Math.min(Math.floor(eased * 100), 100);
 
       if (preloaderProgressFill) preloaderProgressFill.style.width = `${currentPercent}%`;
       if (preloaderCounter) preloaderCounter.textContent = `${currentPercent < 10 ? '0' : ''}${currentPercent}%`;
 
+      // Soft micro-click sounds during progress ticks
+      if (currentPercent > lastTickStep + 20) {
+        lastTickStep = currentPercent;
+        playChime(420 + currentPercent * 4, 0.06, 'sine');
+      }
+
       if (factor < 1) {
         requestAnimationFrame(tickProgress);
       } else {
-        setTimeout(dismissPreloader, 180);
+        setTimeout(dismissPreloader, 200);
       }
     }
 
+    // Start progress and attempt audio playback
     requestAnimationFrame(tickProgress);
+    playLoaderAudio();
 
-    // Click anywhere to immediately enter
+    // Click anywhere to immediately enter and unlock audio
     sitePreloader.addEventListener('click', () => {
+      playLoaderAudio();
       dismissPreloader();
     });
 
@@ -82,14 +168,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Subtle 3D Mouse Parallax Tilt on Canister (Desktop only)
+    // Subtle 3D Mouse Parallax Tilt on Canister/Stickers (Desktop only)
     if (window.matchMedia('(hover: hover) and (pointer: fine)').matches && preloaderCanisterImg) {
       sitePreloader.addEventListener('mousemove', (e) => {
         if (isFinished) return;
         const rect = sitePreloader.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        preloaderCanisterImg.style.transform = `translateY(-4px) rotateY(${x * 24}deg) rotateX(${-y * 24}deg) rotateZ(${x * 10}deg)`;
+        preloaderCanisterImg.style.transform = `translateY(-6px) rotateY(${x * 20}deg) rotateX(${-y * 20}deg) rotateZ(${x * 8}deg)`;
       });
 
       sitePreloader.addEventListener('mouseleave', () => {
@@ -98,10 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Fail-safe: Always dismiss after max 2.5s
-    setTimeout(dismissPreloader, 2500);
+    // Fail-safe: Always dismiss after max 2.6s
+    setTimeout(dismissPreloader, 2600);
   }
-
 
   // ------------------------------------------------------------------------
   // 1. DOM Element References
